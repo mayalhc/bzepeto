@@ -40,7 +40,7 @@ Unity ④ the finished item goes to Unity, checked and packaged
 | | |
 |---|---|
 | OS | Windows 10 / 11, 64-bit |
-| Blender | 4.2 or later (tested on 5.0) |
+| Blender | 4.5 or later (tested on 4.5 – 5.3) |
 | Unity | ZEPETO Studio project, **Unity 2020.3.9f1** |
 | GPU | DirectX 12 capable (for ArmorPaint) |
 | ZEPETO base character | `creatorBaseSet_zepeto.fbx` from ZEPETO's creator resources — it is ZEPETO's file, so it is **not included** |
