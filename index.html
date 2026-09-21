@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="chamiseul" /><link rel="canonical" href="https://mayalhc.github.io/bzepeto/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Welcome to BZepeto - BZepeto — User Guide</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Welcome to BZepeto";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/bzepeto/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> BZepeto — User Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">BZepeto Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Welcome to BZepeto</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#whats-new">What's New</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-bzepeto">What is BZepeto?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installing">Installing</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-blender">1. Blender</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-armorpaint">2. ArmorPaint</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-unity-zepeto-studio">3. Unity (ZEPETO Studio)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-the-base-character">4. The base character</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#where-bzepeto-keeps-its-files">Where BZepeto keeps its files</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#1-blender-the-bzepeto-tab">1. Blender — the BZepeto tab</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#rigging">Rigging</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#swing-bones-hair-skirts-ribbons">Swing bones (hair, skirts, ribbons)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#body-shape">Body shape</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#wearables">Wearables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#send-to-zepeto">Send to ZEPETO</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#zepeto-playground">ZEPETO Playground</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-armorpaint_1">2. ArmorPaint</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#paint-while-you-model">Paint while you model</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#zepeto-smart-materials">ZEPETO smart materials</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#stitches">Stitches</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sending-the-textures">Sending the textures</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-unity-zepeto-studio_1">3. Unity (ZEPETO Studio)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#licence">Licence</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://mayalhc.github.io/GroomForge-Wiki/">All add-ons & guides</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">BZepeto — User Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">BZepeto Guide</li>
+      <li class="breadcrumb-item active">Welcome to BZepeto</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="bzepeto-zepeto-item-creator-suite-for-blender-unity-armorpaint">BZepeto — ZEPETO Item Creator Suite for Blender, Unity &amp; ArmorPaint</h1>
+<p>🇺🇸 English | <a href="KO_index/">🇰🇷 한국어</a></p>
+<blockquote>
+<p>BZepeto is an independent tool made by Chamiseul (ChamIseul Creator). It is not made,
+endorsed or supported by NAVER Z (ZEPETO), the Blender Foundation, Unity Technologies or
+the ArmorPaint authors.</p>
+</blockquote>
+<p><img alt="BZepeto" src="assets/bzepeto2.jpg" /></p>
+<h2 id="whats-new">What's New</h2>
+<p><strong>v1.0.0 — First release</strong></p>
+<ul>
+<li>Blender add-on: ZEPETO checks and Send, swing bone wizard, body shape, wearables, playground</li>
+<li>ArmorPaint live link: paint while you model, smart ZEPETO materials, automatic stitches</li>
+<li>Unity package for ZEPETO Studio (Unity 2020.3.9): hot folder import and automatic ZEPETO shaders</li>
+</ul>
+<hr />
+<h2 id="what-is-bzepeto">What is BZepeto?</h2>
+<p>The whole route of a ZEPETO item in one place: build it in Blender, paint it in ArmorPaint,
+and hand it to ZEPETO Studio in Unity — without exporting, importing and wiring materials
+by hand at every step.</p>
+<div class="highlight"><pre><span></span><code>Blender  ──①──&gt;  ArmorPaint  ──②──&gt;  Blender
+   │                  └────③────&gt;  Unity (ZEPETO Studio)
+   └──────────────④──────────────&gt;  Unity (ZEPETO Studio)
+</code></pre></div>
+<p>① the mesh goes to ArmorPaint live ② painted textures come back ③ textures go straight to
+Unity ④ the finished item goes to Unity, checked and packaged</p>
+<hr />
+<h2 id="what-you-need">What you need</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>Windows 10 / 11, 64-bit</td>
+</tr>
+<tr>
+<td>Blender</td>
+<td>4.5 or later (tested on 4.5 – 5.3)</td>
+</tr>
+<tr>
+<td>Unity</td>
+<td>ZEPETO Studio project, <strong>Unity 2020.3.9f1</strong></td>
+</tr>
+<tr>
+<td>GPU</td>
+<td>DirectX 12 capable (for ArmorPaint)</td>
+</tr>
+<tr>
+<td>ZEPETO base character</td>
+<td><code>creatorBaseSet_zepeto.fbx</code> from ZEPETO's creator resources — it is ZEPETO's file, so it is <strong>not included</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="installing">Installing</h2>
+<p>Your download has these files:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bzepeto_blender.zip</code></td>
+<td>Blender add-on</td>
+</tr>
+<tr>
+<td><code>com.bzepeto.unity2020-&lt;version&gt;.tgz</code></td>
+<td>Unity package for <strong>ZEPETO Studio (Unity 2020.3.9)</strong> — use this one</td>
+</tr>
+<tr>
+<td><code>com.bzepeto.unity-&lt;version&gt;.tgz</code></td>
+<td>Unity package for Unity 6 / 2022.3 (for when ZEPETO moves to Unity 6)</td>
+</tr>
+<tr>
+<td><code>BZepeto_ArmorPaint_&lt;version&gt;_win64.zip</code></td>
+<td>ArmorPaint build with the BZepeto plugins already enabled</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-blender">1. Blender</h3>
+<ol>
+<li><strong>Edit &gt; Preferences &gt; Add-ons</strong>, click <strong>▼</strong> at the top right, <strong>Install from Disk</strong></li>
+<li>Pick <code>bzepeto_blender.zip</code></li>
+<li>Press <strong>N</strong> in the 3D viewport — the <strong>BZepeto</strong> tab appears</li>
+</ol>
+<h3 id="2-armorpaint">2. ArmorPaint</h3>
+<ol>
+<li>Unzip <code>BZepeto_ArmorPaint_&lt;version&gt;_win64.zip</code> anywhere, e.g. <code>C:\Tools\BZepeto_ArmorPaint</code>
+   (avoid <em>Program Files</em> — ArmorPaint cannot save its settings there)</li>
+<li>Run <code>ArmorPaint.exe</code> once to check the window opens</li>
+<li>In Blender, <strong>Edit &gt; Preferences &gt; Add-ons &gt; BZepeto</strong>, set <strong>ArmorPaint Executable</strong> to
+   that <code>ArmorPaint.exe</code></li>
+</ol>
+<blockquote>
+<p>Why a whole ArmorPaint build and not just a plugin? The live link needs a small change to
+ArmorPaint itself: a normal ArmorPaint stops updating the moment you click back into
+Blender. The build is compiled from ArmorPaint's zlib-licensed source, and every change is
+marked in the source.</p>
+</blockquote>
+<h3 id="3-unity-zepeto-studio">3. Unity (ZEPETO Studio)</h3>
+<ol>
+<li>Open your ZEPETO Studio project</li>
+<li><strong>Window &gt; Package Manager</strong>, click <strong>+</strong>, <strong>Add package from tarball...</strong></li>
+<li>Pick <code>com.bzepeto.unity2020-&lt;version&gt;.tgz</code></li>
+<li>A <strong>BZepeto</strong> menu appears at the top</li>
+</ol>
+<h3 id="4-the-base-character">4. The base character</h3>
+<p>Put <code>creatorBaseSet_zepeto.fbx</code> into <code>%USERPROFILE%\BZepeto\Samples\</code>, or point
+<strong>Base Character FBX</strong> in the add-on preferences at wherever you keep it.</p>
+<h3 id="where-bzepeto-keeps-its-files">Where BZepeto keeps its files</h3>
+<p>Everything lives under <code>%USERPROFILE%\BZepeto</code>. Blender and Unity both use
+<code>%USERPROFILE%\BZepeto\HotExport</code> as the hand-over folder, so there is nothing to set up
+between them. To move everything somewhere else, set the environment variable
+<code>BZEPETO_HOME</code> (e.g. <code>D:\BZepeto</code>) and restart Blender and Unity.</p>
+<hr />
+<h2 id="1-blender-the-bzepeto-tab">1. Blender — the BZepeto tab</h2>
+<h3 id="rigging">Rigging</h3>
+<ul>
+<li><strong>Bone counter</strong> — compares your rig with ZEPETO's 104-bone base skeleton and counts the
+  swing bones you added</li>
+<li><strong>Pose</strong> — switch between T-pose and A-pose. The rig shows which pose it is in, and going
+  back restores the saved rig instead of rotating again, so the shoulders do not drift
+  after repeated switches</li>
+<li><strong>Weights</strong> — transfer, mirror, limit to 4 influences</li>
+<li><strong>Bone Cleaner</strong> — remove unused bones</li>
+</ul>
+<h3 id="swing-bones-hair-skirts-ribbons">Swing bones (hair, skirts, ribbons)</h3>
+<ol>
+<li>In Edit Mode, <strong>select the edge runs</strong> the chains should follow (four vertical runs on a
+   skirt = four chains)</li>
+<li>The panel tells you what it will build before anything is created: <em>"4 chain(s), 12 bone(s)"</em></li>
+<li>Choose bones per chain (a fixed count or one per edge), a preset (hair, ribbon, skirt,
+   coat, accessory), the bone to hang from and the weight radius</li>
+<li><strong>Make Swing Chains</strong></li>
+</ol>
+<p>Bones are named the way ZEPETO reads them: <code>&lt;joint&gt; physics &lt;drag&gt; &lt;angle drag&gt; &lt;restore drag&gt;</code>.
+ZEPETO recommends 2–5 chains per item. <strong>Remove Physics Naming</strong> strips the physics part of
+the names again.</p>
+<h3 id="body-shape">Body shape</h3>
+<p>Eight sliders — height, shoulder width, chest, waist, pelvis, leg length, neck, head size —
+with <strong>Realtime</strong> to see the character change while you drag. Leg length moves the bones the
+way the ZEPETO SDK does, so the feet stay on the ground.</p>
+<h3 id="wearables">Wearables</h3>
+<p><code>Import Clothing</code> → <code>Align Mesh to Base Body</code> → <code>Make Garment Rig</code> →
+<code>Bind Garment To Character</code> → <code>Refit Clothing To Body</code></p>
+<h3 id="send-to-zepeto">Send to ZEPETO</h3>
+<p>Checks the item against the limits of its category — 13 checks including triangles,
+materials, texture size (512 px), UVs, bone influences, transforms and names. A failed check
+comes with the button that fixes it (<strong>Fix Transforms</strong>, <strong>Create ZEPETO Material</strong>). When
+everything passes, the item goes to Unity as a package.</p>
+<h3 id="zepeto-playground">ZEPETO Playground</h3>
+<p>ZEPETO Studio's play-mode menu rebuilt in Blender: 10 animations, camera, body types, the
+13 SDK deformations and the space — so you can check the item before it ever reaches Unity.</p>
+<blockquote>
+<p>The playground needs a capture from your own ZEPETO Studio project once: in Unity, enter
+Play mode in the playground scene and choose <strong>BZepeto &gt; Capture Playground For Blender</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="2-armorpaint_1">2. ArmorPaint</h2>
+<h3 id="paint-while-you-model">Paint while you model</h3>
+<ol>
+<li>Select the item mesh in Blender and press <strong>Paint in ArmorPaint</strong></li>
+<li>ArmorPaint opens with the item; its panel reads <strong>BZepeto Live Link: CONNECTED</strong></li>
+<li>With <strong>Auto Push</strong> on, your edits in Blender are sent again 0.8 s after you stop — the
+   paint layers stay</li>
+</ol>
+<p>An item without a material gets a ZEPETO-ready one on the way out.</p>
+<h3 id="zepeto-smart-materials">ZEPETO smart materials</h3>
+<p>The <strong>BZepeto Materials</strong> panel in ArmorPaint: <strong>Denim, Cotton, Knit, Leather, Metal, Base</strong>.
+They are procedural, so they stay crisp when ZEPETO shrinks textures to 512 px, and they
+already match ZEPETO's texture channels. Press one, then <strong>Fill Layer With It</strong>, and paint on
+top.</p>
+<h3 id="stitches">Stitches</h3>
+<ol>
+<li>In Blender Edit Mode, select the seam edges</li>
+<li>Press <strong>Stitch Selected Edges</strong> — it shows <em>"Will draw: N seam(s), M stitch(es)"</em> first</li>
+<li>The stitches appear in ArmorPaint as their <strong>own layer</strong>, so you can recolour or erase
+   them like anything else</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dash / Gap / Width</td>
+<td>thread length, spacing and thickness in millimetres of the real item</td>
+</tr>
+<tr>
+<td>Color / Roughness</td>
+<td>thread colour and roughness</td>
+</tr>
+<tr>
+<td>Target</td>
+<td><code>ArmorPaint</code> (a layer, recommended) or <code>Blender</code> (drawn on the material)</td>
+</tr>
+</tbody>
+</table>
+<p>A seam on the border of two UV islands is stitched on <strong>both</strong> pieces, like real clothing.</p>
+<h3 id="sending-the-textures">Sending the textures</h3>
+<table>
+<thead>
+<tr>
+<th>Button in ArmorPaint</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Send to Blender</strong></td>
+<td>Blender picks the textures up by itself (<strong>Auto Receive</strong>)</td>
+</tr>
+<tr>
+<td><strong>Send to Unity</strong></td>
+<td>goes straight into your ZEPETO Studio project</td>
+</tr>
+<tr>
+<td><strong>Send to Both</strong></td>
+<td>both</td>
+</tr>
+<tr>
+<td><strong>Size 512 / 1024 / 2048 / 4096</strong></td>
+<td>size of the delivered textures — you keep painting at full resolution</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>ZEPETO allows 512 px textures and 1 MB per item, which is why 512 is the default.</p>
+</blockquote>
+<hr />
+<h2 id="3-unity-zepeto-studio_1">3. Unity (ZEPETO Studio)</h2>
+<p>Everything happens by itself once the package is installed:</p>
+<ul>
+<li><strong>Items from Blender</strong> land in <code>Assets/BZepetoImport/&lt;CATEGORY&gt;/&lt;item&gt;/</code> as FBX, prefab and
+  textures</li>
+<li><strong>ZEPETO shaders are applied</strong> automatically (e.g. <code>ZEPETO/BuiltIn/Cloth</code>) and the textures
+  go into the right slots — base colour, normal map and metallic/smoothness</li>
+<li><strong>Textures from ArmorPaint</strong> are copied next to the item and hooked up the same way</li>
+</ul>
+<p>Unity does not need to be the active window — it keeps importing in the background.</p>
+<hr />
+<h2 id="troubleshooting">Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ArmorPaint panel says <code>WAITING FOR BLENDER</code></td>
+<td>Nothing has been sent yet — press <strong>Paint in ArmorPaint</strong> in Blender</td>
+</tr>
+<tr>
+<td>"Set the ArmorPaint path in the add-on preferences first"</td>
+<td>Set <strong>ArmorPaint Executable</strong> (Installing, step 2)</td>
+</tr>
+<tr>
+<td>Textures never reach Blender</td>
+<td>Check the ArmorPaint panel says <code>CONNECTED</code> and <strong>Auto Receive</strong> is on in Blender</td>
+</tr>
+<tr>
+<td>Several ArmorPaint windows</td>
+<td>Each press of <strong>Paint in ArmorPaint</strong> starts one — close them all and press once</td>
+</tr>
+<tr>
+<td>A pose button is greyed out</td>
+<td>The rig is already in that pose</td>
+</tr>
+<tr>
+<td>Send fails with "No material"</td>
+<td>Press <strong>Create ZEPETO Material</strong></td>
+</tr>
+<tr>
+<td>Nothing arrives in Unity</td>
+<td>Check the Unity Console for <code>[BZepeto] Hot folder watch started</code> and that you installed the <strong>2020</strong> package</td>
+</tr>
+<tr>
+<td>Playground list is empty</td>
+<td>Make a capture once (see <em>ZEPETO Playground</em>)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="licence">Licence</h2>
+<ul>
+<li>Blender add-on — GNU GPL v3 or later</li>
+<li>Unity package and ArmorPaint plugins — BZepeto EULA (one licence per person; what you make
+  is yours; do not share or resell the tools)</li>
+<li>ArmorPaint build — zlib licence, © the ArmorPaint authors; fonts and other components under
+  their own licences (see the files in the download)</li>
+</ul>
+<p>© 2026 Chamiseul</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
