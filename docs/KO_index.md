@@ -5,7 +5,7 @@
 > BZepeto는 Chamiseul(ChamIseul Creator)이 만든 독립 도구입니다. NAVER Z(ZEPETO), Blender 재단,
 > Unity Technologies, ArmorPaint 개발자가 만들거나 보증·지원하는 제품이 아닙니다.
 
-![BZepeto](assets/bzepeto.jpg)
+![BZepeto](assets/bzepeto2.jpg)
 
 ## 새 소식
 

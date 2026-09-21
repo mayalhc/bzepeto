@@ -6,7 +6,7 @@
 > endorsed or supported by NAVER Z (ZEPETO), the Blender Foundation, Unity Technologies or
 > the ArmorPaint authors.
 
-![BZepeto](assets/bzepeto.jpg)
+![BZepeto](assets/bzepeto2.jpg)
 
 ## What's New
 
