@@ -9,7 +9,44 @@
 
 ## 새 소식
 
-**v1.0.0 — 첫 출시**
+### v1.2.0 — 중요 업데이트 (2026-09-27)
+
+!!! warning "세 도구를 함께 업데이트하세요"
+    v1.2.0 Blender 애드온, Unity 패키지, ArmorPaint를 **모두** 설치하세요. ArmorPaint는
+    **새 폴더**에 압축을 풀고 **ArmorPaint Executable**을 새 위치로 바꿔 주세요(*설치* 참고).
+
+**제페토 셰이더 10종 완전 연동**
+
+- Blender에서 아이템마다 제페토 셰이더를 고릅니다: Lit, Cloth, Fur, HairAlpha, Sparkle,
+  Iridescence, Prism, CustomEnv, Toon, Detail Normal
+- ArmorPaint의 새 **ZEPETO Mode** 패널이 이를 따라가, 그 셰이더가 읽는 맵만 알맞게 내보냅니다
+  (`_fur`, `_hairspec`, `_sheen`, `_irid`, `_coat`, `_toonth`, `_toonmask` ...)
+- Unity가 셰이더, 텍스처 슬롯, 키워드, 계수를 자동으로 설정합니다
+
+**헤어 품질** — 헤어 카드 UV 방향 검사, **Sort Hair Layers**(안쪽 카드부터 그리기), 알파 검사.
+HairAlpha의 `_Cutoff`를 그대로 두어 가닥 끝이 깨끗하고, 하이라이트 흔들림과 보조 하이라이트를
+칠할 수 있습니다
+
+**ArmorPaint**
+
+- **BZepeto 노드** 13종: Hair Strands, Hair Root to Tip, Floral Lace(레이스), Lace Mesh, Weave,
+  Knit, Quilt, Sequins, Gem Facets, Hammered Metal, Edge Wear, Toon Hatching, Fur Strands
+- 칠하면서 보는 **제페토 뷰포트 미리보기**
+- **애니메이션 페인팅**: 포즈 클립과 함께 보내 타임라인에서 포즈를 바꿔 가며 칠하기
+- 발광(Emission)이 Unity에서 제 색으로 빛납니다 (전에는 흰색)
+- 최신 ArmorPaint 소스로 새로 빌드
+
+**CustomEnv (보석, 고광택)** — 아이템에 지정한 HDRI가 ArmorPaint 뷰포트 조명과 Unity 반사
+큐브맵에 자동으로 들어갑니다
+
+**검사와 수정**
+
+- 텍스처 총용량 1MB 검사(제페토 규격) — Blender와 Unity 양쪽
+- 수정: Blender에서 저장하지 않고 칠한 텍스처가 빈 이미지로 가던 문제
+- 수정: Unity 실시간 체형/포즈 미리보기
+- 수정(Unity): 노멀 맵, 메탈릭/스무스니스, 발광·광택 색, 색 공간, 투명(Cutout, 레이스 등) 설정
+
+### v1.0.0 — 첫 출시
 
 - Blender 애드온: 제페토 규격 검사와 전송, 스윙 본 마법사, 체형, 의상 피팅, 플레이그라운드
 - ArmorPaint 라이브 링크: 모델링하면서 바로 칠하기, 제페토 스마트 머티리얼, 스티치 자동 생성
@@ -52,29 +89,34 @@ Blender  ──①──>  ArmorPaint  ──②──>  Blender
 
 | 파일 | 내용 |
 |---|---|
-| `bzepeto_blender.zip` | Blender 애드온 |
-| `com.bzepeto.unity2020-<버전>.tgz` | **ZEPETO Studio(Unity 2020.3.9)**용 Unity 패키지 — 이것을 설치하세요 |
-| `com.bzepeto.unity-<버전>.tgz` | Unity 6 / 2022.3용 Unity 패키지 (제페토가 Unity 6으로 옮겨갈 때 대비) |
+| `bzepeto_blender-<버전>.zip` | Blender 애드온 |
+| `com.bzepeto.unity2020-<버전>.tgz` | **ZEPETO Studio(Unity 2020.3.9)**용 Unity 패키지 |
 | `BZepeto_ArmorPaint_<버전>_win64.zip` | BZepeto 플러그인이 켜진 상태의 ArmorPaint |
+| `README_KO.txt` / `README_EN.txt` | 릴리즈 노트와 설치 안내 |
+| `SHA256SUMS.txt` | 다운로드 파일 확인용 |
+
+**업데이트할 때는** 새 버전 파일 세 개를 모두 설치하세요. Blender 애드온과 Unity 패키지는 이전
+버전을 자동으로 교체하고, ArmorPaint는 새 폴더에 풉니다(2단계).
 
 ### 1. Blender
 
 1. **Edit > Preferences > Add-ons**에서 오른쪽 위 **▼**를 누르고 **Install from Disk**
-2. `bzepeto_blender.zip` 선택
+2. `bzepeto_blender-<버전>.zip` 선택
 3. 3D 뷰포트에서 **N** 키를 누르면 **BZepeto** 탭이 나타납니다
 
 ### 2. ArmorPaint
 
-1. `BZepeto_ArmorPaint_<버전>_win64.zip`을 원하는 곳에 압축 해제합니다. 예: `C:\Tools\BZepeto_ArmorPaint`
-   (*Program Files* 아래는 피하세요 — ArmorPaint가 설정을 저장하지 못합니다)
+1. `BZepeto_ArmorPaint_<버전>_win64.zip`을 **새 폴더**에 압축 해제합니다. 예: `C:\Tools\BZepeto_ArmorPaint_<버전>`
+   (*Program Files* 아래는 피하세요 — ArmorPaint가 설정을 저장하지 못합니다. 이전 버전 위에 덮어쓰거나
+   이전 플러그인을 복사해 오지 마세요)
 2. `ArmorPaint.exe`를 한 번 실행해 창이 뜨는지 확인합니다
 3. Blender에서 **Edit > Preferences > Add-ons > BZepeto**를 열고 **ArmorPaint Executable**을
    그 `ArmorPaint.exe`로 지정합니다
 
 > 왜 플러그인만이 아니라 ArmorPaint 전체가 들어 있나요? 라이브 링크에는 ArmorPaint 자체의 작은
 > 수정이 필요합니다. 일반 ArmorPaint는 Blender 창을 클릭하는 순간 업데이트를 멈추기 때문입니다.
-> 이 빌드는 zlib 라이선스인 ArmorPaint 소스로 컴파일했으며, 수정한 부분은 모두 소스에 표시되어
-> 있습니다.
+> 이 빌드는 zlib 라이선스인 ArmorPaint 소스로 컴파일했으며, 수정한 부분은 모두 소스에
+> `BZepeto (altered source)`로 표시되어 있습니다.
 
 ### 3. Unity (ZEPETO Studio)
 
@@ -127,9 +169,33 @@ physics 부분을 다시 떼어 냅니다.
 `Bind Garment To Character` → `Refit Clothing To Body`
 
 ### Send to ZEPETO
-아이템을 카테고리 한도에 맞춰 검사합니다 — 삼각형 수, 머티리얼, 텍스처 크기(512px), UV, 본 영향
-수, 트랜스폼, 이름 등 13가지. 검사에 실패하면 고치는 버튼이 함께 나타납니다(**Fix Transforms**,
-**Create ZEPETO Material**). 모두 통과하면 아이템이 패키지로 Unity에 전달됩니다.
+아이템을 카테고리 한도에 맞춰 검사합니다 — 삼각형 수, 머티리얼, 텍스처 크기(512px)와 **텍스처 파일
+총 1MB**, UV, 본 영향 수, 트랜스폼, 이름, 헤어 등 14가지. 검사에 실패하면 고치는 버튼이 함께
+나타납니다(**Fix Transforms**, **Create ZEPETO Material**). 모두 통과하면 아이템이 패키지로 Unity에
+전달됩니다.
+
+**ZEPETO Shader** — Send 패널에서 아이템의 셰이더를 고릅니다(Auto는 Unity가 이름으로 추측).
+셰이더는 아이템과 함께 Unity로 가고, ArmorPaint의 ZEPETO Mode도 이에 맞춰집니다.
+
+| 셰이더 | 용도 |
+|---|---|
+| Lit | 일반 아이템 |
+| Cloth | 벨벳 같은 광택 |
+| Fur | 털 |
+| HairAlpha | 가닥이 비치는 헤어 |
+| Sparkle | 반짝이 |
+| Iridescence | 진주, 홀로그램 |
+| Prism | 클리어코트, 에나멜 |
+| CustomEnv | 보석, 고광택 — 자기 HDRI를 반사 |
+| Toon | 툰 셰이딩 |
+| Detail Normal | 반복되는 미세 디테일 |
+
+**헤어 (HairAlpha)** — 가닥이 UV V 방향이 아닐 때, 베이스 컬러에 알파가 없을 때, 카드 층 순서가
+뒤섞였을 때 헤어 검사가 알려 줍니다. **Sort Hair Layers**는 안쪽 카드를 먼저 그리도록 정렬해
+바깥 카드 뒤에 보이게 합니다.
+
+**CustomEnv** — **Env HDRI**(`.hdr`, 256×128이나 512×256 정도의 작은 2:1 파노라마, 1MB에
+포함)를 지정합니다. `<아이템>_env`로 전송되어 Unity에서 반사 큐브맵이 됩니다.
 
 ### ZEPETO Playground
 ZEPETO Studio의 플레이 모드 메뉴를 Blender에서 그대로 재현합니다: 애니메이션 10종, 카메라,
@@ -149,6 +215,34 @@ ZEPETO Studio의 플레이 모드 메뉴를 Blender에서 그대로 재현합니
    레이어는 그대로 남습니다
 
 머티리얼이 없는 아이템은 보낼 때 제페토용 머티리얼이 자동으로 만들어집니다.
+
+**Animated (pose clip)** — Blender ArmorPaint 패널에서 켜면 아이템을 뼈대와 뼈대의 액션(예: 제페토
+애니메이션 클립)과 함께 보냅니다. ArmorPaint 타임라인을 움직여 이음새가 늘어나는 포즈에서 칠하면
+됩니다. 텍스처 결과는 기본 포즈에서 칠한 것과 같습니다.
+
+### ZEPETO Mode
+ArmorPaint의 **ZEPETO Mode** 패널은 아이템의 제페토 셰이더에 맞춥니다(Blender에서 지정한 셰이더를
+따라감). 그러면 내보내기가 그 셰이더가 읽는 맵으로 바뀌고, 패널에 모드별 채널 의미가 표시됩니다.
+
+- **Setup Base Layer** — 모드의 중립값으로 채운 기본 레이어
+- **Transparent** — 베이스 컬러의 알파 유지 (불투명 아이템은 더 작은 파일)
+- **Emission map** — 빛나는 부분을 그 색으로 내보내기
+- **Viewport preview** — Lit 뷰포트에서 모드별 제페토 느낌 표시(헤어 하이라이트, 툰 단계 음영,
+  진주 광택, 클리어코트, 반짝임 ...). Unity 셰이더 그 자체가 아닌 근사치입니다
+
+> **헤어:** 가닥은 **회색**으로 칠하세요 — 앱에서 사용자가 고른 머리색이 곱해집니다.
+> 알파 = 가닥, Height = 하이라이트 흔들림(0.5 = 없음), Metallic = 보조 하이라이트.
+
+### BZepeto 노드
+재질 노드 메뉴의 **BZepeto ZEPETO** 분류 — 절차적이라 512px에서도 또렷합니다:
+
+| 노드 | |
+|---|---|
+| Hair Strands / Hair Root to Tip | 알파·음영·하이라이트가 있는 가닥, 뿌리→끝 밝기 |
+| Floral Lace / Lace Mesh | 샹티이 스타일 레이스(불투명도, 높이, 무늬 마스크), 단순 망사 |
+| Weave / Knit / Quilt | 원단 조직 |
+| Sequins / Gem Facets / Hammered Metal | 액세서리, 주얼리 |
+| Edge Wear / Toon Hatching / Fur Strands | 마모, 툰 붓자국, 털 무늬 |
 
 ### 제페토 스마트 머티리얼
 ArmorPaint의 **BZepeto Materials** 패널: **Denim, Cotton, Knit, Leather, Metal, Base**.
@@ -187,8 +281,10 @@ UV 섬 두 개의 경계에 있는 시접은 실제 옷처럼 **양쪽 조각 �
 
 - **Blender에서 보낸 아이템**은 `Assets/BZepetoImport/<카테고리>/<아이템>/`에 FBX, 프리팹,
   텍스처로 들어옵니다
-- **제페토 셰이더가 자동으로 지정**되고(예: `ZEPETO/BuiltIn/Cloth`), 텍스처가 알맞은 슬롯 —
-  베이스 컬러, 노멀 맵, 메탈릭/스무스니스 — 에 연결됩니다
+- **제페토 셰이더가 자동으로 지정**되고(Blender에서 고른 셰이더, 없으면 이름으로 추측), 모든 맵이
+  알맞은 슬롯에 올바른 색 공간·키워드·계수로 연결됩니다(노멀 맵, 메탈릭/스무스니스, 발광, 광택, 털,
+  헤어, 무지갯빛, 클리어코트, 툰 맵, CustomEnv 큐브맵). 알파가 있는 텍스처는 Cutout 모드(레이스)
+- 임포트 후 텍스처 총 **1MB**를 다시 검사합니다
 - **ArmorPaint에서 보낸 텍스처**도 아이템 옆으로 복사되어 같은 방식으로 연결됩니다
 
 Unity 창이 앞에 있지 않아도 됩니다 — 백그라운드에서 계속 임포트합니다.
@@ -207,6 +303,9 @@ Unity 창이 앞에 있지 않아도 됩니다 — 백그라운드에서 계속 
 | Send가 "No material"로 실패 | **Create ZEPETO Material**을 누르세요 |
 | Unity에 아무것도 들어오지 않음 | Unity 콘솔에 `[BZepeto] Hot folder watch started`가 있는지, **2020** 패키지를 설치했는지 확인하세요 |
 | 플레이그라운드 목록이 비어 있음 | 캡처를 한 번 하세요 (*ZEPETO Playground* 참고) |
+| BZepeto 노드가 단색으로만 칠해짐 | 이전 버전 플러그인이 복사되어 있습니다 — 새 ArmorPaint를 새 폴더에 풀어 주세요 |
+| CustomEnv 아이템이 회색만 반사 | Blender에서 아이템에 **Env HDRI**를 지정하고 다시 보내세요 |
+| 애니메이션 페인팅이 기본 포즈로만 보임 | 뼈대에 액션이 있어야 하고, ArmorPaint가 v1.2.0 빌드여야 합니다 |
 
 ---
 
