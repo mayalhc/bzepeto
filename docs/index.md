@@ -10,7 +10,45 @@
 
 ## What's New
 
-**v1.0.0 — First release**
+### v1.2.0 — Major update (2026-09-27)
+
+!!! warning "Update all three tools together"
+    Install the v1.2.0 Blender add-on, Unity package **and** ArmorPaint. Unzip ArmorPaint into
+    a **new folder** and point **ArmorPaint Executable** at it (see *Installing*).
+
+**All 10 ZEPETO shaders, end to end**
+
+- Pick the ZEPETO shader per item in Blender: Lit, Cloth, Fur, HairAlpha, Sparkle,
+  Iridescence, Prism, CustomEnv, Toon, Detail Normal
+- ArmorPaint's new **ZEPETO Mode** panel follows it and exports exactly the maps that shader
+  reads (`_fur`, `_hairspec`, `_sheen`, `_irid`, `_coat`, `_toonth`, `_toonmask` ...)
+- Unity sets the shader, texture slots, keywords and factors by itself
+
+**Hair quality** — hair card UV direction check, **Sort Hair Layers** (inner cards drawn
+first), alpha check; HairAlpha keeps its `_Cutoff` so strand ends stay clean; paintable
+highlight shift and secondary highlight
+
+**ArmorPaint**
+
+- 13 **BZepeto nodes**: Hair Strands, Hair Root to Tip, Floral Lace, Lace Mesh, Weave, Knit,
+  Quilt, Sequins, Gem Facets, Hammered Metal, Edge Wear, Toon Hatching, Fur Strands
+- **ZEPETO viewport preview** while you paint
+- **Animated painting**: send the item with a pose clip and paint while scrubbing the timeline
+- Emission now glows in its own colour in Unity (it used to be white)
+- Rebuilt from current ArmorPaint sources
+
+**CustomEnv (gems, high gloss)** — an HDRI set on the item lights ArmorPaint's viewport and
+becomes the Unity reflection cubemap automatically
+
+**Checks and fixes**
+
+- 1 MB total texture check (ZEPETO's limit) in Blender and Unity
+- Fixed: textures painted in Blender without saving arrived blank
+- Fixed: Unity live body shape / pose preview
+- Fixed in Unity: normal maps, metallic/smoothness, emission and sheen colours, colour space,
+  cut-out transparency (lace etc.)
+
+### v1.0.0 — First release
 
 - Blender add-on: ZEPETO checks and Send, swing bone wizard, body shape, wearables, playground
 - ArmorPaint live link: paint while you model, smart ZEPETO materials, automatic stitches
@@ -53,21 +91,26 @@ Your download has these files:
 
 | File | What it is |
 |---|---|
-| `bzepeto_blender.zip` | Blender add-on |
-| `com.bzepeto.unity2020-<version>.tgz` | Unity package for **ZEPETO Studio (Unity 2020.3.9)** — use this one |
-| `com.bzepeto.unity-<version>.tgz` | Unity package for Unity 6 / 2022.3 (for when ZEPETO moves to Unity 6) |
+| `bzepeto_blender-<version>.zip` | Blender add-on |
+| `com.bzepeto.unity2020-<version>.tgz` | Unity package for **ZEPETO Studio (Unity 2020.3.9)** |
 | `BZepeto_ArmorPaint_<version>_win64.zip` | ArmorPaint build with the BZepeto plugins already enabled |
+| `README_EN.txt` / `README_KO.txt` | release notes and install steps |
+| `SHA256SUMS.txt` | checksums to verify the downloads |
+
+**Updating?** Install all three files of the new version. The Blender add-on and the Unity
+package replace the old ones; ArmorPaint goes into a new folder (step 2).
 
 ### 1. Blender
 
 1. **Edit > Preferences > Add-ons**, click **▼** at the top right, **Install from Disk**
-2. Pick `bzepeto_blender.zip`
+2. Pick `bzepeto_blender-<version>.zip`
 3. Press **N** in the 3D viewport — the **BZepeto** tab appears
 
 ### 2. ArmorPaint
 
-1. Unzip `BZepeto_ArmorPaint_<version>_win64.zip` anywhere, e.g. `C:\Tools\BZepeto_ArmorPaint`
-   (avoid *Program Files* — ArmorPaint cannot save its settings there)
+1. Unzip `BZepeto_ArmorPaint_<version>_win64.zip` into a **new folder**, e.g.
+   `C:\Tools\BZepeto_ArmorPaint_<version>` (avoid *Program Files* — ArmorPaint cannot save its
+   settings there; do not unzip over an older version or copy its plugins across)
 2. Run `ArmorPaint.exe` once to check the window opens
 3. In Blender, **Edit > Preferences > Add-ons > BZepeto**, set **ArmorPaint Executable** to
    that `ArmorPaint.exe`
@@ -75,7 +118,7 @@ Your download has these files:
 > Why a whole ArmorPaint build and not just a plugin? The live link needs a small change to
 > ArmorPaint itself: a normal ArmorPaint stops updating the moment you click back into
 > Blender. The build is compiled from ArmorPaint's zlib-licensed source, and every change is
-> marked in the source.
+> marked in the source (`BZepeto (altered source)`).
 
 ### 3. Unity (ZEPETO Studio)
 
@@ -131,10 +174,35 @@ way the ZEPETO SDK does, so the feet stay on the ground.
 `Bind Garment To Character` → `Refit Clothing To Body`
 
 ### Send to ZEPETO
-Checks the item against the limits of its category — 13 checks including triangles,
-materials, texture size (512 px), UVs, bone influences, transforms and names. A failed check
-comes with the button that fixes it (**Fix Transforms**, **Create ZEPETO Material**). When
-everything passes, the item goes to Unity as a package.
+Checks the item against the limits of its category — 14 checks including triangles,
+materials, texture size (512 px) and **1 MB of texture files in total**, UVs, bone influences,
+transforms, names and hair. A failed check comes with the button that fixes it
+(**Fix Transforms**, **Create ZEPETO Material**). When everything passes, the item goes to
+Unity as a package.
+
+**ZEPETO Shader** — pick the item's shader in the Send panel (Auto lets Unity guess from the
+names). It travels with the item to Unity and sets ArmorPaint's ZEPETO Mode.
+
+| Shader | For |
+|---|---|
+| Lit | standard items |
+| Cloth | velvet-like sheen |
+| Fur | shell fur |
+| HairAlpha | hair with see-through strands |
+| Sparkle | glitter |
+| Iridescence | pearl, holographic |
+| Prism | clear coat, enamel |
+| CustomEnv | gems, high gloss — reflects its own HDRI |
+| Toon | cel shading |
+| Detail Normal | tiled fine detail |
+
+**Hair (HairAlpha)** — the hair check warns when strands do not run along UV V, when base
+colour has no alpha, or when the card layers are out of order. **Sort Hair Layers** puts the
+inner cards first so they draw behind the outer ones.
+
+**CustomEnv** — set **Env HDRI** (`.hdr`, a small 2:1 panorama such as 256×128 or 512×256;
+it counts toward the 1 MB). It is sent as `<item>_env` and becomes the reflection cubemap in
+Unity.
 
 ### ZEPETO Playground
 ZEPETO Studio's play-mode menu rebuilt in Blender: 10 animations, camera, body types, the
@@ -154,6 +222,38 @@ ZEPETO Studio's play-mode menu rebuilt in Blender: 10 animations, camera, body t
    paint layers stay
 
 An item without a material gets a ZEPETO-ready one on the way out.
+
+**Animated (pose clip)** — turn it on in Blender's ArmorPaint panel to send the item with its
+armature and the armature's action (e.g. a ZEPETO animation clip). Scrub ArmorPaint's timeline
+to the pose where a seam stretches and paint there; the textures are the same as from the
+rest pose.
+
+### ZEPETO Mode
+The **ZEPETO Mode** panel in ArmorPaint matches the item's ZEPETO shader (it follows the
+shader set in Blender). The export then writes the maps that shader reads, and the panel
+lists what each channel means in that mode.
+
+- **Setup Base Layer** — a fill layer with the mode's neutral values to start from
+- **Transparent** — keep the base colour's alpha (opaque items ship a smaller file)
+- **Emission map** — export the glowing parts in their colour
+- **Viewport preview** — shows a ZEPETO-like look of the mode in the Lit viewport
+  (hair highlight bands, toon steps, pearl sheen, clear coat, glints ...). It is a close
+  approximation, not the Unity shader itself
+
+> **Hair:** paint the strands in **grey** — the app multiplies them by the hair colour the
+> user picks. Alpha = strands, Height = highlight shift (0.5 = none), Metallic = secondary
+> highlight.
+
+### BZepeto nodes
+In the material node menu under **BZepeto ZEPETO** — procedural, so they stay sharp at 512 px:
+
+| Node | |
+|---|---|
+| Hair Strands / Hair Root to Tip | strands with alpha, shade and highlight shift; root-to-tip light |
+| Floral Lace / Lace Mesh | Chantilly-style lace (opacity, height, motif mask); simple mesh net |
+| Weave / Knit / Quilt | fabric structures |
+| Sequins / Gem Facets / Hammered Metal | accessories and jewellery |
+| Edge Wear / Toon Hatching / Fur Strands | wear, toon brush strokes, fur pattern |
 
 ### ZEPETO smart materials
 The **BZepeto Materials** panel in ArmorPaint: **Denim, Cotton, Knit, Leather, Metal, Base**.
@@ -194,8 +294,11 @@ Everything happens by itself once the package is installed:
 
 - **Items from Blender** land in `Assets/BZepetoImport/<CATEGORY>/<item>/` as FBX, prefab and
   textures
-- **ZEPETO shaders are applied** automatically (e.g. `ZEPETO/BuiltIn/Cloth`) and the textures
-  go into the right slots — base colour, normal map and metallic/smoothness
+- **ZEPETO shaders are applied** automatically — the shader chosen in Blender, or a guess from
+  the names — and every map goes into its slot with the right colour space, keywords and
+  factors (normal map, metallic/smoothness, emission, sheen, fur, hair, iridescence, clear
+  coat, toon maps, the CustomEnv cubemap). Textures with alpha get Cutout mode (lace)
+- The **1 MB** texture total is checked again after import
 - **Textures from ArmorPaint** are copied next to the item and hooked up the same way
 
 Unity does not need to be the active window — it keeps importing in the background.
@@ -214,6 +317,9 @@ Unity does not need to be the active window — it keeps importing in the backgr
 | Send fails with "No material" | Press **Create ZEPETO Material** |
 | Nothing arrives in Unity | Check the Unity Console for `[BZepeto] Hot folder watch started` and that you installed the **2020** package |
 | Playground list is empty | Make a capture once (see *ZEPETO Playground*) |
+| BZepeto nodes paint a flat colour | ArmorPaint plugins from an older version were copied in — unzip the new ArmorPaint into a fresh folder |
+| CustomEnv item reflects flat grey | Set **Env HDRI** on the item in Blender and send again |
+| Animated painting shows the rest pose | The armature needs an action, and ArmorPaint must be the v1.2.0 build |
 
 ---
 
