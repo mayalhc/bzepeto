@@ -1,0 +1,51 @@
+# Unity Package (ZEPETO Studio)
+
+🇺🇸 English | [🇰🇷 한국어](./KO_unity.md)
+
+## 1. Install
+
+1. Open your ZEPETO Studio project (**Unity 2020.3.9f1**)
+2. **Window > Package Manager**, click **+** at the top left, **Add package from tarball...**
+3. Pick `com.bzepeto.unity2020-<version>.tgz`
+4. A **BZepeto** menu appears in the menu bar, and the Console shows
+   `[BZepeto] Hot folder watch started`
+
+To update, do the same with the new file — the old version is replaced.
+
+## 2. What happens by itself
+
+- **Items from Blender** (Send to Unity) land in `Assets/BZepetoImport/<CATEGORY>/<item>/` as FBX,
+  prefab and textures
+- **ZEPETO shaders are applied** — the shader chosen in Blender, or a guess from the names — and every
+  map goes into its slot with the right colour space, keywords and factors (normal map,
+  metallic/smoothness, emission, sheen, fur, hair, iridescence, clear coat, toon maps, the CustomEnv
+  cubemap). Textures with alpha get Cutout mode (lace)
+- Headwear and mask materials get **(NoColor)** in their name, so the hair colour does not tint them
+- **Import BlendShapes** is switched on, so face expressions survive the import
+- The **1 MB** texture total is checked again, and a **thumbnail draft** (300×300 transparent PNG) is
+  saved to `<project>/BZepetoThumbnails`
+- **Textures from ArmorPaint** are copied next to the item and hooked up the same way
+
+Unity does not need to be the active window — it keeps importing in the background.
+
+## 3. The BZepeto menu
+
+| Menu | What it does |
+|---|---|
+| **BZepeto > Open Dashboard** | status of the bridge, the hot folder and the live preview |
+| **BZepeto > Bridge Connection** | connect to Blender by hand |
+| **BZepeto > Review > Check Selected Prefab** | review rules on the selected prefab: Light components, particle limits, particles without material or texture (white squares after upload), non-ZEPETO shaders, Color Grading, fur length, "(NoColor)", Import BlendShapes. Results in the Console |
+| **BZepeto > Review > Make Thumbnail (Selected Prefab)** | thumbnail draft; particles run for a second so they show |
+| **BZepeto > Review > URP Readiness (Selected)** | whether every material is a ZEPETO BuiltIn shader (converted automatically when ZEPETO switches to URP) |
+| **BZepeto > Effects > Add Safe Particle System** | a particle system with every option inside the Effect guide's limits, on the selected fx joint |
+| **BZepeto > Effects > Set Selected Textures as Particle Sprites** | Sprite (2D and UI) + Full Rect, as the Effect guide asks |
+| **BZepeto > Capture Playground For Blender** | in Play mode of the playground scene: records ZEPETO's preview menu for Blender's Playground and clip tests |
+| **BZepeto > Undo Live Preview on Avatar** | see below |
+| **BZepeto > Convert Diagnostics** | why a "Convert to ZEPETO style" failed |
+
+## 4. Live preview
+
+Body shape sliders and poses changed in Blender move the bones of the avatar in the Unity scene live.
+**BZepeto > Undo Live Preview on Avatar** (dashboard: **Undo live preview**) puts the avatar back in its
+own pose; it also happens by itself before a scene save and before Play, so a preview pose is never
+saved into the scene.
