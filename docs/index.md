@@ -108,6 +108,8 @@ Mouth → **Transfer to Mascot Head**. A mascot eye 1.3x the face's blinks 1.3x 
 
 **Skirts and dresses** — no longer split open in the middle on a stride
 
+**Live preview removed** — the Unity edit-mode scene has no character of its own (the SDK builds it on Play), so the feature had nothing to move. Checking body shape and poses stays with Blender's **Playground** (ZEPETO's preview menu and the clip tests)
+
 **Also** — every panel folds into sections (▸/▾, the status stays on the folded row); check results
 list the problems first; panels stay fast after importing a GLB; Bind keeps a belt's and its buckle's
 thickness; the wrong T-pose coat warning is gone; symmetry fixes keep the 4-bones-per-vertex limit;

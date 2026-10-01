@@ -32,7 +32,7 @@ Unity 창이 앞에 있지 않아도 됩니다 — 백그라운드에서 계속 
 
 | 메뉴 | 하는 일 |
 |---|---|
-| **BZepeto > Open Dashboard** | 브리지, 핫 폴더, 실시간 미리보기 상태 |
+| **BZepeto > Open Dashboard** | 브리지, 핫 폴더, 가져오기 상태 |
 | **BZepeto > Bridge Connection** | Blender와 직접 연결 |
 | **BZepeto > Review > Check Selected Prefab** | 선택한 프리팹 심사 검사: 조명(Light), 파티클 한도, 재질·텍스처 없는 파티클(업로드하면 흰 네모), 제페토가 아닌 셰이더, Color Grading, 털 길이, "(NoColor)", Import BlendShapes. 결과는 Console에 |
 | **BZepeto > Review > Make Thumbnail (Selected Prefab)** | 썸네일 초안. 파티클은 1초 재생한 뒤 찍어서 보입니다 |
@@ -40,11 +40,4 @@ Unity 창이 앞에 있지 않아도 됩니다 — 백그라운드에서 계속 
 | **BZepeto > Effects > Add Safe Particle System** | 선택한 fx 조인트에 이펙트 가이드 한도 안의 파티클 시스템 추가 |
 | **BZepeto > Effects > Set Selected Textures as Particle Sprites** | 이펙트 가이드대로 Sprite(2D and UI) + Full Rect |
 | **BZepeto > Capture Playground For Blender** | 플레이그라운드 씬 Play 모드에서: Blender 플레이그라운드와 뚫림 검사용 제페토 미리보기 메뉴 기록 |
-| **BZepeto > Undo Live Preview on Avatar** | 아래 참고 |
 | **BZepeto > Convert Diagnostics** | "Convert to ZEPETO style" 이 실패한 이유 |
-
-## 4. 실시간 미리보기
-
-Blender에서 체형 슬라이더나 포즈를 바꾸면 Unity 씬의 아바타 뼈가 바로 따라 움직입니다.
-**BZepeto > Undo Live Preview on Avatar**(대시보드의 **Undo live preview**)는 아바타를 원래 자세로
-되돌립니다. 씬 저장과 Play 직전에도 자동으로 되돌리므로 미리보기 자세가 씬에 저장되지 않습니다.
