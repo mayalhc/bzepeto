@@ -18,13 +18,18 @@
 | BZepeto nodes paint a flat colour | ArmorPaint plugins from an older version were copied in — unzip the new ArmorPaint into a fresh folder |
 | A node sample shows nothing | The BZepeto Nodes plugin is off: **Plugins > Preferences**, enable `bzepeto_nodes.c` |
 | CustomEnv item reflects flat grey | Set **Env HDRI** on the item in Blender and send again |
-| Animated painting shows the rest pose | The armature needs an action, and ArmorPaint must be the v1.2.0 build |
+| Animated painting shows the rest pose | The armature needs an action, and ArmorPaint must be the current build |
+| The BZepeto Library (material library) panel is missing | Turn `bzepeto_presets.c` on under **Plugins > Preferences** (the cog icon). If you unzipped the update over an older version's folder, unzip into a new folder and point Blender at it |
 | Skin comes through the clothes in some poses / large body types | Review Tools > **Pose / Body Clip Test** finds which; enlarge that part a little or mask it |
 | Hair on a hat does not take the hair colour | Only Hair items take it — make the hair a separate Hair item |
 | Particles are white squares after upload | The particle material has no texture — **BZepeto > Review > Check Selected Prefab** reports it |
 | "Face expressions skipped" | The base mask is not ZEPETO's base (vertex count / layout) — load the original base from ZEPETO |
 
 ## FAQ
+
+**Different textures on the top and the bottom (UDIM)?** — Split the item into two materials and put
+the bottom's UVs on tile 1002 (U 1–2). ArmorPaint paints each tile, and Blender and Unity give every
+material its own maps. See [Set outfits](blender.md).
 
 **Where do I get updates?** — From your **Gumroad Library**; Gumroad emails you when a new version is
 posted. Install all three tools of the same version ([Home](index.md#your-download)).

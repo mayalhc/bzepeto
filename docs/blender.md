@@ -27,6 +27,11 @@ resources.
 
 ![Load the base character](assets/guide/bl-load-base.png)
 
+**Folding the panels** — the parts of the BZepeto panels (Pose, High Heel, Weights, Body Shape, the
+Send rules ...) collapse with the **▸/▾** arrow in their header. The folded row keeps the status that
+matters (the current pose, the heel angle, the swing chain count, the weight problem count ...), so
+you can fold what you are not using and keep the panel short. Blender remembers what you folded.
+
 ## 3. Rigging
 
 - **Bone counter** — compares your rig with ZEPETO's 104-bone base skeleton and counts the swing
@@ -35,6 +40,37 @@ resources.
   again, so the shoulders do not drift after repeated switches
 - **Weights** — transfer, mirror, limit to 4 influences
 - **Bone Cleaner** — remove unused bones
+
+### High heels
+
+The **High Heel** box under Pose lifts the heels. The toes stay flat and **in place** on the floor and
+the body rises with them.
+
+1. **Heel Angle** lifts the heels (degrees); **Sole (cm)** adds a platform under the toes
+2. Model the shoe on the raised feet
+3. Select it: **Make Garment (Shoes)**, then **Bind Garment To Character**. The shoe stays where you
+   modelled it; inside, it is bound to the flat foot ZEPETO skins it on
+4. **Export / Send**: only a Shoes item carries ZEPETO's heel data (the `expressions` bones). ZEPETO
+   poses the avatar's feet, toes and hips from it, so the shoe is worn as it looks in Blender. Tops,
+   dresses and other items never carry it
+
+- **Flat Feet** turns the heel off
+- **Read Heel From Rig** takes the heel of an imported ZEPETO heel item onto the sliders
+- The heel is only a pose, never baked into the rest pose; body sliders and T/A switches keep it
+
+### Gloves, nails and rings (Glove Test)
+
+- **Make Garment** for hand items (gloves, nails, rings, bracelets) weights every vertex from **its own
+  finger's skin only** -- no bones of the next finger in the gap between two fingers
+- **Nails** go on their finger's **tip bone**, one bone per piece at 100%; **rings** on one bone per piece
+- **Glove Test > Fist** curls both hands into a fist as you raise it: watch gloves, rings and nails follow
+  the fingers. Only a pose -- the export always uses open hands
+
+### Skirts, dresses and coats
+
+Made as Skirt, Dress or Outerwear, a garment's leg weights change sides **gradually** around the body (half
+and half at the front and back middle, one leg at the sides), so a stride no longer splits it open in the
+middle like trousers
 
 ### Swing bones (hair, skirts, ribbons)
 
@@ -60,19 +96,43 @@ ZEPETO SDK does, so the feet stay on the ground.
 → `Make Garment Rig` → `Bind Garment To Character` → `Refit Clothing To Body`. **Auto Mask from Items**
 paints the body black where the items cover it (ZEPETO hides those parts).
 
+**Touching up the mask by face** — ZEPETO hides every **vertex** that is not white and removes every
+triangle touching one, so painting finer (a subdivided copy) changes nothing. Work on the result
+instead, face by face:
+
+- **Show Removed Triangles** — draws on the body, in red, every triangle ZEPETO removes (follows the
+  pose and the body shape). Auto Mask turns it on.
+- Select the body (`mask`), Tab into Edit Mode, select faces: **Mask Faces** removes them,
+  **Unmask Faces** brings them back. Mask Faces **never removes a face outside the selection** (so a
+  face at its edge may stay); to remove all of it, turn on **Cover Whole Selection** in the redo panel
+  (the ring just outside goes too).
+- **Select Removed Faces** selects what is removed now — handy for touching up an Auto Mask.
+
 ## 6. Send to ZEPETO
 
 1. Select the item and choose its **Category** **①** (e.g. Skirt) — the limits of that category
    show under it
-2. Press **Check** **②**. The result list shows every rule: ✔ passed, ⚠ warning, ✖ must be fixed
+2. Press **Check** **②**. The result list shows every rule: ✔ passed, ⚠ warning, ✖ must be fixed —
+   by default only the **problems** are listed; **Show all** below it expands the full list
 3. A failed rule comes with the button that fixes it **④** (e.g. **Fix Transforms**,
    **Create ZEPETO Material**, **Shrink Textures to 1 MB**)
 4. When nothing is red, press **Send to Unity** **③**
 
 ![Send to ZEPETO](assets/guide/bl-send.png)
 
-The check covers 19 rules: triangles, materials, texture size (512 px) and **1 MB of texture files
-in total**, UVs, bone influences, transforms, names, mask, hair, item size, face expressions and more.
+The check covers 20 rules: triangles, materials, material names, texture size (512 px) and **1 MB of
+texture files in total**, UVs, bone influences, transforms, names, mask, hair, item size, face
+expressions and more.
+
+**Material names (ZEPETO's rule)** — ZEPETO's guide names a material *item name + `_shd`*
+(e.g. `TOP_turtleneck_shd`), and the mesh starts with its type: dress `DR`, top `TOP`, bottom and skirt
+`BTM`, headwear `HEADWEAR`. A custom body part keeps `skin`.
+
+- A default name (`Material.001`, `lambert2`) or a name without `_shd` gets a warning with the name to
+  take instead (e.g. `Material -> TOP_shirt_1_shd`)
+- **Fix Material Names** renames them in one go: a default name follows the mesh name, numbered when
+  there are several. Rename the mesh yourself
+- Materials BZepeto creates are `<mesh name>_shd` too
 
 **ZEPETO Shader** — pick the item's shader in the Send panel (Auto lets Unity guess from the names).
 It travels with the item to Unity and sets ArmorPaint's ZEPETO Mode.
@@ -111,6 +171,24 @@ them in the item's materials. The originals stay.
 
 ![Where the skin comes through](assets/guide/bl-clip-red.png)
 
+**Mascot head expressions** -- a head bigger than the face and away from it (special mask, costume head)
+
+Transfer Face Expressions (below) is for items that hug the face (within 4 cm); a mascot head is out of
+its reach, and its eyes and mouth are neither where nor as big as the face's.
+
+1. Select the head, Tab into Edit Mode, select its **eye** vertices, **Mark Eyes** (both eyes at once is
+   fine: left and right are split for you). The same for **Mark Brows** and **Mark Mouth**; **Unmark ...**
+   takes vertices back out
+2. **Transfer to Mascot Head** matches each part to the same part of the face by centre and size, and bakes
+   the face's movement **scaled to the part**: an eye 1.3x the face's blinks 1.3x as far
+3. The edges of the parts blend into the head, the rest of it stays still. Check with ◀ Rest ▶ or Play
+   Expressions
+4. The face shape sliders (face length, eye size ...) are left out, so the mascot keeps its shape whatever
+   the user's face settings (**Face Shape Sliders Too** puts them in)
+
+The marks are mesh attributes, not bone weights: the Send checks and the FBX leave them out. For an eye to
+close, the head needs a lid to close with (skin above the eye).
+
 **Face expressions (headwear, accessory mask, special mask)**
 
 - **Add Face Expressions to Base** **③** — creates the 249 expressions (official names and order) on
@@ -120,7 +198,15 @@ them in the item's materials. The originals stay.
   it (full within 1 cm, fading out by 4 cm). Expressions that would not move the item are left out
 - **◀ Rest ▶** **⑤** — shows one expression at a time on the face and the items
 - **Expression Clip Test** **⑥** — every expression and the guide's pairs (jawOpen + mouthClose,
-  jawOpen + cheekPuff, brows with blinks): face skin coming through the item
+  jawOpen + cheekPuff, brows with blinks) on the ZEPETO base face, checked two ways: face skin coming
+  **through** the item, and the item **following** the face. An expression that moves the face while the
+  item stays put is reported as "stay behind", and those parts go into the item's `BZ_Follow` group (red in
+  Weight Paint) -- run Transfer Face Expressions again
+- **Play Expressions** -- puts every expression on the timeline, on the base face and the face items (10
+  frames each, a marker naming it): press **Play** (Space) and watch the item follow the face. Expression
+  Clip Test builds the same animation after testing, marks the expressions that failed (`! jawOpen: 124
+  through, 119 behind`) and jumps to the first one. **X** next to it removes the keys and markers and
+  restores the frame range
 
 ![Review Tools](assets/guide/bl-review.png)
 
@@ -140,6 +226,28 @@ checklist (tick it once you have gone through ZEPETO's content rules).
 ![ArmorPaint panel](assets/guide/bl-armorpaint.png)
 
 More on the ArmorPaint side: [ArmorPaint](armorpaint.md).
+
+### Set outfits — separate maps for the top and the bottom (UDIM)
+
+When a top and a bottom are one item (a dress, a set outfit), each material can have its own
+textures (ZEPETO's Dress category allows 2 textures, 1 MB in total).
+
+1. Make two materials — e.g. `DR_227_TOP` and `DR_227_BTM`
+2. In the UV editor put the top's UVs in the **0–1 square (1001)** and the bottom's in the **square to
+   its right (1002, U 1–2)**. Two materials without moving any UVs also works — they become 1001, 1002
+   in material order
+3. **Paint in ArmorPaint** — ArmorPaint opens `item.1001` and `item.1002` as UDIM tiles; paint each
+4. The maps that come back (`item_base.1001.png`, `item_base.1002.png` ...) go to **their own material**
+   only
+5. **Send to Unity** — the UVs are moved into 0–1 inside the FBX only (your Blender scene is left as it
+   is) and Unity hooks every material up to its own maps
+
+Your Blender materials are created in ArmorPaint **by name and colour**, each already filled on its own
+tile (one layer per material in Layers). A material an FBX import left black comes across as neutral grey,
+so it is easy to paint over.
+
+The Send UV check reads *"one texture set per material (DR_227_TOP 1001, DR_227_BTM 1002)"* when the
+split is right, and warns when one material spreads over two tiles.
 
 ## 9. ZEPETO Playground
 

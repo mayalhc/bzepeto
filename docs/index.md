@@ -27,7 +27,7 @@ Unity ④ the finished item goes to Unity, checked and packaged
 |---|---|
 | [Blender Add-on](blender.md) | install, loading the base character, checks and Send, Review Tools, face expressions |
 | [Unity Package](unity.md) | install, automatic import and ZEPETO shaders, review menu, live preview |
-| [ArmorPaint](armorpaint.md) | install, live link, **node samples for beginners**, ZEPETO Mode, stitches |
+| [ArmorPaint](armorpaint.md) | install, live link, **node samples for beginners**, the material library, ZEPETO Mode, stitches |
 | [Help & FAQ](help.md) | troubleshooting, frequent questions, rejection reasons, licence |
 
 ---
@@ -76,6 +76,43 @@ nothing to set up between them. To move everything, set the environment variable
 
 ## What's New
 
+### v1.3.0 — The ArmorPaint material library & high heels
+
+!!! warning "Update all three tools together"
+    Install the v1.3.0 Blender add-on, Unity package **and** ArmorPaint. Unzip ArmorPaint into
+    a **new folder** and point **ArmorPaint Executable** at it.
+
+**The ArmorPaint material library (the BZepeto Library panel)** — the star of this release:
+
+- **22 smart materials** — Wool·Canvas·Linen·Suede·Corduroy·Tweed·Velvet·Satin·Sequin·Camo,
+  Gold·Chrome·Copper·Rusty Iron·Painted Metal·Brushed Aluminium·Carbon Fiber·Gem,
+  Glitter·Wood·Marble·Plastic·Rubber. Colour, roughness, metal and relief land in one click, and
+  being procedural they stay crisp at 512 px
+- **6 generators** — Dirt·Bleach Fade·Mud·Rust·Chipping·Sparkle Dust. One click makes a layer whose
+  opacity *is* the pattern; paint its black mask to place it (the Substance smart-mask job)
+- **9 quick setups** — top·hoodie·jeans·skirt·coat·shoes·gem·hair·toon. The ZEPETO mode and a
+  matching material, one button each
+- **Match materials by name** — rebuilds the item's materials from the names they arrive with from
+  Blender (`gold_trim`→gold, `denim`→denim, `leather`→leather ...). Hair, fur, eyes, mouth and lace
+  are left alone
+
+**High heels** — lift the heels with the **Heel Angle** and **Sole (cm)** sliders, model the shoe on
+them, and the shoe's FBX carries ZEPETO's heel data (the `expressions` bones) so the preview wears it
+the way you modelled it. **Read Heel From Rig** pulls the values of an imported ZEPETO heel item
+
+**Gloves, nails, rings** — the finger weights no longer blend into the next finger when it bends;
+check with **Glove Test > Fist**
+
+**Mascot head expressions** — a head bigger than the face gets expressions too: Mark Eyes / Brows /
+Mouth → **Transfer to Mascot Head**. A mascot eye 1.3x the face's blinks 1.3x as far
+
+**Skirts and dresses** — no longer split open in the middle on a stride
+
+**Also** — every panel folds into sections (▸/▾, the status stays on the folded row); check results
+list the problems first; panels stay fast after importing a GLB; Bind keeps a belt's and its buckle's
+thickness; the wrong T-pose coat warning is gone; symmetry fixes keep the 4-bones-per-vertex limit;
+Unity's hot folder survives bursts of files
+
 ### v1.2.0 — Major update
 
 !!! warning "Update all three tools together"
@@ -108,6 +145,9 @@ current ArmorPaint sources
 
 **CustomEnv (gems, high gloss)** — an HDRI set on the item lights ArmorPaint's viewport and becomes
 the Unity reflection cubemap
+
+**Set outfits (UDIM)** — a top and a bottom material each get their own maps: painted as UDIM tiles
+in ArmorPaint, wired per material in Blender and Unity ([how](blender.md))
 
 **One download** — all three tools in one file, `BZepeto_1.2.0.zip`, with checksums; the ArmorPaint
 folder no longer includes ArmorPaint's downloaded brush and mask cache, so it is smaller

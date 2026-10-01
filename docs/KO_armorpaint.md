@@ -70,11 +70,98 @@ ArmorPaint 폴더의 **Template** 에 BZepeto 노드 13종의 완성 재질(`.ar
 **Animated (pose clip)** — Blender ArmorPaint 패널에서 켜면 아이템을 뼈대·액션(예: 제페토 애니메이션
 클립)과 함께 보냅니다. ArmorPaint 타임라인을 이음새가 늘어나는 포즈로 옮겨 칠하면 됩니다.
 
+**버텍스 컬러 → Color ID** — ArmorPaint 의 Color ID 도구(**C**)는 버텍스 컬러가 아니라 텍스처를 씁니다.
+그래서 Blender ArmorPaint 패널의 **Vertex Colours as Color ID**(기본 켜짐)가 켜져 있으면, **Paint in ArmorPaint**
+를 누를 때 아이템의 버텍스 컬러를 Color ID 맵으로 구워 함께 보냅니다. ArmorPaint 가 그 맵을 자동으로
+Color ID 맵으로 지정하므로, ArmorPaint 에서 **C** 를 누르고 색 영역을 클릭하면 그 영역 안에만 칠해집니다.
+세트 의상(UDIM)은 타일마다 따로 구분됩니다. 버텍스 컬러가 없거나 한 색뿐이면 맵을 만들지 않습니다.
+
+**Color ID 영역에 재질 입히기**
+1. **C** 를 누르고 재질을 입힐 색 영역을 클릭합니다(Color ID 화면으로 바뀜)
+2. Layers 에서 그 부분 재질 그룹의 `paint` 레이어를 고릅니다
+3. Materials 에서 입힐 재질을 고릅니다(클라우드 재질은 Materials 빈 곳에 끌어다 놓아 추가)
+4. **채우기 도구**(물통)로 그 영역을 클릭 — 찍은 영역 안에만 재질 전체(색·거칠기·노멀 등)가 들어갑니다.
+   브러시로 칠해도 영역 밖으로 나가지 않습니다
+5. 다른 영역은 다시 **C** 로 찍으면 됩니다
+
+**세트 의상 (UDIM)** — 상의·하의 재질이 나뉜 아이템은 `아이템.1001`, `아이템.1002` 처럼 타일별 객체로
+열립니다. 레이어는 타일마다 따로 칠해지고, 보낼 때 타일마다 텍스처 세트가 나옵니다
+(`아이템_base.1001.png` …). Blender 쪽 준비: [세트 의상](KO_blender.md).
+
+**Blender 머티리얼** — Blender에서 쓰던 머티리얼이 같은 이름·색으로 Materials 패널에 생기고, 머티리얼마다
+채우기 레이어가 하나씩 만들어집니다(세트 의상이면 자기 타일에만). 처음 열 때 한 번만 만들고, 그다음부터는
+칠한 레이어를 건드리지 않습니다.
+
+**레이어 구성** — 재질 하나가 Layers의 **그룹(폴더) 하나**입니다(이름은 재질 이름). 접으면 재질 수만큼만 보이고,
+펼치면 안에 `<재질> fill`(재질 색 채우기)과 `<재질> paint`(칠하는 레이어)가 있습니다. 둘 다 그 재질의 타일(메쉬)에만
+칠해집니다. 채우기 레이어는 브러시로 칠해지지 않으니(ArmorPaint 규칙) `paint` 레이어에 칠하세요 — 마지막 재질의
+`paint` 가 선택된 채로 열립니다. 다른 재질을 칠하려면 그 그룹의 `paint` 를 누르세요.
+
+**브러시 색** — ArmorPaint 는 선택된 **재질**로 칠합니다(Layers **+ New → Paint Layer** 도 같음). 열 때
+`Swatch Color` 재질이 선택되어 있어 **Swatches** 에서 고른 색이 그대로 칠해집니다. Materials에서 다른 재질을 고르면
+브러시가 그 재질을 칠하니, 다시 색으로 칠하려면 Plugins 탭의 **Brush: Swatch Color** 를 누르세요.
+
+**한 그룹에 재질 섞기** — Materials에서 섞을 재질을 고르고(클라우드 재질은 Materials 빈 곳에 끌어다 놓아 추가),
+Layers에서 그 재질 그룹의 레이어를 하나 누른 뒤 Plugins 탭의 **Add Material to Group: <재질>** 을 누르세요. 그룹
+안에 그 재질의 fill 레이어가 **검은 마스크**와 함께 생기고 마스크가 선택됩니다. 마스크에 **흰색으로 칠한 곳만** 새
+재질이 보이고, 검은색으로 칠하면 다시 가려집니다. 타일 제한도 그룹 것을 그대로 따릅니다.
+
+ArmorPaint 자체 기능도 같은 구조로 만들어집니다. **+ New → Fill Layer**, 재질을 뷰포트나 Layers에 끌어다 놓기,
+Materials 우클릭 → **To Fill Layer** 모두:
+- **그룹 줄(또는 그룹 밖)을 선택한 상태** → 재질 이름의 새 그룹 + `fill` + `paint`
+- **그룹 안의 레이어를 선택한 상태** → 그 그룹에 검은 마스크로 섞기
+
+그룹 안에 새로 만들거나 끌어 넣은 레이어는 그룹의 메쉬(타일)를 자동으로 따라갑니다. 레이어 오른쪽 아래 칸이
+`Shared` 면 모든 메쉬에 칠해지는데, 세트 의상 타일들은 UV가 같은 자리에 겹쳐 있어 다른 타일까지 바뀝니다.
+
+**재질 바꾸기 (클라우드·Template)** — 클라우드나 브라우저의 재질을 **Layers의 그 재질 그룹(또는 fill 레이어) 위**나 **Materials의 그
+재질 아이콘 위**에 끌어다 놓으면 새로 추가되지 않고 그 재질이 바뀝니다. 이름과 채우기 레이어는 그대로라, 그 재질을
+쓰는 부분(세트 의상이면 그 타일)이 한 번에 새 재질로 바뀌고 Blender·Unity로 보낼 때도 같은 이름입니다. 빈 곳에
+놓으면 전처럼 새 재질로 추가됩니다.
+
 ## 4. BZepeto Materials (스마트 머티리얼)
 
 **BZepeto Materials** 패널 **②**: **Denim, Cotton, Knit, Leather, Metal, Base**. 하나를 누른 뒤
 **Fill Layer With It** 으로 채우고 그 위에 칠하면 됩니다. 절차적이라 512px에서도 또렷하고 제페토 텍스처
 채널에 이미 맞춰져 있습니다.
+
+### BZepeto Library — 재질 라이브러리
+
+같은 Plugins 탭의 **BZepeto Library** 패널은 스마트 재질 22종, 제너레이터 6종, 퀵 셋업, 이름 매칭을
+담은 큰 상자입니다. 전부 절차적이라 제페토 규격 512px(권장 256px)에서도 무너지지 않고, 색·거칠기·금속·
+노멀(올록볼록)이 한 번에 들어갑니다.
+
+**스마트 재질** — 누르면 `ZEPETO <이름>` 재질이 만들어집니다. **Fill Layer With It** 으로 레이어 전체에
+입히거나 브러시로 그 재질을 칠하세요:
+
+| 분류 | 재질 |
+|---|---|
+| **Fabric (원단)** | Wool 울 · Canvas 캔버스 · Linen 리넨 · Suede 스웨이드 · Corduroy 코듀로이 · Tweed 트위드 · Velvet 벨벳 · Satin 새틴 · Sequin 시퀸 · Camo 카모 |
+| **Metal / Hard (금속·단단한 것)** | Gold 골드 · Chrome 크롬 · Copper 구리 · Rusty Iron 녹슨 철 · Painted Metal 도장 메탈 · Brushed Aluminium 브러시드 알루미늄 · Carbon Fiber 카본 · Gem 보석 |
+| **Other (기타)** | Glitter 글리터 · Wood 나무 · Marble 대리석 · Plastic 플라스틱 · Rubber 러버 |
+
+- **Velvet**은 ZEPETO Mode 를 **Cloth** 로, **Gem**은 **CustomEnv** 로 바꾸고 쓰면 제대로 보입니다
+  (상태 줄에도 표시됩니다)
+- 색만 바꾸려면 재질을 더블클릭해 노드를 열고 **Mix RGB** 의 두 색을 바꾸세요 — 무늬는 그대로입니다
+
+**제너레이터 (Generators)** — **불투명도가 절차적 패턴인 채우기 레이어**를 한 클릭에 만듭니다:
+Dirt(더러움) · Bleach Fade(바랜 티) · Mud(진흙 튐) · Rust(녹) · Chipping(도장 벗겨짐) · Sparkle
+Dust(반짝이 먼지). 레이어는 패턴이 있는 곳에만 보입니다. 레이어에 **검은 마스크를 추가**해(레이어
+우클릭 → Add Black Mask) 흰색으로 칠한 곳에서만 보이게 하거나, 레이어를 직접 칠해 더할 수 있습니다.
+색·거칠기는 재질 노드에서 조절합니다.
+
+**퀵 셋업 (Quick Setup)** — 제페토 옷 종류별 버튼 하나로 **ZEPETO Mode 선택 + 어울리는 재질**이 함께
+적용됩니다: Top / T-Shirt · Hoodie / Knit · Jeans / Pants · Skirt / Dress · Coat / Outer · Shoes ·
+Gem / Jewelry · Hair · Toon Item. 예를 들어 **Shoes** 는 Lit 모드 + Leather 재질, **Gem / Jewelry** 는
+CustomEnv 모드 + Gem 재질. **Hair** 는 모드만 바꾸고(가닥은 회색으로 칠하세요), **Toon Item** 은 Toon
+모드의 중립값을 채워 줍니다.
+
+**재질 이름 자동 매칭 (Match Materials by Name)** — Blender 에서 보낸 아이템은 재질 이름이 그대로
+ArmorPaint 에 있습니다. **Match Materials** 를 누르면 이름으로 재질을 판단해 노드를 다시 구성합니다:
+`gold_trim`→골드, `denim`→데님, `leather`→레더, `knit`→니트, `pearl`→진주, `sole`→러버 등.
+이름에 해당하는 재질이 없거나 이름에서 판단이 안 서면 그대로 둡니다. **헤어·퍼·눈·입·레이스는** 각
+셰이더 모드의 채널이 담당하므로 건드리지 않습니다. 결과는 패널에 `Matched N, left M unchanged` 로
+표시됩니다. 잘못 골랐으면 그 재질의 다른 스마트 재질을 눌러 다시 입히면 됩니다.
 
 ## 5. ZEPETO Mode
 

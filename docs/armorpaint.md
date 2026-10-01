@@ -79,11 +79,103 @@ An item without a material gets a ZEPETO-ready one on the way out.
 and action (e.g. a ZEPETO animation clip). Scrub ArmorPaint's timeline to the pose where a seam
 stretches and paint there.
 
+**Vertex colours → Color ID** — ArmorPaint's Color ID tool (**C**) reads a texture, not vertex colours.
+With **Vertex Colours as Color ID** on in Blender's ArmorPaint panel (on by default), **Paint in
+ArmorPaint** bakes the item's vertex colours into a Color ID map and sends it along; ArmorPaint makes it
+the Color ID map by itself. Press **C** in ArmorPaint and click a colour region to paint only inside it.
+Set outfits (UDIM) keep each tile apart. No map is made when the item has no vertex colours, or just one.
+
+**A material on a Color ID region**
+1. Press **C** and click the colour region (the view shows the Color ID map)
+2. In Layers, pick the `paint` layer of that part's material group
+3. In Materials, pick the material (a cloud material: drop it on an empty spot in Materials to add it)
+4. Click the region with the **Fill** tool (bucket): the whole material (colour, roughness, normal...) goes
+   inside the picked region only. The brush stays inside it too
+5. For another region, pick again with **C**
+
+**Set outfits (UDIM)** — an item whose top and bottom have their own materials opens as one object per
+tile, `item.1001`, `item.1002`. Each tile is painted on its own and sends its own texture set
+(`item_base.1001.png` ...). The Blender side: [Set outfits](blender.md).
+
+**Blender materials** — the materials you used in Blender appear in the Materials panel with the same
+name and colour, each with a fill layer of its own (on its own tile for a set outfit). They are made once,
+the first time the item opens; after that your paint layers are left alone.
+
+**Layers** — each material is **one group (folder)** in Layers, named after it: collapsed, you see one
+row per material; open it and there are `<material> fill` (the material's colour) and `<material> paint`
+(the layer you paint on), both painting only that material's tile mesh. Fill layers take no brush strokes
+(ArmorPaint's rule), so paint on `paint` — the last material's `paint` is selected when the item opens.
+To paint another material, click the `paint` in its group.
+
+**Brush colour** — ArmorPaint paints with the selected **material** (so does Layers **+ New → Paint
+Layer**). The item opens with the `Swatch Color` material selected, so the colour you pick in **Swatches** is
+what the brush paints. Pick another material in Materials and the brush paints that material; to go back to
+colour, press **Brush: Swatch Color** in the Plugins tab.
+
+**Mixing materials in a group** — pick the material to mix in Materials (a cloud material: drop it on an
+empty spot in Materials to add it), click a layer of the material's group in Layers, then press **Add
+Material to Group: <material>** in the Plugins tab. The group gets a fill layer of that material with a
+**black mask**, selected: the new material shows only **where you paint the mask white**; paint black to hide
+it again. It keeps the group's tile.
+
+ArmorPaint's own tools lay materials out the same way — **+ New → Fill Layer**, a material dropped on the
+viewport or in Layers, Materials right-click → **To Fill Layer**:
+- **a group row (or nothing in a group) selected** → a new group named after the material, with `fill` + `paint`
+- **a layer inside a group selected** → mixed into that group with a black mask
+
+A layer made in, or dragged into, a group follows the group's mesh (tile) by itself. A layer set to `Shared`
+(bottom-right box) paints every mesh, and the tiles of a set outfit share the same UV square, so it would change
+the other tiles too.
+
+**Swapping a material (cloud, Template)** — drag a material from the cloud or the browser **onto that
+material's group (or its fill layer) in Layers** or **its icon in Materials**: it replaces the material instead of adding
+one. The name and the fill layer stay, so everything using the material (its tile, for a set outfit)
+changes at once and keeps its name on the way to Blender and Unity. Dropped on empty space it is added as
+before.
+
 ## 4. BZepeto Materials (smart materials)
 
 In the **BZepeto Materials** panel **②**: **Denim, Cotton, Knit, Leather, Metal, Base**. Press one, then
 **Fill Layer With It**, and paint on top. They are procedural, so they stay crisp at 512 px, and they
 already match ZEPETO's texture channels.
+
+### The BZepeto Library — the material library
+
+The **BZepeto Library** panel in the same Plugins tab holds 22 smart materials, 6 generators, the
+quick setups and the name matching. Everything is procedural, so nothing blurs at ZEPETO's 512 px
+(256 px recommended), and colour, roughness, metal and relief (normal) land in one go.
+
+**Smart materials** — pressing one creates a `ZEPETO <name>` material. Apply it to the whole layer
+with **Fill Layer With It**, or paint with it:
+
+| Group | Materials |
+|---|---|
+| **Fabric** | Wool · Canvas · Linen · Suede · Corduroy · Tweed · Velvet · Satin · Sequin · Camo |
+| **Metal / Hard** | Gold · Chrome · Copper · Rusty Iron · Painted Metal · Brushed Aluminium · Carbon Fiber · Gem |
+| **Other** | Glitter · Wood · Marble · Plastic · Rubber |
+
+- **Velvet** wants the ZEPETO Mode set to **Cloth**, and **Gem** to **CustomEnv** (the status line
+  says so too)
+- To recolour, double-click the material to open its nodes and change the two colours of **Mix RGB**
+  — the pattern stays
+
+**Generators** — one click makes a fill layer whose **opacity is the pattern**:
+Dirt · Bleach Fade · Mud · Rust · Chipping · Sparkle Dust. The layer shows only where the pattern is.
+Add a **black mask** (right-click the layer → Add Black Mask) and paint white where it should show, or
+paint on the layer to add more. Colour and roughness live in the material's nodes.
+
+**Quick Setup** — one button per kind of ZEPETO garment applies the **ZEPETO Mode and a matching
+material** together: Top / T-Shirt · Hoodie / Knit · Jeans / Pants · Skirt / Dress · Coat / Outer ·
+Shoes · Gem / Jewelry · Hair · Toon Item. **Shoes**, for example, picks the Lit mode plus the Leather
+material, **Gem / Jewelry** CustomEnv plus Gem. **Hair** only switches the mode (paint the strands
+grey), **Toon Item** fills Toon's neutral map values.
+
+**Match Materials by Name** — an item sent from Blender brings its material names along. **Match
+Materials** reads them and rebuilds each material's nodes from the name: `gold_trim`→gold,
+`denim`→denim, `leather`→leather, `knit`→knit, `pearl`→pearl, `sole`→rubber and so on. A material whose
+name says nothing is left alone, and **hair, fur, eyes, mouth and lace** are never touched — their
+shader modes own them. The panel reports `Matched N, left M unchanged`. Picked wrong? Press another
+smart material and fill again.
 
 ## 5. ZEPETO Mode
 

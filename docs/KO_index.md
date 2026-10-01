@@ -25,7 +25,7 @@ Blender  ──①──>  ArmorPaint  ──②──>  Blender
 |---|---|
 | [Blender 애드온](KO_blender.md) | 설치, 베이스 캐릭터 불러오기, 검사와 Send, Review Tools, 얼굴 표정 |
 | [Unity 패키지](KO_unity.md) | 설치, 자동 가져오기와 제페토 셰이더, 검사 메뉴, 실시간 미리보기 |
-| [ArmorPaint](KO_armorpaint.md) | 설치, 라이브 링크, **처음 쓰는 분을 위한 노드 샘플**, ZEPETO Mode, 스티치 |
+| [ArmorPaint](KO_armorpaint.md) | 설치, 라이브 링크, **처음 쓰는 분을 위한 노드 샘플**, 재질 라이브러리, ZEPETO Mode, 스티치 |
 | [도움말·FAQ](KO_help.md) | 문제 해결, 자주 묻는 질문, 반려 사례, 라이선스 |
 
 ---
@@ -74,6 +74,42 @@ Unity를 다시 시작하세요.
 
 ## 새 소식
 
+### v1.3.0 — 아머페인트 재질 라이브러리 & 하이힐
+
+!!! warning "세 도구를 함께 업데이트하세요"
+    v1.3.0 Blender 애드온, Unity 패키지, ArmorPaint를 **모두** 설치하세요. ArmorPaint는 **새 폴더**에
+    풀고 **ArmorPaint Executable**을 새 위치로 바꿔 주세요.
+
+**아머페인트 재질 라이브러리 (BZepeto Library 패널)** — 이번 업데이트의 주인공:
+
+- **스마트 재질 22종** — Wool·Canvas·Linen·Suede·Corduroy·Tweed·Velvet·Satin·Sequin·Camo,
+  Gold·Chrome·Copper·Rusty Iron·Painted Metal·Brushed Aluminium·Carbon Fiber·Gem,
+  Glitter·Wood·Marble·Plastic·Rubber. 색·거칠기·금속·올록볼록까지 한 번에 들어가고, 절차적이라
+  512px에서도 또렷합니다
+- **제너레이터 6종** — Dirt(더러움)·Bleach Fade(바랜 티)·Mud(진흙)·Rust(녹)·Chipping(도장 벗겨짐)·
+  Sparkle Dust(반짝이 먼지). 패턴이 곧 불투명도인 레이어를 한 클릭에 만들고, 검은 마스크를 칠해
+  위치를 정합니다 (섭스텐스의 스마트 마스크 역할)
+- **퀵 셋업 9종** — 상의·후디·청바지·치마·코트·신발·보석·헤어·툰. ZEPETO 모드 선택과 어울리는 재질
+  적용이 버튼 하나로
+- **재질 이름 자동 매칭** — Blender에서 보낸 재질 이름으로 재질을 다시 구성합니다
+  (`gold_trim`→골드, `denim`→데님, `leather`→레더 …). 헤어·퍼·눈·입·레이스는 건드리지 않습니다
+
+**하이힐** — **Heel Angle**·**Sole (cm)** 슬라이더로 뒤꿈치를 들고 신발을 모델링하면, 신발 FBX에
+제페토의 힐 데이터(`expressions` 본)가 실려 미리보기에서도 모델링한 그대로 신겨집니다.
+**Read Heel From Rig** 으로 기존 힐 아이템의 값도 슬라이더로 가져옵니다
+
+**장갑·네일·반지** — 손가락을 구부릴 때 옆 손가락으로 새던 웨이트를 고쳤습니다. **Glove Test > Fist**
+로 주먹을 쥐어 확인하세요
+
+**인형탈 표정** — 얼굴보다 큰 탈도 표정을 받습니다: Mark Eyes / Brows / Mouth → **Transfer to Mascot
+Head**. 탈 눈이 얼굴 눈의 1.3배면 1.3배로 깜빡입니다
+
+**치마·원피스** — 걸음 포즈에서 앞가운데가 바지처럼 갈라지던 것을 고쳤습니다
+
+**기타** — 모든 패널이 섹션별로 접힙니다(▸/▾, 접힌 머리줄에 상태 표시). 검사 결과는 문제 항목 먼저.
+GLB 를 불러온 뒤 패널이 느려지던 것, Bind 뒤 벨트·버클이 납작해지던 것, T포즈 코트의 잘못된 경고,
+대칭 수정 후 뼈 4개 한도가 깨지던 것, Unity 핫 폴더가 파일 몰림을 견디도록 수정
+
 ### v1.2.0 — 중요 업데이트
 
 !!! warning "세 도구를 함께 업데이트하세요"
@@ -103,6 +139,9 @@ Sparkle, Iridescence, Prism, CustomEnv, Toon, Detail Normal) ArmorPaint **ZEPETO
 미리보기, 포즈 클립으로 애니메이션 페인팅, 발광이 제 색으로, 최신 ArmorPaint 소스로 새로 빌드
 
 **CustomEnv (보석, 고광택)** — 아이템에 지정한 HDRI가 ArmorPaint 뷰포트 조명과 Unity 반사 큐브맵에 자동으로
+
+**세트 의상 (UDIM)** — 상의·하의 재질마다 자기 맵: ArmorPaint에서 UDIM 타일로 칠하고, Blender와
+Unity가 재질별로 연결 ([방법](KO_blender.md))
 
 **다운로드 하나로** — 세 도구와 체크섬이 `BZepeto_1.2.0.zip` 한 파일에. ArmorPaint 폴더에서
 ArmorPaint가 내려받는 브러시·마스크 캐시를 빼서 더 작아졌습니다

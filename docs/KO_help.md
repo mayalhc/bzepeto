@@ -18,13 +18,18 @@
 | BZepeto 노드가 단색으로만 칠해짐 | 이전 버전 플러그인이 복사되어 있습니다 — 새 ArmorPaint를 새 폴더에 푸세요 |
 | 노드 샘플이 아무것도 안 그림 | BZepeto Nodes 플러그인이 꺼져 있습니다: **Plugins > Preferences** 에서 `bzepeto_nodes.c` 켜기 |
 | CustomEnv 아이템이 회색만 반사 | Blender에서 아이템에 **Env HDRI** 를 지정하고 다시 보내세요 |
-| 애니메이션 페인팅이 기본 포즈로만 보임 | 뼈대에 액션이 있어야 하고 ArmorPaint가 v1.2.0 빌드여야 합니다 |
+| 애니메이션 페인팅이 기본 포즈로만 보임 | 뼈대에 액션이 있어야 하고 ArmorPaint가 최신 빌드여야 합니다 |
+| BZepeto Library(재질 라이브러리) 패널이 안 보임 | **Plugins > Preferences**(톱니)에서 `bzepeto_presets.c` 를 켜세요. 이전 버전 폴더 위에 덮어 썼으면 새 폴더에 풀고 경로를 다시 지정하세요 |
 | 특정 포즈·큰 체형에서 살이 옷을 뚫음 | Review Tools > **Pose / Body Clip Test** 로 찾고 그 부분을 조금 키우거나 마스크로 가리세요 |
 | 모자 위 머리카락이 머리색을 안 따라감 | 헤어 카테고리 아이템만 머리색을 받습니다 — 머리카락을 따로 헤어 아이템으로 |
 | 파티클이 업로드 후 흰 네모 | 파티클 재질에 텍스처가 없습니다 — **BZepeto > Review > Check Selected Prefab** 이 알려 줍니다 |
 | "Face expressions skipped" | 베이스 마스크가 제페토 기본 베이스와 다릅니다 — 제페토에서 받은 원본 베이스를 불러오세요 |
 
 ## 자주 묻는 질문
+
+**상의·하의에 다른 텍스처를 쓰고 싶어요 (UDIM)** — 재질을 두 개로 나누고 하의 UV를 1002 칸(U 1–2)에
+두면 됩니다. ArmorPaint에서 타일별로 칠하고, Blender·Unity가 재질마다 자기 맵을 연결합니다.
+[세트 의상](KO_blender.md) 참고.
 
 **업데이트는 어디서 받나요** — **검로드 라이브러리(Library)** 에서 받습니다. 새 버전이 나오면 검로드가
 메일로 알려 줍니다. 세 도구를 같은 버전으로 모두 설치하세요([홈](KO_index.md)).

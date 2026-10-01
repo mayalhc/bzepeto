@@ -25,6 +25,8 @@ To update, do the same with the new file — the old version is replaced.
 - The **1 MB** texture total is checked again, and a **thumbnail draft** (300×300 transparent PNG) is
   saved to `<project>/BZepetoThumbnails`
 - **Textures from ArmorPaint** are copied next to the item and hooked up the same way
+- **Set outfits** (a top and a bottom material, UDIM tiles): `<item>.udim.json` says which textures
+  belong to which material, and every material gets its own maps
 
 Unity does not need to be the active window — it keeps importing in the background.
 
