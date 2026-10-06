@@ -9,7 +9,8 @@ The red boxes in the pictures are what you click, in the order of their numbers.
 1. Unzip `BZepeto_ArmorPaint_<version>_win64.zip` into a **new folder**, e.g.
    `C:\Tools\BZepeto_ArmorPaint` (avoid *Program Files* — ArmorPaint cannot save its settings there;
    do not unzip over an older version or copy old plugins across)
-2. Run `ArmorPaint.exe` once to check the window opens. The BZepeto plugins are already on
+2. Run `ArmorPaint.exe` once to check the window opens. The BZepeto plugins are already on,
+   and the Browser opens straight on this install's **Template** folder (the node samples)
 3. In Blender, set **ArmorPaint Executable** to this `ArmorPaint.exe`
    (see [Blender, Install](blender.md#1-install))
 

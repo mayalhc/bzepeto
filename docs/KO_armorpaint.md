@@ -10,6 +10,7 @@
    *Program Files* 아래는 피하세요 — ArmorPaint가 설정을 저장하지 못합니다. 이전 버전 폴더에 덮어쓰거나
    예전 플러그인을 복사하지 마세요
 2. `ArmorPaint.exe` 를 한 번 실행해 창이 뜨는지 확인합니다. BZepeto 플러그인은 이미 켜져 있습니다
+   — Browser 도 설치 폴더의 **Template**(노드 샘플)에서 바로 열립니다
 3. Blender에서 **ArmorPaint Executable** 을 이 `ArmorPaint.exe` 로 지정합니다
    ([Blender 설치](KO_blender.md) 참고)
 
