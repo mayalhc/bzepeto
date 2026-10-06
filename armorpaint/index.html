@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="chamiseul" /><link rel="canonical" href="https://mayalhc.github.io/bzepeto/armorpaint/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>ArmorPaint - BZepeto — User Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "ArmorPaint";
+        var mkdocs_page_input_path = "armorpaint.md";
+        var mkdocs_page_url = "/bzepeto/armorpaint/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> BZepeto — User Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">English</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="..#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="..#your-download">Your download</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="..#where-bzepeto-keeps-its-files">Where BZepeto keeps its files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="..#whats-new">What's New</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="..#v131-studio-render-marvelous-designer-link-long-skirt-swing-accurate-checks">v1.3.1 — Studio render, Marvelous Designer link, long-skirt swing &amp; accurate checks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#v132-armorpaint-filters-mesh-driven-generators-diagnostics">v1.3.2 — ArmorPaint filters, mesh-driven generators + diagnostics</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#v131">v1.3.1</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#v130-the-armorpaint-material-library-high-heels">v1.3.0 — The ArmorPaint material library &amp; high heels</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#v120-major-update">v1.2.0 — Major update</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#v100-first-release">v1.0.0 — First release</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../blender/">Blender Add-on</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#1-install">1. Install</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#2-the-bzepeto-tab-and-the-base-character">2. The BZepeto tab and the base character</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#3-rigging">3. Rigging</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#high-heels">High heels</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#gloves-nails-and-rings-glove-test">Gloves, nails and rings (Glove Test)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#skirts-dresses-and-coats">Skirts, dresses and coats</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#swing-bones-hair-skirts-ribbons">Swing bones (hair, skirts, ribbons)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#4-body-shape">4. Body shape</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#5-wearables">5. Wearables</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#marvelous-designer">Marvelous Designer</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#6-send-to-zepeto">6. Send to ZEPETO</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#7-review-tools-under-send">7. Review Tools (under Send)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#8-painting-in-armorpaint">8. Painting in ArmorPaint</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#set-outfits-separate-maps-for-the-top-and-the-bottom-udim">Set outfits — separate maps for the top and the bottom (UDIM)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#9-zepeto-playground">9. ZEPETO Playground</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#10-studio-render">10. Studio Render</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unity/">Unity Package</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../unity/#1-install">1. Install</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../unity/#2-what-happens-by-itself">2. What happens by itself</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../unity/#3-the-bzepeto-menu">3. The BZepeto menu</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">ArmorPaint</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-install">1. Install</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-new-to-armorpaint-start-with-the-node-samples">2. New to ArmorPaint? Start with the node samples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-paint-while-you-model-live-link">3. Paint while you model (live link)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-bzepeto-materials-smart-materials">4. BZepeto Materials (smart materials)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#the-bzepeto-library-the-material-library">The BZepeto Library — the material library</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-zepeto-mode">5. ZEPETO Mode</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-bzepeto-nodes">6. BZepeto nodes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-stitches">7. Stitches</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8-sending-the-textures">8. Sending the textures</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help & FAQ</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../help/#troubleshooting">Troubleshooting</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../help/#faq">FAQ</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../help/#rejection-reasons-official-guide-and-help-centre">Rejection reasons (official guide and help centre)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../help/#licence">Licence</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">한국어</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../KO_index/">홈</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_index/#_1">필요한 것</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_index/#_2">받은 파일</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_index/#bzepeto">BZepeto가 파일을 두는 곳</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_index/#_3">새 소식</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v131">v1.3.1 — 스튜디오 렌더, 마블러스 디자이너 연동, 롱치마 흔들림 &amp; 검사 정확도</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v132">v1.3.2 — 아머페인트 필터·메시 제너레이터 + 진단 개선</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v131_1">v1.3.1</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v130">v1.3.0 — 아머페인트 재질 라이브러리 &amp; 하이힐</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v120">v1.2.0 — 중요 업데이트</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v100">v1.0.0 — 첫 출시</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../KO_blender/">Blender 애드온</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#1">1. 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#2-bzepeto">2. BZepeto 탭과 베이스 캐릭터</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#3-rigging">3. 리깅 (Rigging)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#high-heel">하이힐 (High Heel)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#glove-test">장갑·네일·반지 (Glove Test)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#_1">치마·원피스·코트</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#_2">스윙 본 (머리카락, 치마, 리본)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#4-body-shape">4. 체형 (Body Shape)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#5-wearables">5. 의상 (Wearables)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#marvelous-designer">마블러스 디자이너 (Marvelous Designer)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#6-send-to-zepeto">6. Send to ZEPETO</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#7-review-tools-send">7. Review Tools (Send 아래)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#8-armorpaint">8. ArmorPaint에서 칠하기</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#udim">세트 의상 — 상의·하의에 맵을 따로 (UDIM)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#9-zepeto-playground">9. ZEPETO Playground</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#10-studio-render">10. 스튜디오 렌더 (Studio Render)</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../KO_unity/">Unity 패키지</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_unity/#1">1. 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_unity/#2">2. 자동으로 되는 것</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_unity/#3-bzepeto">3. BZepeto 메뉴</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../KO_armorpaint/">ArmorPaint</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/#1">1. 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/#2-armorpaint">2. ArmorPaint가 처음이라면 — 노드 샘플부터</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/#3">3. 모델링하면서 칠하기 (라이브 링크)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/#4-bzepeto-materials">4. BZepeto Materials (스마트 머티리얼)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_armorpaint/#bzepeto-library">BZepeto Library — 재질 라이브러리</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/#5-zepeto-mode">5. ZEPETO Mode</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/#6-bzepeto">6. BZepeto 노드</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/#7">7. 스티치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/#8">8. 텍스처 보내기</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../KO_help/">도움말·FAQ</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_help/#_1">문제 해결</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_help/#_2">자주 묻는 질문</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_help/#_3">반려 사례 (공식 가이드·고객센터 기준)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_help/#_4">라이선스</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://mayalhc.github.io/GroomForge-Wiki/">All add-ons & guides</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">BZepeto — User Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">English</li>
+      <li class="breadcrumb-item active">ArmorPaint</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="armorpaint">ArmorPaint</h1>
+<p>🇺🇸 English | <a href="../KO_armorpaint/">🇰🇷 한국어</a></p>
+<p>The red boxes in the pictures are what you click, in the order of their numbers.</p>
+<h2 id="1-install">1. Install</h2>
+<ol>
+<li>Unzip <code>BZepeto_ArmorPaint_&lt;version&gt;_win64.zip</code> into a <strong>new folder</strong>, e.g.
+   <code>C:\Tools\BZepeto_ArmorPaint</code> (avoid <em>Program Files</em> — ArmorPaint cannot save its settings there;
+   do not unzip over an older version or copy old plugins across)</li>
+<li>Run <code>ArmorPaint.exe</code> once to check the window opens. The BZepeto plugins are already on,
+   and the Browser opens straight on this install's <strong>Template</strong> folder (the node samples)</li>
+<li>In Blender, set <strong>ArmorPaint Executable</strong> to this <code>ArmorPaint.exe</code>
+   (see <a href="../blender/#1-install">Blender, Install</a>)</li>
+</ol>
+<blockquote>
+<p>Why a whole ArmorPaint build and not just a plugin? The live link needs a small change to ArmorPaint
+itself: a normal ArmorPaint stops updating the moment you click back into Blender. The build is
+compiled from ArmorPaint's zlib-licensed source, and every change is marked in the source
+(<code>BZepeto (altered source)</code>).</p>
+</blockquote>
+<h2 id="2-new-to-armorpaint-start-with-the-node-samples">2. New to ArmorPaint? Start with the node samples</h2>
+<p>The <strong>Template</strong> folder in the ArmorPaint folder has a finished material (<code>.arm</code>) for each of the 13
+BZepeto nodes, already wired into colour, opacity, height, metallic and roughness the way ZEPETO items
+use them. <code>Template\_Overview.png</code> shows them all:</p>
+<p><img alt="The 13 node samples" src="../assets/guide/ap-template-overview.png" /></p>
+<p><strong>Put a sample on your item (3 steps)</strong></p>
+<ol>
+<li>Drag an <code>.arm</code> file from the <code>Template</code> folder onto the ArmorPaint window — or press <strong>Import</strong> <strong>①</strong>
+   in the Materials panel (bottom right) and pick it</li>
+<li>The material appears in the Materials panel: click it <strong>②</strong></li>
+</ol>
+<p><img alt="Import and pick a sample" src="../assets/guide/ap-import.png" /></p>
+<ol>
+<li>Open the <strong>Plugins</strong> tab <strong>①</strong> and press <strong>Fill Layer With It</strong> <strong>②</strong> — the whole layer takes the
+   material. To paint it only in places, use the brush instead</li>
+</ol>
+<p><img alt="Fill Layer With It" src="../assets/guide/ap-fill.png" /></p>
+<p><strong>Changing a sample</strong> — double-click the material to open its nodes. Most samples go
+<em>node → Mix RGB → Base Color</em>: change the two colours of the <strong>Mix RGB</strong> node to recolour without
+touching the pattern, or change the values on the BZepeto node:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>ZEPETO shader</th>
+<th>Try changing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01 Hair Strands</td>
+<td>HairAlpha</td>
+<td>Strands, Taper, Length Variation, Seed</td>
+</tr>
+<tr>
+<td>02 Hair Root to Tip</td>
+<td>HairAlpha</td>
+<td>Root, Tip, Grain</td>
+</tr>
+<tr>
+<td>03 Floral Lace</td>
+<td>Lit (transparent)</td>
+<td>Motif Scale, Net Density, Thread, Motifs</td>
+</tr>
+<tr>
+<td>04 Lace Mesh</td>
+<td>Lit (transparent)</td>
+<td>Scale, Hole</td>
+</tr>
+<tr>
+<td>05 Weave Denim</td>
+<td>Cloth</td>
+<td>Scale, Pattern (0 plain, 1 twill, 2 satin), Contrast</td>
+</tr>
+<tr>
+<td>06 Knit Wool</td>
+<td>Cloth</td>
+<td>Scale</td>
+</tr>
+<tr>
+<td>07 Quilt Puffer</td>
+<td>Lit</td>
+<td>Scale, Line</td>
+</tr>
+<tr>
+<td>08 Sequins</td>
+<td>Sparkle</td>
+<td>Scale, Density, Seed</td>
+</tr>
+<tr>
+<td>09 Gem Facets</td>
+<td>CustomEnv</td>
+<td>Facets, Scale</td>
+</tr>
+<tr>
+<td>10 Hammered Metal</td>
+<td>Lit (metal)</td>
+<td>Scale</td>
+</tr>
+<tr>
+<td>11 Edge Wear</td>
+<td>Lit</td>
+<td>Amount, Break Up (reads the mesh edges — little shows on a flat face)</td>
+</tr>
+<tr>
+<td>12 Toon Hatching</td>
+<td>Toon</td>
+<td>Scale, Angle, Width</td>
+</tr>
+<tr>
+<td>13 Fur Strands</td>
+<td>Fur</td>
+<td>Scale</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Hair (01, 02) is grey on purpose: the app multiplies in the hair colour the user picks</li>
+<li>Lace (03, 04) is transparent: turn <strong>Transparent</strong> on in the ZEPETO Mode panel so the alpha is exported</li>
+<li>Every pattern is procedural, so it stays sharp at ZEPETO's 512 px (256 px recommended)</li>
+</ul>
+<h2 id="3-paint-while-you-model-live-link">3. Paint while you model (live link)</h2>
+<ol>
+<li>In Blender select the item and press <strong>Paint in ArmorPaint</strong></li>
+<li>ArmorPaint opens with the item; the <strong>BZepeto Live Link</strong> panel <strong>①</strong> in the Plugins tab reads
+   <strong>CONNECTED</strong> (before that: <em>WAITING FOR BLENDER</em>)</li>
+<li>With <strong>Auto Push</strong> on in Blender, your edits are sent again 0.8 s after you stop — the paint layers
+   stay</li>
+</ol>
+<p><img alt="Plugins tab" src="../assets/guide/ap-plugins.png" /></p>
+<p>An item without a material gets a ZEPETO-ready one on the way out.</p>
+<p><strong>Animated (pose clip)</strong> — turn it on in Blender's ArmorPaint panel to send the item with its armature
+and action (e.g. a ZEPETO animation clip). Scrub ArmorPaint's timeline to the pose where a seam
+stretches and paint there.</p>
+<p><strong>Vertex colours → Color ID</strong> — ArmorPaint's Color ID tool (<strong>C</strong>) reads a texture, not vertex colours.
+With <strong>Vertex Colours as Color ID</strong> on in Blender's ArmorPaint panel (on by default), <strong>Paint in
+ArmorPaint</strong> bakes the item's vertex colours into a Color ID map and sends it along; ArmorPaint makes it
+the Color ID map by itself. Press <strong>C</strong> in ArmorPaint and click a colour region to paint only inside it.
+Set outfits (UDIM) keep each tile apart. No map is made when the item has no vertex colours, or just one.</p>
+<p><strong>A material on a Color ID region</strong>
+1. Press <strong>C</strong> and click the colour region (the view shows the Color ID map)
+2. In Layers, pick the <code>paint</code> layer of that part's material group
+3. In Materials, pick the material (a cloud material: drop it on an empty spot in Materials to add it)
+4. Click the region with the <strong>Fill</strong> tool (bucket): the whole material (colour, roughness, normal...) goes
+   inside the picked region only. The brush stays inside it too
+5. For another region, pick again with <strong>C</strong></p>
+<p><strong>Set outfits (UDIM)</strong> — an item whose top and bottom have their own materials opens as one object per
+tile, <code>item.1001</code>, <code>item.1002</code>. Each tile is painted on its own and sends its own texture set
+(<code>item_base.1001.png</code> ...). The Blender side: <a href="../blender/">Set outfits</a>.</p>
+<p><strong>Blender materials</strong> — the materials you used in Blender appear in the Materials panel with the same
+name and colour, each with a fill layer of its own (on its own tile for a set outfit). They are made once,
+the first time the item opens; after that your paint layers are left alone.</p>
+<p><strong>Layers</strong> — each material is <strong>one group (folder)</strong> in Layers, named after it: collapsed, you see one
+row per material; open it and there are <code>&lt;material&gt; fill</code> (the material's colour) and <code>&lt;material&gt; paint</code>
+(the layer you paint on), both painting only that material's tile mesh. Fill layers take no brush strokes
+(ArmorPaint's rule), so paint on <code>paint</code> — the last material's <code>paint</code> is selected when the item opens.
+To paint another material, click the <code>paint</code> in its group.</p>
+<p><strong>Brush colour</strong> — ArmorPaint paints with the selected <strong>material</strong> (so does Layers <strong>+ New → Paint
+Layer</strong>). The item opens with the <code>Swatch Color</code> material selected, so the colour you pick in <strong>Swatches</strong> is
+what the brush paints. Pick another material in Materials and the brush paints that material; to go back to
+colour, press <strong>Brush: Swatch Color</strong> in the Plugins tab.</p>
+<p><strong>Mixing materials in a group</strong> — pick the material to mix in Materials (a cloud material: drop it on an
+empty spot in Materials to add it), click a layer of the material's group in Layers, then press <strong>Add
+Material to Group: <material></strong> in the Plugins tab. The group gets a fill layer of that material with a
+<strong>black mask</strong>, selected: the new material shows only <strong>where you paint the mask white</strong>; paint black to hide
+it again. It keeps the group's tile.</p>
+<p>ArmorPaint's own tools lay materials out the same way — <strong>+ New → Fill Layer</strong>, a material dropped on the
+viewport or in Layers, Materials right-click → <strong>To Fill Layer</strong>:
+- <strong>a group row (or nothing in a group) selected</strong> → a new group named after the material, with <code>fill</code> + <code>paint</code>
+- <strong>a layer inside a group selected</strong> → mixed into that group with a black mask</p>
+<p>A layer made in, or dragged into, a group follows the group's mesh (tile) by itself. A layer set to <code>Shared</code>
+(bottom-right box) paints every mesh, and the tiles of a set outfit share the same UV square, so it would change
+the other tiles too.</p>
+<p><strong>Swapping a material (cloud, Template)</strong> — drag a material from the cloud or the browser <strong>onto that
+material's group (or its fill layer) in Layers</strong> or <strong>its icon in Materials</strong>: it replaces the material instead of adding
+one. The name and the fill layer stay, so everything using the material (its tile, for a set outfit)
+changes at once and keeps its name on the way to Blender and Unity. Dropped on empty space it is added as
+before.</p>
+<h2 id="4-bzepeto-materials-smart-materials">4. BZepeto Materials (smart materials)</h2>
+<p>In the <strong>BZepeto Materials</strong> panel <strong>②</strong>: <strong>Denim, Cotton, Knit, Leather, Metal, Base</strong>. Press one, then
+<strong>Fill Layer With It</strong>, and paint on top. They are procedural, so they stay crisp at 512 px, and they
+already match ZEPETO's texture channels.</p>
+<h3 id="the-bzepeto-library-the-material-library">The BZepeto Library — the material library</h3>
+<p>The <strong>BZepeto Library</strong> panel in the same Plugins tab holds 22 smart materials, 6 generators, the
+quick setups and the name matching. Everything is procedural, so nothing blurs at ZEPETO's 512 px
+(256 px recommended), and colour, roughness, metal and relief (normal) land in one go.</p>
+<p><strong>Smart materials</strong> — pressing one creates a <code>ZEPETO &lt;name&gt;</code> material. Apply it to the whole layer
+with <strong>Fill Layer With It</strong>, or paint with it:</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Materials</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fabric</strong></td>
+<td>Wool · Canvas · Linen · Suede · Corduroy · Tweed · Velvet · Satin · Sequin · Camo · Denim Wash · Crushed Velvet · Tulle Net (transparent)</td>
+</tr>
+<tr>
+<td><strong>Metal / Hard</strong></td>
+<td>Gold · Chrome · Copper · Rusty Iron · Painted Metal · Brushed Aluminium · Carbon Fiber · Gem · Rose Gold · Patina Copper · Gold Sequin</td>
+</tr>
+<tr>
+<td><strong>Other</strong></td>
+<td>Glitter · Wood · Marble · Plastic · Rubber · Neoprene · Cork · Terrazzo · Chalk Paint</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Velvet</strong> wants the ZEPETO Mode set to <strong>Cloth</strong>, and <strong>Gem</strong> to <strong>CustomEnv</strong> (the status line
+  says so too)</li>
+<li>To recolour, double-click the material to open its nodes and change the two colours of <strong>Mix RGB</strong>
+  — the pattern stays</li>
+</ul>
+<p><strong>Generators</strong> — one click makes a fill layer whose <strong>opacity is the pattern</strong>:
+Dirt · Bleach Fade · Mud · Rust · Chipping · Sparkle Dust. The layer shows only where the pattern is.
+Add a <strong>black mask</strong> (right-click the layer → Add Black Mask) and paint white where it should show, or
+paint on the layer to add more. Colour and roughness live in the material's nodes.</p>
+<p><strong>Mesh-driven generators</strong> — <strong>Edge Wear</strong> and <strong>Cavity Dirt</strong> read the mesh's curved areas in the
+shader: they appear on edges and in crevices only, like Substance's generators. Adjust them in the
+material's nodes, or paint the layer's mask to place them.</p>
+<p><strong>Filters</strong> — adjustment layers that edit <strong>everything painted below</strong>: Blur · Sharpen · Invert ·
+HSL Shift · Levels · Warm Tint. Change the values in the filter layer's nodes and the whole stack
+below follows (the Substance filter-layer way).</p>
+<p><strong>Quick Setup</strong> — one button per kind of ZEPETO garment applies the <strong>ZEPETO Mode and a matching
+material</strong> together: Top / T-Shirt · Hoodie / Knit · Jeans / Pants · Skirt / Dress · Coat / Outer ·
+Shoes · Gem / Jewelry · Hair · Toon Item. <strong>Shoes</strong>, for example, picks the Lit mode plus the Leather
+material, <strong>Gem / Jewelry</strong> CustomEnv plus Gem. <strong>Hair</strong> only switches the mode (paint the strands
+grey), <strong>Toon Item</strong> fills Toon's neutral map values.</p>
+<p><strong>Match Materials by Name</strong> — an item sent from Blender brings its material names along. <strong>Match
+Materials</strong> reads them and rebuilds each material's nodes from the name: <code>gold_trim</code>→gold,
+<code>denim</code>→denim, <code>leather</code>→leather, <code>knit</code>→knit, <code>pearl</code>→pearl, <code>sole</code>→rubber and so on. A material whose
+name says nothing is left alone, and <strong>hair, fur, eyes, mouth and lace</strong> are never touched — their
+shader modes own them. The panel reports <code>Matched N, left M unchanged</code>. Picked wrong? Press another
+smart material and fill again.</p>
+<h2 id="5-zepeto-mode">5. ZEPETO Mode</h2>
+<p>The <strong>ZEPETO Mode</strong> panel <strong>③</strong> matches the item's ZEPETO shader (it follows the shader set in Blender;
+<strong>&lt; Previous / Next &gt;</strong> changes it by hand). The export then writes the maps that shader reads, and the
+panel lists what each channel means in that mode.</p>
+<ul>
+<li><strong>Setup Base Layer (neutral values)</strong> — a fill layer with the mode's neutral values to start from</li>
+<li><strong>Transparent (export base alpha)</strong> — keep the base colour's alpha (opaque items ship a smaller file)</li>
+<li><strong>Emission map</strong> — export the glowing parts in their colour</li>
+<li><strong>Viewport preview</strong> — a ZEPETO-like look of the mode in the Lit viewport (hair highlight bands, toon
+  steps, pearl sheen, clear coat, glints). A close approximation, not the Unity shader itself</li>
+</ul>
+<blockquote>
+<p><strong>Hair:</strong> paint the strands in <strong>grey</strong> — the app multiplies them by the user's hair colour.
+Alpha = strands, Height = highlight shift (0.5 = none), Metallic = secondary highlight.</p>
+</blockquote>
+<h2 id="6-bzepeto-nodes">6. BZepeto nodes</h2>
+<p>In the material node menu under <strong>BZepeto ZEPETO</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hair Strands / Hair Root to Tip</td>
+<td>strands with alpha, shade and highlight shift; root-to-tip light</td>
+</tr>
+<tr>
+<td>Floral Lace / Lace Mesh</td>
+<td>Chantilly-style lace (opacity, height, motif mask); simple mesh net</td>
+</tr>
+<tr>
+<td>Weave / Knit / Quilt</td>
+<td>fabric structures</td>
+</tr>
+<tr>
+<td>Tartan Plaid / Gingham / Polka Dots</td>
+<td>fashion check and stripe patterns</td>
+</tr>
+<tr>
+<td>Sequins / Gem Facets / Hammered Metal</td>
+<td>accessories and jewellery</td>
+</tr>
+<tr>
+<td>Edge Wear / Toon Hatching / Fur Strands</td>
+<td>wear, toon brush strokes, fur pattern</td>
+</tr>
+<tr>
+<td>Grunge</td>
+<td>stain and scuff mask (the dirt/wear building block)</td>
+</tr>
+<tr>
+<td>Water Drops / Glow Bands</td>
+<td>droplets, glowing stripes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-stitches">7. Stitches</h2>
+<ol>
+<li>In Blender Edit Mode, select the seam edges</li>
+<li>Press <strong>Stitch Selected Edges</strong> — it shows <em>"Will draw: N seam(s), M stitch(es)"</em> first</li>
+<li>The stitches appear in ArmorPaint as their <strong>own layer</strong>, so you can recolour or erase them</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dash / Gap / Width</td>
+<td>thread length, spacing and thickness in millimetres of the real item</td>
+</tr>
+<tr>
+<td>Color / Roughness</td>
+<td>thread colour and roughness</td>
+</tr>
+<tr>
+<td>Target</td>
+<td><code>ArmorPaint</code> (a layer, recommended) or <code>Blender</code> (drawn on the material)</td>
+</tr>
+</tbody>
+</table>
+<p>A seam on the border of two UV islands is stitched on <strong>both</strong> pieces, like real clothing.</p>
+<h2 id="8-sending-the-textures">8. Sending the textures</h2>
+<table>
+<thead>
+<tr>
+<th>Button in ArmorPaint</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Send to Blender</strong></td>
+<td>Blender picks the textures up by itself (<strong>Auto Receive</strong>)</td>
+</tr>
+<tr>
+<td><strong>Send to Unity</strong></td>
+<td>goes straight into your ZEPETO Studio project</td>
+</tr>
+<tr>
+<td><strong>Send to Both</strong></td>
+<td>both</td>
+</tr>
+<tr>
+<td><strong>Size 512 / 1024 / 2048 / 4096</strong></td>
+<td>size of the delivered textures — you keep painting at full resolution</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>ZEPETO allows 512 px textures and 1 MB per item, which is why 512 is the default.</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../unity/" class="btn btn-neutral float-left" title="Unity Package"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../help/" class="btn btn-neutral float-right" title="Help & FAQ">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../unity/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../help/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

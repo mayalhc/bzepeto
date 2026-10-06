@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="chamiseul" /><link rel="canonical" href="https://mayalhc.github.io/bzepeto/KO_armorpaint/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>ArmorPaint - BZepeto — User Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "ArmorPaint";
+        var mkdocs_page_input_path = "KO_armorpaint.md";
+        var mkdocs_page_url = "/bzepeto/KO_armorpaint/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> BZepeto — User Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">English</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="..#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="..#your-download">Your download</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="..#where-bzepeto-keeps-its-files">Where BZepeto keeps its files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="..#whats-new">What's New</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="..#v131-studio-render-marvelous-designer-link-long-skirt-swing-accurate-checks">v1.3.1 — Studio render, Marvelous Designer link, long-skirt swing &amp; accurate checks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#v132-armorpaint-filters-mesh-driven-generators-diagnostics">v1.3.2 — ArmorPaint filters, mesh-driven generators + diagnostics</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#v131">v1.3.1</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#v130-the-armorpaint-material-library-high-heels">v1.3.0 — The ArmorPaint material library &amp; high heels</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#v120-major-update">v1.2.0 — Major update</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#v100-first-release">v1.0.0 — First release</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../blender/">Blender Add-on</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#1-install">1. Install</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#2-the-bzepeto-tab-and-the-base-character">2. The BZepeto tab and the base character</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#3-rigging">3. Rigging</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#high-heels">High heels</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#gloves-nails-and-rings-glove-test">Gloves, nails and rings (Glove Test)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#skirts-dresses-and-coats">Skirts, dresses and coats</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#swing-bones-hair-skirts-ribbons">Swing bones (hair, skirts, ribbons)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#4-body-shape">4. Body shape</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#5-wearables">5. Wearables</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#marvelous-designer">Marvelous Designer</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#6-send-to-zepeto">6. Send to ZEPETO</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#7-review-tools-under-send">7. Review Tools (under Send)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#8-painting-in-armorpaint">8. Painting in ArmorPaint</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#set-outfits-separate-maps-for-the-top-and-the-bottom-udim">Set outfits — separate maps for the top and the bottom (UDIM)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#9-zepeto-playground">9. ZEPETO Playground</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#10-studio-render">10. Studio Render</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unity/">Unity Package</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../unity/#1-install">1. Install</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../unity/#2-what-happens-by-itself">2. What happens by itself</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../unity/#3-the-bzepeto-menu">3. The BZepeto menu</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../armorpaint/">ArmorPaint</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../armorpaint/#1-install">1. Install</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../armorpaint/#2-new-to-armorpaint-start-with-the-node-samples">2. New to ArmorPaint? Start with the node samples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../armorpaint/#3-paint-while-you-model-live-link">3. Paint while you model (live link)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../armorpaint/#4-bzepeto-materials-smart-materials">4. BZepeto Materials (smart materials)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../armorpaint/#the-bzepeto-library-the-material-library">The BZepeto Library — the material library</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../armorpaint/#5-zepeto-mode">5. ZEPETO Mode</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../armorpaint/#6-bzepeto-nodes">6. BZepeto nodes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../armorpaint/#7-stitches">7. Stitches</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../armorpaint/#8-sending-the-textures">8. Sending the textures</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help & FAQ</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../help/#troubleshooting">Troubleshooting</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../help/#faq">FAQ</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../help/#rejection-reasons-official-guide-and-help-centre">Rejection reasons (official guide and help centre)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../help/#licence">Licence</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">한국어</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../KO_index/">홈</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_index/#_1">필요한 것</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_index/#_2">받은 파일</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_index/#bzepeto">BZepeto가 파일을 두는 곳</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_index/#_3">새 소식</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v131">v1.3.1 — 스튜디오 렌더, 마블러스 디자이너 연동, 롱치마 흔들림 &amp; 검사 정확도</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v132">v1.3.2 — 아머페인트 필터·메시 제너레이터 + 진단 개선</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v131_1">v1.3.1</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v130">v1.3.0 — 아머페인트 재질 라이브러리 &amp; 하이힐</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v120">v1.2.0 — 중요 업데이트</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v100">v1.0.0 — 첫 출시</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../KO_blender/">Blender 애드온</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#1">1. 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#2-bzepeto">2. BZepeto 탭과 베이스 캐릭터</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#3-rigging">3. 리깅 (Rigging)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#high-heel">하이힐 (High Heel)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#glove-test">장갑·네일·반지 (Glove Test)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#_1">치마·원피스·코트</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#_2">스윙 본 (머리카락, 치마, 리본)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#4-body-shape">4. 체형 (Body Shape)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#5-wearables">5. 의상 (Wearables)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#marvelous-designer">마블러스 디자이너 (Marvelous Designer)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#6-send-to-zepeto">6. Send to ZEPETO</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#7-review-tools-send">7. Review Tools (Send 아래)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#8-armorpaint">8. ArmorPaint에서 칠하기</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#udim">세트 의상 — 상의·하의에 맵을 따로 (UDIM)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#9-zepeto-playground">9. ZEPETO Playground</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#10-studio-render">10. 스튜디오 렌더 (Studio Render)</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../KO_unity/">Unity 패키지</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_unity/#1">1. 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_unity/#2">2. 자동으로 되는 것</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_unity/#3-bzepeto">3. BZepeto 메뉴</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">ArmorPaint</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1">1. 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-armorpaint">2. ArmorPaint가 처음이라면 — 노드 샘플부터</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3">3. 모델링하면서 칠하기 (라이브 링크)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-bzepeto-materials">4. BZepeto Materials (스마트 머티리얼)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#bzepeto-library">BZepeto Library — 재질 라이브러리</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-zepeto-mode">5. ZEPETO Mode</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-bzepeto">6. BZepeto 노드</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7">7. 스티치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8">8. 텍스처 보내기</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../KO_help/">도움말·FAQ</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_help/#_1">문제 해결</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_help/#_2">자주 묻는 질문</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_help/#_3">반려 사례 (공식 가이드·고객센터 기준)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_help/#_4">라이선스</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://mayalhc.github.io/GroomForge-Wiki/">All add-ons & guides</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">BZepeto — User Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">한국어</li>
+      <li class="breadcrumb-item active">ArmorPaint</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="armorpaint">ArmorPaint</h1>
+<p><a href="../armorpaint/">🇺🇸 English</a> | 🇰🇷 한국어</p>
+<p>그림의 빨간 상자가 누를 곳이고, 번호 순서대로 누르면 됩니다.</p>
+<h2 id="1">1. 설치</h2>
+<ol>
+<li><code>BZepeto_ArmorPaint_&lt;버전&gt;_win64.zip</code> 을 <strong>새 폴더</strong>에 풉니다(예: <code>C:\Tools\BZepeto_ArmorPaint</code>).
+   <em>Program Files</em> 아래는 피하세요 — ArmorPaint가 설정을 저장하지 못합니다. 이전 버전 폴더에 덮어쓰거나
+   예전 플러그인을 복사하지 마세요</li>
+<li><code>ArmorPaint.exe</code> 를 한 번 실행해 창이 뜨는지 확인합니다. BZepeto 플러그인은 이미 켜져 있습니다
+   — Browser 도 설치 폴더의 <strong>Template</strong>(노드 샘플)에서 바로 열립니다</li>
+<li>Blender에서 <strong>ArmorPaint Executable</strong> 을 이 <code>ArmorPaint.exe</code> 로 지정합니다
+   (<a href="../KO_blender/">Blender 설치</a> 참고)</li>
+</ol>
+<h2 id="2-armorpaint">2. ArmorPaint가 처음이라면 — 노드 샘플부터</h2>
+<p>ArmorPaint 폴더의 <strong>Template</strong> 에 BZepeto 노드 13종의 완성 재질(<code>.arm</code>)이 있습니다. 노드가 색·투명도·
+높이·금속·거칠기에 제페토 용도대로 이미 연결되어 있습니다. <code>Template\_Overview.png</code> 에서 모두 볼 수 있습니다:</p>
+<p><img alt="노드 샘플 13종" src="../assets/guide/ap-template-overview.png" /></p>
+<p><strong>샘플을 아이템에 입히기 (3단계)</strong></p>
+<ol>
+<li><code>Template</code> 폴더의 <code>.arm</code> 파일을 ArmorPaint 창에 끌어다 놓습니다 — 또는 오른쪽 아래 Materials 패널의
+   <strong>Import</strong> <strong>①</strong> 를 눌러 고릅니다</li>
+<li>Materials 패널에 재질이 생기면 그것을 클릭합니다 <strong>②</strong></li>
+</ol>
+<p><img alt="샘플 불러오고 고르기" src="../assets/guide/ap-import.png" /></p>
+<ol>
+<li><strong>Plugins</strong> 탭 <strong>①</strong> 을 열고 <strong>Fill Layer With It</strong> <strong>②</strong> 를 누르면 레이어 전체에 입혀집니다.
+   일부만 칠하려면 브러시로 칠하세요</li>
+</ol>
+<p><img alt="Fill Layer With It" src="../assets/guide/ap-fill.png" /></p>
+<p><strong>샘플 바꾸기</strong> — 재질을 더블클릭하면 노드가 열립니다. 대부분 <em>노드 → Mix RGB → Base Color</em> 구조라,
+<strong>Mix RGB</strong> 노드의 두 색만 바꾸면 무늬는 그대로 두고 색만 바뀝니다. BZepeto 노드의 값도 바꿔 보세요:</p>
+<table>
+<thead>
+<tr>
+<th>파일</th>
+<th>제페토 셰이더</th>
+<th>바꿔 볼 값</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01 Hair Strands</td>
+<td>HairAlpha</td>
+<td>Strands, Taper, Length Variation, Seed</td>
+</tr>
+<tr>
+<td>02 Hair Root to Tip</td>
+<td>HairAlpha</td>
+<td>Root, Tip, Grain</td>
+</tr>
+<tr>
+<td>03 Floral Lace</td>
+<td>Lit (투명)</td>
+<td>Motif Scale, Net Density, Thread, Motifs</td>
+</tr>
+<tr>
+<td>04 Lace Mesh</td>
+<td>Lit (투명)</td>
+<td>Scale, Hole</td>
+</tr>
+<tr>
+<td>05 Weave Denim</td>
+<td>Cloth</td>
+<td>Scale, Pattern(0 평직, 1 능직, 2 수자), Contrast</td>
+</tr>
+<tr>
+<td>06 Knit Wool</td>
+<td>Cloth</td>
+<td>Scale</td>
+</tr>
+<tr>
+<td>07 Quilt Puffer</td>
+<td>Lit</td>
+<td>Scale, Line</td>
+</tr>
+<tr>
+<td>08 Sequins</td>
+<td>Sparkle</td>
+<td>Scale, Density, Seed</td>
+</tr>
+<tr>
+<td>09 Gem Facets</td>
+<td>CustomEnv</td>
+<td>Facets, Scale</td>
+</tr>
+<tr>
+<td>10 Hammered Metal</td>
+<td>Lit (금속)</td>
+<td>Scale</td>
+</tr>
+<tr>
+<td>11 Edge Wear</td>
+<td>Lit</td>
+<td>Amount, Break Up (메쉬 모서리를 읽음 — 평평한 면에는 거의 안 보임)</td>
+</tr>
+<tr>
+<td>12 Toon Hatching</td>
+<td>Toon</td>
+<td>Scale, Angle, Width</td>
+</tr>
+<tr>
+<td>13 Fur Strands</td>
+<td>Fur</td>
+<td>Scale</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>헤어(01, 02)는 일부러 회색입니다. 앱에서 사용자가 고른 머리색이 곱해집니다</li>
+<li>레이스(03, 04)는 투명 아이템입니다. ZEPETO Mode 패널에서 <strong>Transparent</strong> 를 켜야 알파가 내보내집니다</li>
+<li>모든 무늬는 절차적이라 제페토 규격 512px(권장 256px)로 줄여도 또렷합니다</li>
+</ul>
+<h2 id="3">3. 모델링하면서 칠하기 (라이브 링크)</h2>
+<ol>
+<li>Blender에서 아이템을 선택하고 <strong>Paint in ArmorPaint</strong></li>
+<li>아이템이 열린 채로 ArmorPaint가 뜨고, Plugins 탭의 <strong>BZepeto Live Link</strong> 패널 <strong>①</strong> 이 <strong>CONNECTED</strong>
+   로 바뀝니다(그 전에는 <em>WAITING FOR BLENDER</em>)</li>
+<li>Blender의 <strong>Auto Push</strong> 를 켜 두면 편집을 멈춘 뒤 0.8초 후 다시 전송됩니다 — 칠한 레이어는 남습니다</li>
+</ol>
+<p><img alt="Plugins 탭" src="../assets/guide/ap-plugins.png" /></p>
+<p>머티리얼이 없는 아이템은 보낼 때 제페토용 머티리얼이 자동으로 만들어집니다.</p>
+<p><strong>Animated (pose clip)</strong> — Blender ArmorPaint 패널에서 켜면 아이템을 뼈대·액션(예: 제페토 애니메이션
+클립)과 함께 보냅니다. ArmorPaint 타임라인을 이음새가 늘어나는 포즈로 옮겨 칠하면 됩니다.</p>
+<p><strong>버텍스 컬러 → Color ID</strong> — ArmorPaint 의 Color ID 도구(<strong>C</strong>)는 버텍스 컬러가 아니라 텍스처를 씁니다.
+그래서 Blender ArmorPaint 패널의 <strong>Vertex Colours as Color ID</strong>(기본 켜짐)가 켜져 있으면, <strong>Paint in ArmorPaint</strong>
+를 누를 때 아이템의 버텍스 컬러를 Color ID 맵으로 구워 함께 보냅니다. ArmorPaint 가 그 맵을 자동으로
+Color ID 맵으로 지정하므로, ArmorPaint 에서 <strong>C</strong> 를 누르고 색 영역을 클릭하면 그 영역 안에만 칠해집니다.
+세트 의상(UDIM)은 타일마다 따로 구분됩니다. 버텍스 컬러가 없거나 한 색뿐이면 맵을 만들지 않습니다.</p>
+<p><strong>Color ID 영역에 재질 입히기</strong>
+1. <strong>C</strong> 를 누르고 재질을 입힐 색 영역을 클릭합니다(Color ID 화면으로 바뀜)
+2. Layers 에서 그 부분 재질 그룹의 <code>paint</code> 레이어를 고릅니다
+3. Materials 에서 입힐 재질을 고릅니다(클라우드 재질은 Materials 빈 곳에 끌어다 놓아 추가)
+4. <strong>채우기 도구</strong>(물통)로 그 영역을 클릭 — 찍은 영역 안에만 재질 전체(색·거칠기·노멀 등)가 들어갑니다.
+   브러시로 칠해도 영역 밖으로 나가지 않습니다
+5. 다른 영역은 다시 <strong>C</strong> 로 찍으면 됩니다</p>
+<p><strong>세트 의상 (UDIM)</strong> — 상의·하의 재질이 나뉜 아이템은 <code>아이템.1001</code>, <code>아이템.1002</code> 처럼 타일별 객체로
+열립니다. 레이어는 타일마다 따로 칠해지고, 보낼 때 타일마다 텍스처 세트가 나옵니다
+(<code>아이템_base.1001.png</code> …). Blender 쪽 준비: <a href="../KO_blender/">세트 의상</a>.</p>
+<p><strong>Blender 머티리얼</strong> — Blender에서 쓰던 머티리얼이 같은 이름·색으로 Materials 패널에 생기고, 머티리얼마다
+채우기 레이어가 하나씩 만들어집니다(세트 의상이면 자기 타일에만). 처음 열 때 한 번만 만들고, 그다음부터는
+칠한 레이어를 건드리지 않습니다.</p>
+<p><strong>레이어 구성</strong> — 재질 하나가 Layers의 <strong>그룹(폴더) 하나</strong>입니다(이름은 재질 이름). 접으면 재질 수만큼만 보이고,
+펼치면 안에 <code>&lt;재질&gt; fill</code>(재질 색 채우기)과 <code>&lt;재질&gt; paint</code>(칠하는 레이어)가 있습니다. 둘 다 그 재질의 타일(메쉬)에만
+칠해집니다. 채우기 레이어는 브러시로 칠해지지 않으니(ArmorPaint 규칙) <code>paint</code> 레이어에 칠하세요 — 마지막 재질의
+<code>paint</code> 가 선택된 채로 열립니다. 다른 재질을 칠하려면 그 그룹의 <code>paint</code> 를 누르세요.</p>
+<p><strong>브러시 색</strong> — ArmorPaint 는 선택된 <strong>재질</strong>로 칠합니다(Layers <strong>+ New → Paint Layer</strong> 도 같음). 열 때
+<code>Swatch Color</code> 재질이 선택되어 있어 <strong>Swatches</strong> 에서 고른 색이 그대로 칠해집니다. Materials에서 다른 재질을 고르면
+브러시가 그 재질을 칠하니, 다시 색으로 칠하려면 Plugins 탭의 <strong>Brush: Swatch Color</strong> 를 누르세요.</p>
+<p><strong>한 그룹에 재질 섞기</strong> — Materials에서 섞을 재질을 고르고(클라우드 재질은 Materials 빈 곳에 끌어다 놓아 추가),
+Layers에서 그 재질 그룹의 레이어를 하나 누른 뒤 Plugins 탭의 <strong>Add Material to Group: &lt;재질&gt;</strong> 을 누르세요. 그룹
+안에 그 재질의 fill 레이어가 <strong>검은 마스크</strong>와 함께 생기고 마스크가 선택됩니다. 마스크에 <strong>흰색으로 칠한 곳만</strong> 새
+재질이 보이고, 검은색으로 칠하면 다시 가려집니다. 타일 제한도 그룹 것을 그대로 따릅니다.</p>
+<p>ArmorPaint 자체 기능도 같은 구조로 만들어집니다. <strong>+ New → Fill Layer</strong>, 재질을 뷰포트나 Layers에 끌어다 놓기,
+Materials 우클릭 → <strong>To Fill Layer</strong> 모두:
+- <strong>그룹 줄(또는 그룹 밖)을 선택한 상태</strong> → 재질 이름의 새 그룹 + <code>fill</code> + <code>paint</code>
+- <strong>그룹 안의 레이어를 선택한 상태</strong> → 그 그룹에 검은 마스크로 섞기</p>
+<p>그룹 안에 새로 만들거나 끌어 넣은 레이어는 그룹의 메쉬(타일)를 자동으로 따라갑니다. 레이어 오른쪽 아래 칸이
+<code>Shared</code> 면 모든 메쉬에 칠해지는데, 세트 의상 타일들은 UV가 같은 자리에 겹쳐 있어 다른 타일까지 바뀝니다.</p>
+<p><strong>재질 바꾸기 (클라우드·Template)</strong> — 클라우드나 브라우저의 재질을 <strong>Layers의 그 재질 그룹(또는 fill 레이어) 위</strong>나 <strong>Materials의 그
+재질 아이콘 위</strong>에 끌어다 놓으면 새로 추가되지 않고 그 재질이 바뀝니다. 이름과 채우기 레이어는 그대로라, 그 재질을
+쓰는 부분(세트 의상이면 그 타일)이 한 번에 새 재질로 바뀌고 Blender·Unity로 보낼 때도 같은 이름입니다. 빈 곳에
+놓으면 전처럼 새 재질로 추가됩니다.</p>
+<h2 id="4-bzepeto-materials">4. BZepeto Materials (스마트 머티리얼)</h2>
+<p><strong>BZepeto Materials</strong> 패널 <strong>②</strong>: <strong>Denim, Cotton, Knit, Leather, Metal, Base</strong>. 하나를 누른 뒤
+<strong>Fill Layer With It</strong> 으로 채우고 그 위에 칠하면 됩니다. 절차적이라 512px에서도 또렷하고 제페토 텍스처
+채널에 이미 맞춰져 있습니다.</p>
+<h3 id="bzepeto-library">BZepeto Library — 재질 라이브러리</h3>
+<p>같은 Plugins 탭의 <strong>BZepeto Library</strong> 패널은 스마트 재질 22종, 제너레이터 6종, 퀵 셋업, 이름 매칭을
+담은 큰 상자입니다. 전부 절차적이라 제페토 규격 512px(권장 256px)에서도 무너지지 않고, 색·거칠기·금속·
+노멀(올록볼록)이 한 번에 들어갑니다.</p>
+<p><strong>스마트 재질</strong> — 누르면 <code>ZEPETO &lt;이름&gt;</code> 재질이 만들어집니다. <strong>Fill Layer With It</strong> 으로 레이어 전체에
+입히거나 브러시로 그 재질을 칠하세요:</p>
+<table>
+<thead>
+<tr>
+<th>분류</th>
+<th>재질</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fabric (원단)</strong></td>
+<td>Wool 울 · Canvas 캔버스 · Linen 리넨 · Suede 스웨이드 · Corduroy 코듀로이 · Tweed 트위드 · Velvet 벨벳 · Satin 새틴 · Sequin 시퀸 · Camo 카모 · Denim Wash 데님 워시 · Crushed Velvet 러시드 벨벳 · Tulle Net 튤망(투명)</td>
+</tr>
+<tr>
+<td><strong>Metal / Hard (금속·단단한 것)</strong></td>
+<td>Gold 골드 · Chrome 크롬 · Copper 구리 · Rusty Iron 녹슨 철 · Painted Metal 도장 메탈 · Brushed Aluminium 브러시드 알루미늄 · Carbon Fiber 카본 · Gem 보석 · Rose Gold 로즈골드 · Patina Copper 파티나 구리 · Gold Sequin 골드 시퀸</td>
+</tr>
+<tr>
+<td><strong>Other (기타)</strong></td>
+<td>Glitter 글리터 · Wood 나무 · Marble 대리석 · Plastic 플라스틱 · Rubber 러버 · Neoprene 네오프렌 · Cork 코르크 · Terrazzo 테라조 · Chalk Paint 분편</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Velvet</strong>은 ZEPETO Mode 를 <strong>Cloth</strong> 로, <strong>Gem</strong>은 <strong>CustomEnv</strong> 로 바꾸고 쓰면 제대로 보입니다
+  (상태 줄에도 표시됩니다)</li>
+<li>색만 바꾸려면 재질을 더블클릭해 노드를 열고 <strong>Mix RGB</strong> 의 두 색을 바꾸세요 — 무늬는 그대로입니다</li>
+</ul>
+<p><strong>제너레이터 (Generators)</strong> — <strong>불투명도가 패턴인 채우기 레이어</strong>를 한 클릭에 만듭니다:
+Dirt(더러움) · Bleach Fade(바랜 티) · Mud(진흙 튐) · Rust(녹) · Chipping(도장 벗겨짐) · Sparkle
+Dust(반짝이 먼지). 레이어는 패턴이 있는 곳에만 보입니다. 레이어에 <strong>검은 마스크를 추가</strong>해(레이어
+우클릭 → Add Black Mask) 흰색으로 칠한 곳에서만 보이게 하거나, 레이어를 직접 칠해 더할 수 있습니다.
+색·거칠기는 재질 노드에서 조절합니다.</p>
+<p><strong>메시 기반 제너레이터</strong> — <strong>Edge Wear(모서리 마모)</strong>와 <strong>Cavity Dirt(오목한 곳 먼지)</strong>는 메쉬의
+굽은 영역을 셰이더에서 직접 읽습니다: 모서리·오목한 곳에만 자동으로 나타나고, 나머지는 그대로.
+섭스텐스의 제너레이터와 같은 동작입니다. 양은 재질 노드의 값으로 조절하고, 마스크를 칠해 위치를
+정할 수도 있습니다.</p>
+<p><strong>필터 (Filters)</strong> — 아래에 칠한 <strong>모든 것을 편집하는 조정 레이어</strong>: Blur(흐리게) · Sharpen(선명) ·
+Invert(반전) · HSL Shift(색조) · Levels(명암) · Warm Tint(따뜻한 톤). 필터 레이어의 노드에서
+값을 조절하면 아래 전체에 적용됩니다 (섭스텐스의 필터 레이어와 같은 방식).</p>
+<p><strong>퀵 셋업 (Quick Setup)</strong> — 제페토 옷 종류별 버튼 하나로 <strong>ZEPETO Mode 선택 + 어울리는 재질</strong>이 함께
+적용됩니다: Top / T-Shirt · Hoodie / Knit · Jeans / Pants · Skirt / Dress · Coat / Outer · Shoes ·
+Gem / Jewelry · Hair · Toon Item. 예를 들어 <strong>Shoes</strong> 는 Lit 모드 + Leather 재질, <strong>Gem / Jewelry</strong> 는
+CustomEnv 모드 + Gem 재질. <strong>Hair</strong> 는 모드만 바꾸고(가닥은 회색으로 칠하세요), <strong>Toon Item</strong> 은 Toon
+모드의 중립값을 채워 줍니다.</p>
+<p><strong>재질 이름 자동 매칭 (Match Materials by Name)</strong> — Blender 에서 보낸 아이템은 재질 이름이 그대로
+ArmorPaint 에 있습니다. <strong>Match Materials</strong> 를 누르면 이름으로 재질을 판단해 노드를 다시 구성합니다:
+<code>gold_trim</code>→골드, <code>denim</code>→데님, <code>leather</code>→레더, <code>knit</code>→니트, <code>pearl</code>→진주, <code>sole</code>→러버 등.
+이름에 해당하는 재질이 없거나 이름에서 판단이 안 서면 그대로 둡니다. <strong>헤어·퍼·눈·입·레이스는</strong> 각
+셰이더 모드의 채널이 담당하므로 건드리지 않습니다. 결과는 패널에 <code>Matched N, left M unchanged</code> 로
+표시됩니다. 잘못 골랐으면 그 재질의 다른 스마트 재질을 눌러 다시 입히면 됩니다.</p>
+<h2 id="5-zepeto-mode">5. ZEPETO Mode</h2>
+<p><strong>ZEPETO Mode</strong> 패널 <strong>③</strong> 은 아이템의 제페토 셰이더에 맞춥니다(Blender에서 지정한 셰이더를 따라가고,
+<strong>&lt; Previous / Next &gt;</strong> 로 직접 바꿀 수도 있음). 내보내기가 그 셰이더가 읽는 맵으로 바뀌고, 패널에
+모드별 채널 의미가 표시됩니다.</p>
+<ul>
+<li><strong>Setup Base Layer (neutral values)</strong> — 모드의 중립값으로 채운 기본 레이어</li>
+<li><strong>Transparent (export base alpha)</strong> — 베이스 컬러의 알파 유지(불투명 아이템은 더 작은 파일)</li>
+<li><strong>Emission map</strong> — 빛나는 부분을 그 색으로 내보내기</li>
+<li><strong>Viewport preview</strong> — Lit 뷰포트에서 모드별 제페토 느낌(헤어 하이라이트, 툰 단계 음영, 진주 광택,
+  클리어코트, 반짝임). Unity 셰이더 그 자체가 아닌 근사치입니다</li>
+</ul>
+<blockquote>
+<p><strong>헤어:</strong> 가닥은 <strong>회색</strong>으로 칠하세요 — 앱에서 사용자가 고른 머리색이 곱해집니다.
+알파 = 가닥, Height = 하이라이트 흔들림(0.5 = 없음), Metallic = 보조 하이라이트.</p>
+</blockquote>
+<h2 id="6-bzepeto">6. BZepeto 노드</h2>
+<p>재질 노드 메뉴의 <strong>BZepeto ZEPETO</strong> 분류:</p>
+<table>
+<thead>
+<tr>
+<th>노드</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hair Strands / Hair Root to Tip</td>
+<td>알파·음영·하이라이트가 있는 가닥, 뿌리→끝 밝기</td>
+</tr>
+<tr>
+<td>Floral Lace / Lace Mesh</td>
+<td>샹티이 스타일 레이스(불투명도, 높이, 무늬 마스크), 단순 망사</td>
+</tr>
+<tr>
+<td>Weave / Knit / Quilt</td>
+<td>원단 조직</td>
+</tr>
+<tr>
+<td>Tartan Plaid / Gingham / Polka Dots</td>
+<td>체크·스트라이프 패션 무늬</td>
+</tr>
+<tr>
+<td>Sequins / Gem Facets / Hammered Metal</td>
+<td>액세서리, 주얼리</td>
+</tr>
+<tr>
+<td>Edge Wear / Toon Hatching / Fur Strands</td>
+<td>마모, 툰 붓자국, 털 무늬</td>
+</tr>
+<tr>
+<td>Grunge</td>
+<td>얼룩·스크래치 마스크 (더러움·마모의 재료)</td>
+</tr>
+<tr>
+<td>Water Drops / Glow Bands</td>
+<td>이슬 방울, 발광 줄무늬</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7">7. 스티치</h2>
+<ol>
+<li>Blender 에디트 모드에서 시접 엣지를 선택합니다</li>
+<li><strong>Stitch Selected Edges</strong> — 먼저 <em>"Will draw: N seam(s), M stitch(es)"</em> 가 표시됩니다</li>
+<li>스티치가 ArmorPaint에 <strong>별도 레이어</strong>로 생겨 색을 바꾸거나 지울 수 있습니다</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>설정</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dash / Gap / Width</td>
+<td>실 길이, 간격, 굵기 (실제 아이템 크기 기준 mm)</td>
+</tr>
+<tr>
+<td>Color / Roughness</td>
+<td>실 색과 거칠기</td>
+</tr>
+<tr>
+<td>Target</td>
+<td><code>ArmorPaint</code>(레이어로 생성, 권장) 또는 <code>Blender</code>(머티리얼에 직접 그림)</td>
+</tr>
+</tbody>
+</table>
+<p>UV 섬 두 개의 경계에 있는 시접은 실제 옷처럼 <strong>양쪽 조각 모두</strong>에 그려집니다.</p>
+<h2 id="8">8. 텍스처 보내기</h2>
+<table>
+<thead>
+<tr>
+<th>ArmorPaint 버튼</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Send to Blender</strong></td>
+<td>Blender가 알아서 받습니다(<strong>Auto Receive</strong>)</td>
+</tr>
+<tr>
+<td><strong>Send to Unity</strong></td>
+<td>ZEPETO Studio 프로젝트로 바로</td>
+</tr>
+<tr>
+<td><strong>Send to Both</strong></td>
+<td>둘 다</td>
+</tr>
+<tr>
+<td><strong>Size 512 / 1024 / 2048 / 4096</strong></td>
+<td>보낼 텍스처 크기 — 칠하는 해상도는 그대로</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>제페토는 텍스처 512px, 아이템당 1MB까지 허용하므로 기본값이 512입니다.</p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../KO_unity/" class="btn btn-neutral float-left" title="Unity 패키지"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../KO_help/" class="btn btn-neutral float-right" title="도움말·FAQ">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../KO_unity/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../KO_help/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

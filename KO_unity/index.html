@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="chamiseul" /><link rel="canonical" href="https://mayalhc.github.io/bzepeto/KO_unity/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Unity 패키지 - BZepeto — User Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Unity \ud328\ud0a4\uc9c0";
+        var mkdocs_page_input_path = "KO_unity.md";
+        var mkdocs_page_url = "/bzepeto/KO_unity/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> BZepeto — User Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">English</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="..#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="..#your-download">Your download</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="..#where-bzepeto-keeps-its-files">Where BZepeto keeps its files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="..#whats-new">What's New</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="..#v131-studio-render-marvelous-designer-link-long-skirt-swing-accurate-checks">v1.3.1 — Studio render, Marvelous Designer link, long-skirt swing &amp; accurate checks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#v132-armorpaint-filters-mesh-driven-generators-diagnostics">v1.3.2 — ArmorPaint filters, mesh-driven generators + diagnostics</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#v131">v1.3.1</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#v130-the-armorpaint-material-library-high-heels">v1.3.0 — The ArmorPaint material library &amp; high heels</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#v120-major-update">v1.2.0 — Major update</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#v100-first-release">v1.0.0 — First release</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../blender/">Blender Add-on</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#1-install">1. Install</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#2-the-bzepeto-tab-and-the-base-character">2. The BZepeto tab and the base character</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#3-rigging">3. Rigging</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#high-heels">High heels</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#gloves-nails-and-rings-glove-test">Gloves, nails and rings (Glove Test)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#skirts-dresses-and-coats">Skirts, dresses and coats</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#swing-bones-hair-skirts-ribbons">Swing bones (hair, skirts, ribbons)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#4-body-shape">4. Body shape</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#5-wearables">5. Wearables</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#marvelous-designer">Marvelous Designer</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#6-send-to-zepeto">6. Send to ZEPETO</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#7-review-tools-under-send">7. Review Tools (under Send)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#8-painting-in-armorpaint">8. Painting in ArmorPaint</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#set-outfits-separate-maps-for-the-top-and-the-bottom-udim">Set outfits — separate maps for the top and the bottom (UDIM)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#9-zepeto-playground">9. ZEPETO Playground</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../blender/#10-studio-render">10. Studio Render</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unity/">Unity Package</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../unity/#1-install">1. Install</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../unity/#2-what-happens-by-itself">2. What happens by itself</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../unity/#3-the-bzepeto-menu">3. The BZepeto menu</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../armorpaint/">ArmorPaint</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../armorpaint/#1-install">1. Install</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../armorpaint/#2-new-to-armorpaint-start-with-the-node-samples">2. New to ArmorPaint? Start with the node samples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../armorpaint/#3-paint-while-you-model-live-link">3. Paint while you model (live link)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../armorpaint/#4-bzepeto-materials-smart-materials">4. BZepeto Materials (smart materials)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../armorpaint/#the-bzepeto-library-the-material-library">The BZepeto Library — the material library</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../armorpaint/#5-zepeto-mode">5. ZEPETO Mode</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../armorpaint/#6-bzepeto-nodes">6. BZepeto nodes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../armorpaint/#7-stitches">7. Stitches</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../armorpaint/#8-sending-the-textures">8. Sending the textures</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help & FAQ</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../help/#troubleshooting">Troubleshooting</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../help/#faq">FAQ</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../help/#rejection-reasons-official-guide-and-help-centre">Rejection reasons (official guide and help centre)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../help/#licence">Licence</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">한국어</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../KO_index/">홈</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_index/#_1">필요한 것</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_index/#_2">받은 파일</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_index/#bzepeto">BZepeto가 파일을 두는 곳</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_index/#_3">새 소식</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v131">v1.3.1 — 스튜디오 렌더, 마블러스 디자이너 연동, 롱치마 흔들림 &amp; 검사 정확도</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v132">v1.3.2 — 아머페인트 필터·메시 제너레이터 + 진단 개선</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v131_1">v1.3.1</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v130">v1.3.0 — 아머페인트 재질 라이브러리 &amp; 하이힐</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v120">v1.2.0 — 중요 업데이트</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#v100">v1.0.0 — 첫 출시</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../KO_blender/">Blender 애드온</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#1">1. 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#2-bzepeto">2. BZepeto 탭과 베이스 캐릭터</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#3-rigging">3. 리깅 (Rigging)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#high-heel">하이힐 (High Heel)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#glove-test">장갑·네일·반지 (Glove Test)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#_1">치마·원피스·코트</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#_2">스윙 본 (머리카락, 치마, 리본)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#4-body-shape">4. 체형 (Body Shape)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#5-wearables">5. 의상 (Wearables)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#marvelous-designer">마블러스 디자이너 (Marvelous Designer)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#6-send-to-zepeto">6. Send to ZEPETO</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#7-review-tools-send">7. Review Tools (Send 아래)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#8-armorpaint">8. ArmorPaint에서 칠하기</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#udim">세트 의상 — 상의·하의에 맵을 따로 (UDIM)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#9-zepeto-playground">9. ZEPETO Playground</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_blender/#10-studio-render">10. 스튜디오 렌더 (Studio Render)</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Unity 패키지</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1">1. 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2">2. 자동으로 되는 것</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-bzepeto">3. BZepeto 메뉴</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../KO_armorpaint/">ArmorPaint</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/#1">1. 설치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/#2-armorpaint">2. ArmorPaint가 처음이라면 — 노드 샘플부터</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/#3">3. 모델링하면서 칠하기 (라이브 링크)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/#4-bzepeto-materials">4. BZepeto Materials (스마트 머티리얼)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_armorpaint/#bzepeto-library">BZepeto Library — 재질 라이브러리</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/#5-zepeto-mode">5. ZEPETO Mode</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/#6-bzepeto">6. BZepeto 노드</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/#7">7. 스티치</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/#8">8. 텍스처 보내기</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../KO_help/">도움말·FAQ</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_help/#_1">문제 해결</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_help/#_2">자주 묻는 질문</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_help/#_3">반려 사례 (공식 가이드·고객센터 기준)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../KO_help/#_4">라이선스</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://mayalhc.github.io/GroomForge-Wiki/">All add-ons & guides</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">BZepeto — User Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">한국어</li>
+      <li class="breadcrumb-item active">Unity 패키지</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="unity-zepeto-studio">Unity 패키지 (ZEPETO Studio)</h1>
+<p><a href="../unity/">🇺🇸 English</a> | 🇰🇷 한국어</p>
+<h2 id="1">1. 설치</h2>
+<ol>
+<li>ZEPETO Studio 프로젝트(<strong>Unity 2020.3.9f1</strong>)를 엽니다</li>
+<li><strong>Window &gt; Package Manager</strong>, 왼쪽 위 <strong>+</strong> 를 눌러 <strong>Add package from tarball...</strong></li>
+<li><code>com.bzepeto.unity2020-&lt;버전&gt;.tgz</code> 를 고릅니다</li>
+<li>메뉴 막대에 <strong>BZepeto</strong> 메뉴가 생기고, Console에 <code>[BZepeto] Hot folder watch started</code> 가 나옵니다</li>
+</ol>
+<p>업데이트도 새 파일로 똑같이 하면 이전 버전이 교체됩니다.</p>
+<h2 id="2">2. 자동으로 되는 것</h2>
+<ul>
+<li><strong>Blender에서 보낸 아이템</strong>(Send to Unity)은 <code>Assets/BZepetoImport/&lt;카테고리&gt;/&lt;아이템&gt;/</code> 에 FBX,
+  프리팹, 텍스처로 들어옵니다</li>
+<li><strong>제페토 셰이더가 자동으로 지정</strong>되고(Blender에서 고른 셰이더, 없으면 이름으로 추측), 모든 맵이 알맞은
+  슬롯에 올바른 색 공간·키워드·계수로 연결됩니다(노멀 맵, 메탈릭/스무스니스, 발광, 광택, 털, 헤어,
+  무지갯빛, 클리어코트, 툰 맵, CustomEnv 큐브맵). 알파가 있는 텍스처는 Cutout 모드(레이스)</li>
+<li>헤드웨어·마스크 재질 이름에 <strong>(NoColor)</strong> 가 붙어 머리색이 섞이지 않습니다</li>
+<li><strong>Import BlendShapes</strong> 가 켜져 얼굴 표정이 그대로 들어옵니다</li>
+<li>텍스처 총 <strong>1MB</strong> 를 다시 검사하고, <strong>썸네일 초안</strong>(300×300 투명 PNG)을 <code>&lt;프로젝트&gt;/BZepetoThumbnails</code>
+  에 저장합니다</li>
+<li><strong>ArmorPaint에서 보낸 텍스처</strong>도 아이템 옆으로 복사되어 같은 방식으로 연결됩니다</li>
+<li><strong>세트 의상</strong>(상의·하의 재질, UDIM 타일): <code>&lt;아이템&gt;.udim.json</code> 이 어느 텍스처가 어느 재질 것인지 알려
+  주어, 재질마다 자기 맵이 연결됩니다</li>
+</ul>
+<p>Unity 창이 앞에 있지 않아도 됩니다 — 백그라운드에서 계속 가져옵니다.</p>
+<p><img alt="가져온 아이템" src="../assets/guide/un-import.png" /></p>
+<p>Blender 에서 보낸 치마가 들어온 모습: <strong>①</strong> 제페토 셰이더(<code>ZEPETO/BuiltIn/Lit</code>)가 지정되고 <strong>②</strong> 텍스처가 Albedo 칸에
+연결됩니다. <strong>③</strong> Console 에 가져오기 결과와 심사 검사 결과(<code>0 error(s), 0 warning(s)</code>)가 나옵니다.</p>
+<p><strong>흔들림 뼈</strong> — Blender 의 Auto Skirt Swing 으로 만든 체인은 이름 그대로(<code>skirtswing_1_01_physics_14_20_26</code>)
+허벅지 뼈 아래에 들어옵니다 <strong>①②</strong>. 제페토는 이름에 <code>_physics</code> 가 있는 뼈를 흔듭니다.</p>
+<p><img alt="흔들림 뼈" src="../assets/guide/un-swing-bones.png" /></p>
+<h2 id="3-bzepeto">3. BZepeto 메뉴</h2>
+<table>
+<thead>
+<tr>
+<th>메뉴</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BZepeto &gt; Open Dashboard</strong></td>
+<td>브리지, 핫 폴더, 가져오기 상태</td>
+</tr>
+<tr>
+<td><strong>BZepeto &gt; Bridge Connection</strong></td>
+<td>Blender와 직접 연결</td>
+</tr>
+<tr>
+<td><strong>BZepeto &gt; Review &gt; Check Selected Prefab</strong></td>
+<td>선택한 프리팹 심사 검사: 조명(Light), 파티클 한도, 재질·텍스처 없는 파티클(업로드하면 흰 네모), 제페토가 아닌 셰이더, Color Grading, 털 길이, "(NoColor)", Import BlendShapes. 결과는 Console에</td>
+</tr>
+<tr>
+<td><strong>BZepeto &gt; Review &gt; Make Thumbnail (Selected Prefab)</strong></td>
+<td>썸네일 초안. 파티클은 1초 재생한 뒤 찍어서 보입니다</td>
+</tr>
+<tr>
+<td><strong>BZepeto &gt; Review &gt; URP Readiness (Selected)</strong></td>
+<td>모든 재질이 제페토 BuiltIn 셰이더인지 (제페토가 URP로 바꿀 때 자동 변환되는 셰이더)</td>
+</tr>
+<tr>
+<td><strong>BZepeto &gt; Effects &gt; Add Safe Particle System</strong></td>
+<td>선택한 fx 조인트에 이펙트 가이드 한도 안의 파티클 시스템 추가</td>
+</tr>
+<tr>
+<td><strong>BZepeto &gt; Effects &gt; Set Selected Textures as Particle Sprites</strong></td>
+<td>이펙트 가이드대로 Sprite(2D and UI) + Full Rect</td>
+</tr>
+<tr>
+<td><strong>BZepeto &gt; Capture Playground For Blender</strong></td>
+<td>플레이그라운드 씬 Play 모드에서: Blender 플레이그라운드와 뚫림 검사용 제페토 미리보기 메뉴 기록</td>
+</tr>
+<tr>
+<td><strong>BZepeto &gt; Convert Diagnostics</strong></td>
+<td>"Convert to ZEPETO style" 이 실패한 이유</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="BZepeto Dashboard" src="../assets/guide/un-dashboard.png" /></p>
+<p><strong>BZepeto &gt; Open Dashboard</strong> 의 <strong>Import</strong> 탭: 핫 폴더 감시 상태와 감시하는 폴더 <strong>①</strong>, 감시 켜기·끄기 <strong>②</strong>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../KO_blender/" class="btn btn-neutral float-left" title="Blender 애드온"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../KO_armorpaint/" class="btn btn-neutral float-right" title="ArmorPaint">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../KO_blender/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../KO_armorpaint/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
