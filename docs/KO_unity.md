@@ -28,6 +28,16 @@
 
 Unity 창이 앞에 있지 않아도 됩니다 — 백그라운드에서 계속 가져옵니다.
 
+![가져온 아이템](assets/guide/un-import.png)
+
+Blender 에서 보낸 치마가 들어온 모습: **①** 제페토 셰이더(`ZEPETO/BuiltIn/Lit`)가 지정되고 **②** 텍스처가 Albedo 칸에
+연결됩니다. **③** Console 에 가져오기 결과와 심사 검사 결과(`0 error(s), 0 warning(s)`)가 나옵니다.
+
+**흔들림 뼈** — Blender 의 Auto Skirt Swing 으로 만든 체인은 이름 그대로(`skirtswing_1_01_physics_14_20_26`)
+허벅지 뼈 아래에 들어옵니다 **①②**. 제페토는 이름에 `_physics` 가 있는 뼈를 흔듭니다.
+
+![흔들림 뼈](assets/guide/un-swing-bones.png)
+
 ## 3. BZepeto 메뉴
 
 | 메뉴 | 하는 일 |
@@ -41,3 +51,8 @@ Unity 창이 앞에 있지 않아도 됩니다 — 백그라운드에서 계속 
 | **BZepeto > Effects > Set Selected Textures as Particle Sprites** | 이펙트 가이드대로 Sprite(2D and UI) + Full Rect |
 | **BZepeto > Capture Playground For Blender** | 플레이그라운드 씬 Play 모드에서: Blender 플레이그라운드와 뚫림 검사용 제페토 미리보기 메뉴 기록 |
 | **BZepeto > Convert Diagnostics** | "Convert to ZEPETO style" 이 실패한 이유 |
+
+![BZepeto Dashboard](assets/guide/un-dashboard.png)
+
+**BZepeto > Open Dashboard** 의 **Import** 탭: 핫 폴더 감시 상태와 감시하는 폴더 **①**, 감시 켜기·끄기 **②**.
+

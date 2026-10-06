@@ -136,19 +136,28 @@ Materials 우클릭 → **To Fill Layer** 모두:
 
 | 분류 | 재질 |
 |---|---|
-| **Fabric (원단)** | Wool 울 · Canvas 캔버스 · Linen 리넨 · Suede 스웨이드 · Corduroy 코듀로이 · Tweed 트위드 · Velvet 벨벳 · Satin 새틴 · Sequin 시퀸 · Camo 카모 |
-| **Metal / Hard (금속·단단한 것)** | Gold 골드 · Chrome 크롬 · Copper 구리 · Rusty Iron 녹슨 철 · Painted Metal 도장 메탈 · Brushed Aluminium 브러시드 알루미늄 · Carbon Fiber 카본 · Gem 보석 |
-| **Other (기타)** | Glitter 글리터 · Wood 나무 · Marble 대리석 · Plastic 플라스틱 · Rubber 러버 |
+| **Fabric (원단)** | Wool 울 · Canvas 캔버스 · Linen 리넨 · Suede 스웨이드 · Corduroy 코듀로이 · Tweed 트위드 · Velvet 벨벳 · Satin 새틴 · Sequin 시퀸 · Camo 카모 · Denim Wash 데님 워시 · Crushed Velvet 러시드 벨벳 · Tulle Net 튤망(투명) |
+| **Metal / Hard (금속·단단한 것)** | Gold 골드 · Chrome 크롬 · Copper 구리 · Rusty Iron 녹슨 철 · Painted Metal 도장 메탈 · Brushed Aluminium 브러시드 알루미늄 · Carbon Fiber 카본 · Gem 보석 · Rose Gold 로즈골드 · Patina Copper 파티나 구리 · Gold Sequin 골드 시퀸 |
+| **Other (기타)** | Glitter 글리터 · Wood 나무 · Marble 대리석 · Plastic 플라스틱 · Rubber 러버 · Neoprene 네오프렌 · Cork 코르크 · Terrazzo 테라조 · Chalk Paint 분편 |
 
 - **Velvet**은 ZEPETO Mode 를 **Cloth** 로, **Gem**은 **CustomEnv** 로 바꾸고 쓰면 제대로 보입니다
   (상태 줄에도 표시됩니다)
 - 색만 바꾸려면 재질을 더블클릭해 노드를 열고 **Mix RGB** 의 두 색을 바꾸세요 — 무늬는 그대로입니다
 
-**제너레이터 (Generators)** — **불투명도가 절차적 패턴인 채우기 레이어**를 한 클릭에 만듭니다:
+**제너레이터 (Generators)** — **불투명도가 패턴인 채우기 레이어**를 한 클릭에 만듭니다:
 Dirt(더러움) · Bleach Fade(바랜 티) · Mud(진흙 튐) · Rust(녹) · Chipping(도장 벗겨짐) · Sparkle
 Dust(반짝이 먼지). 레이어는 패턴이 있는 곳에만 보입니다. 레이어에 **검은 마스크를 추가**해(레이어
 우클릭 → Add Black Mask) 흰색으로 칠한 곳에서만 보이게 하거나, 레이어를 직접 칠해 더할 수 있습니다.
 색·거칠기는 재질 노드에서 조절합니다.
+
+**메시 기반 제너레이터** — **Edge Wear(모서리 마모)**와 **Cavity Dirt(오목한 곳 먼지)**는 메쉬의
+굽은 영역을 셰이더에서 직접 읽습니다: 모서리·오목한 곳에만 자동으로 나타나고, 나머지는 그대로.
+섭스텐스의 제너레이터와 같은 동작입니다. 양은 재질 노드의 값으로 조절하고, 마스크를 칠해 위치를
+정할 수도 있습니다.
+
+**필터 (Filters)** — 아래에 칠한 **모든 것을 편집하는 조정 레이어**: Blur(흐리게) · Sharpen(선명) ·
+Invert(반전) · HSL Shift(색조) · Levels(명암) · Warm Tint(따뜻한 톤). 필터 레이어의 노드에서
+값을 조절하면 아래 전체에 적용됩니다 (섭스텐스의 필터 레이어와 같은 방식).
 
 **퀵 셋업 (Quick Setup)** — 제페토 옷 종류별 버튼 하나로 **ZEPETO Mode 선택 + 어울리는 재질**이 함께
 적용됩니다: Top / T-Shirt · Hoodie / Knit · Jeans / Pants · Skirt / Dress · Coat / Outer · Shoes ·
@@ -187,8 +196,11 @@ ArmorPaint 에 있습니다. **Match Materials** 를 누르면 이름으로 재�
 | Hair Strands / Hair Root to Tip | 알파·음영·하이라이트가 있는 가닥, 뿌리→끝 밝기 |
 | Floral Lace / Lace Mesh | 샹티이 스타일 레이스(불투명도, 높이, 무늬 마스크), 단순 망사 |
 | Weave / Knit / Quilt | 원단 조직 |
+| Tartan Plaid / Gingham / Polka Dots | 체크·스트라이프 패션 무늬 |
 | Sequins / Gem Facets / Hammered Metal | 액세서리, 주얼리 |
 | Edge Wear / Toon Hatching / Fur Strands | 마모, 툰 붓자국, 털 무늬 |
+| Grunge | 얼룩·스크래치 마스크 (더러움·마모의 재료) |
+| Water Drops / Glow Bands | 이슬 방울, 발광 줄무늬 |
 
 ## 7. 스티치
 

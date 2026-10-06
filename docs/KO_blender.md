@@ -15,8 +15,11 @@
 
 ![Blender 환경 설정](assets/guide/bl-prefs.png)
 
-**Base Character FBX** 는 제페토의 `creatorBaseSet_zepeto.fbx` 위치입니다(기본
-`%USERPROFILE%\BZepeto\Samples\`). BZepeto에는 들어 있지 않으니 제페토 크리에이터 자료에서 받으세요.
+**ZEPETO Files Folder** **③** 는 애드온이 읽는 제페토 파일을 **한 폴더**에 모아 두는 곳입니다(기본
+`%USERPROFILE%\BZepeto\Samples\`). 이 폴더에 제페토의 `creatorBaseSet_zepeto.fbx`(베이스 캐릭터)와
+`Female_Torso.fbx`(Body Shape > Female 용 여성 레퍼런스)를 두세요 — 이름으로 찾으므로 `Female_Torso.fbx.fbx` 처럼
+받아진 이름도 됩니다. 바로 아래에 두 파일을 찾았는지(✔ / 찾지 못함) 표시됩니다. BZepeto에는 들어 있지 않으니 제페토
+크리에이터 자료에서 받으세요. 예전 버전에서 파일을 따로 지정해 두었다면 그 설정도 계속 쓰입니다.
 
 ## 2. BZepeto 탭과 베이스 캐릭터
 
@@ -76,8 +79,37 @@
 3. 체인당 뼈 수, 프리셋(헤어, 리본, 치마, 코트, 액세서리), 매달 뼈, 웨이트 반경을 고릅니다
 4. **Make Swing Chains**
 
-뼈 이름은 제페토가 읽는 형식 `<관절> physics <drag> <angle drag> <restore drag>` 로 자동으로
-붙습니다. 제페토 권장은 아이템당 체인 2–5개. **Remove Physics Naming** 은 physics 부분을 다시 지웁니다.
+뼈 이름은 제페토 SDK 가 읽는 형식 `<관절>_physics_<drag>_<angle drag>_<restore drag>` 로 자동으로
+붙습니다(예: `hair_01_physics_10_15_20`). 제페토 권장은 아이템당 체인 2–5개. **Remove Physics Naming** 은 physics 부분을
+다시 지웁니다.
+
+!!! warning "1.3.1 이전에 만든 흔들림 뼈"
+    예전 버전은 `hair_01 physics 10 15 20` 처럼 **띄어쓰기**로 이름을 붙였는데, 제페토는 이름에 `_physics` 가 있는 뼈만
+    흔듭니다 — 그래서 Unity·제페토에서 흔들리지 않았습니다. **Fix Swing Names** 를 한 번 누르고 아이템을 다시 보내세요
+    (값과 웨이트는 그대로). Send 검사가 이런 뼈를 찾아 알려 줍니다.
+
+**Auto Skirt Swing** — 치마·원피스·롱코트에 흔들림 본을 한 번에 넣습니다. Wearables > ZEPETO Category 에서 Skirt·Dress·
+Outerwear 를 고르면 그 칸에 **1. Make Rig → 2. Bind To Character → 3. Auto Skirt Swing** 버튼이 순서대로 있습니다.
+치마 안에 속바지·안감이 한 메쉬로 붙어 있어도 체인은 바깥 치마에 놓이고, 속바지는 흔들리지 않고 다리를 따라갑니다.
+엣지를 고를 필요 없이 체인(기본 4개, 2–5)을 고관절 높이에서 밑단까지, 천 바로 안쪽에 놓습니다.
+
+![Auto Skirt Swing](assets/guide/bl-swing.png)
+
+**①** ZEPETO 카테고리(Skirt) **②** 순서대로 누르는 세 버튼 **③** 끝나면 `MySkirt: 4 swing chains` 처럼 체인 수가
+표시됩니다. 뷰포트의 세로 막대 4개가 허벅지에 매달린 흔들림 체인입니다.
+
+**Find Crossing Faces** — 큰 자세에서 옷 허리·겹친 부분이 들쭉날쭉하게 보이면, 옷 메쉬가 **처음부터 스스로를 뚫고**
+있는 경우가 많습니다(마블러스 디자이너에서 내보낸 겹옷·플랩·허리띠 고리). 이 버튼은 지금 자세에서 다른 면을 뚫는
+면을 에디트 모드로 선택해 줍니다. 웨이트로는 고칠 수 없으니 MD 에서 레이어 간격을 띄우거나 숨은 안쪽 면을 지우세요.
+
+**Follow the Legs**(기본 켜짐) — 제페토 기본 흔들림에는 다리 충돌이 없어서, 골반에 매단 체인은 다리를 들어도 제자리에
+있고 **허벅지가 치마를 뚫고 나옵니다**. 그래서 체인을 대각선(왼앞·오른앞·왼뒤·오른뒤)에 놓고 각각 **그쪽 허벅지에
+매답니다**: 다리를 들면 치마가 다리와 함께 나가고, 흔들림은 그 위에 더해집니다. 발목 길이 치마 측정: 크게 걸을 때(45°)
+뚫고 나온 다리 점 694 → 41, 보통 걸음(30°) 220 → 0. 체인 수는 짝수(2·4)가 좋습니다(홀수면 하나가 뒤 가운데 골반에).
+
+위쪽은 원래 웨이트 그대로, 밑단으로 갈수록 흔들림이 늘어납니다(**Swing at the Hem**, 기본 0.7 — 허벅지에 매달면
+가장 덜 뚫림; Follow the Legs 를 끄면 0.4 권장).
+다시 누르면 이전 체인을 지우고 새로 만듭니다.
 
 ## 4. 체형 (Body Shape)
 
@@ -90,6 +122,11 @@
 `Make Garment Rig` → `Bind Garment To Character` → `Refit Clothing To Body`.
 **Auto Mask from Items** 는 아이템이 덮는 몸을 검게 칠합니다(제페토가 그 부분을 숨깁니다).
 
+**헤드웨어·헤어 피봇** — 제페토의 헤드 템플릿(`HEADWEAR_Guide`)은 **머리 관절(head)이 원점**에 있습니다(앱이 헤어·모자·
+안경을 캐릭터 머리에 붙이기 때문). BZepeto 캐릭터의 머리는 약 0.89m 위에 있어서, 가이드로 만든 아이템은 그대로면 발밑에
+놓입니다. `Head Accessory` 가져오기와 `Make Head Acc` / `Make Hair Rig` 가 이 배치를 알아보고 머리 위로 올립니다
+(웨이트가 없는 조각은 head 뼈에). 보낸 아이템은 제페토에서 가이드로 만든 것과 같은 자리에 붙습니다(Unity 변환 결과로 확인).
+
 **마스크를 면 단위로 다듬기** — 제페토는 흰색이 아닌 **정점**을 숨기고, 그 정점에 닿은 삼각형을 통째로
 지웁니다. 그래서 색을 더 세밀하게 칠해도(섭디바이드 등) 결과는 달라지지 않습니다. 대신 결과 자체를 보고
 면 단위로 고치세요:
@@ -101,6 +138,56 @@
   (그래서 선택 가장자리의 면이 남을 수 있음). 선택한 면을 전부 지우려면 실행 후 왼쪽 아래 창에서
   **Cover Whole Selection** 을 켜세요(바깥 한 줄도 같이 지워짐).
 - **Select Removed Faces** — 지금 지워지는 면을 선택해 줍니다. Auto Mask 결과에서 바로 손볼 때 편합니다.
+
+### 마블러스 디자이너 (Marvelous Designer)
+
+제페토 캐릭터를 마블러스 디자이너로 보내 옷을 만들고, 완성된 옷을 **입힌 상태로** 가져옵니다.
+BZepeto 탭의 **MD Live (Marvelous Designer)** 패널에 있습니다.
+
+![MD Live 패널](assets/guide/bl-md-live.png)
+
+**①** Start Live **②** Get Garment Now **③** Send Body to MD **④** Import Garment from MD **⑤** Open MD Plug-in Folder
+
+**처음 한 번만**
+
+1. **Open MD Plug-in Folder** 를 눌러 플러그인 폴더를 엽니다.
+2. 마블러스 디자이너에서 **Plug-in ▸ Plug-in Manager ▸ Add** 로 `bz_live.py` 를 등록합니다.
+   한 번씩 주고받는 `bz_load_avatar`(아바타 불러오기), `bz_send_garment`(옷 보내기)도 원하면 같이 등록하세요.
+
+**라이브 (자동)**
+
+1. Blender 에서 **Start Live**.
+2. 마블러스 디자이너에서 Plug-in 메뉴의 `bz_live` 를 한 번 누릅니다(다시 누르면 멈춤).
+   패널에 `MD: bz_live running` 이 보이면 연결된 것입니다.
+
+그다음부터는 누를 것이 없습니다:
+
+- Blender 에서 **포즈·체형·하이힐** 을 바꾸면 몸이 자동으로 다시 보내지고, 마블러스 디자이너가 아바타를
+  바꾼 뒤 **MD Simulate Frames**(기본 30)만큼 시뮬레이션해서 옷을 돌려보냅니다.
+- 돌아온 옷은 **Wear As** 카테고리로 리깅되어 입혀지고, 이전에 라이브로 받은 옷을 대신합니다.
+- 마블러스 디자이너에서 옷을 고친 뒤에는 **Get Garment Now** — 지금 옷을 바로 받습니다.
+- 옷은 오브젝트 모드에서 받습니다. 다른 모드에 있으면 "Garment waiting" 이 뜨고, 돌아오면 입혀집니다.
+
+**한 번씩 주고받기 — 캐릭터 보내기**
+
+1. Blender 에서 **Send Body to MD** — 지금 포즈·체형 그대로의 제페토 몸이 공유 폴더에 OBJ 로 저장됩니다.
+2. 마블러스 디자이너에서 Plug-in 메뉴의 `bz_load_avatar` — 가져오기 창 없이 아바타로 들어옵니다. 다시 보내면
+   아바타가 교체되고 두 개가 되지 않습니다.
+
+**한 번씩 주고받기 — 옷 가져오기**
+
+1. 마블러스 디자이너에서 `bz_send_garment` — 옷만(아바타 제외) 공유 폴더에 저장됩니다.
+2. Blender 에서 **Import Garment from MD** — 가장 최근 옷이 미리 골라져 있습니다. **ZEPETO Category** 를
+   고르면 그 카테고리 방식으로 리깅되어 바로 입혀집니다(Make Garment Rig + Bind 와 같음).
+
+**알아두면 좋은 점**
+
+- 공유 폴더는 비워 두면 `%USERPROFILE%\BZepeto\MDLive` 입니다. 폴더와 배율은 기억됩니다.
+- 단위: BZepeto 플러그인으로 보낸 옷은 단위가 함께 기록되어 그대로 맞습니다. MD 메뉴에서 직접 내보낸 옷은
+  **Import Scale** 을 쓰고, 그래도 몸에 맞지 않으면 mm·cm·inch·m 중 맞는 단위를 자동으로 찾습니다.
+- 탑스티치는 내보내는 동안만 텍스처로 바뀌어(끝나면 원래대로) 파일이 가볍습니다. 직접 내보낸 큰 파일도
+  스티치·단추·지퍼는 읽기 전에 빠집니다(**Skip Stitches & Trims**) — 300 MB 셔츠가 1~2 초에 들어옵니다.
+- 제페토 삼각형 한도를 넘기 쉬우니 마블러스에서 **Particle Distance** 를 키워 메쉬를 성기게 하세요.
 
 ## 6. Send to ZEPETO
 
@@ -240,3 +327,36 @@ SDK 데포메이션 13종, 스페이스 — Unity로 넘기기 전에 아이템�
 
 > 플레이그라운드는 내 ZEPETO Studio 프로젝트에서 캡처를 한 번 해야 쓸 수 있습니다: Unity에서
 > 플레이그라운드 씬을 Play 모드로 실행하고 **BZepeto > Capture Playground For Blender**를 누르세요.
+
+## 10. 스튜디오 렌더 (Studio Render)
+
+캐릭터 빌더 홍보 이미지처럼, 아이템을 입은 캐릭터를 스튜디오에서 찍습니다. BZepeto 탭의 **Studio Render** 패널.
+
+![Studio Render 패널](assets/guide/bl-studio.png)
+
+번호는 아래 순서와 같습니다: **①** Start/Exit Studio **②** Background **③** Light **④** Camera **⑤** Character **⑥** Render
+
+1. **Start Studio** — 이음매 없는 배경(바닥이 벽으로 둥글게 이어짐), 부드러운 3점 조명(키·필·림), 85 mm 인물 카메라가
+   캐릭터에 맞춰 생기고 뷰포트가 카메라 시점의 **렌더 화면**으로 바뀝니다(아래 Render 에서 고른 EEVEE/Cycles 로). 캐릭터의 지금 포즈(A/T 포즈, 하이힐, 플레이그라운드
+   애니메이션 프레임)를 그대로 찍습니다.
+2. **Background** — 흰색·회색·핑크·피치·버터·민트·스카이·라벤더·다크, 또는 **Custom** 색.
+3. **Light** — Neutral·Warm·Cool·Pink·**Rainbow**(세 조명이 세 가지 색), **Brightness**.
+4. **Camera** — **Full Body / Upper Body / Head** 구도, **Format**(1:1, 4:5, 9:16, 16:9), **Depth of Field**(배경 흐림).
+   포즈·체형·아이템을 바꾼 뒤에는 **Frame Again**.
+5. **Character** — 빌더처럼 **Head Size**, **Lean ↔ Sturdy**(가슴·허리·골반·어깨 함께), **Height**.
+   **Back to Original** 은 체형 슬라이더를 모두 0 으로.
+6. **Render** — **EEVEE**(빠름), **Cycles**(노이즈 제거, **GPU** 로 — 환경설정 > System 의 장치, 없으면 자동 선택), **Both**(둘 다 한 장씩). **Transparent** 를 켜면 배경이 투명한
+   PNG(Cycles 는 바닥 그림자를 남김). 그림은 `%USERPROFILE%\BZepeto\Renders` 에 저장됩니다(**Open Renders Folder**).
+
+**ZEPETO Shader Look** — Send 에서 아이템에 제페토 셰이더를 골라 두었으면 렌더에서 그 느낌을 냅니다: Cloth·Fur 는
+천 색의 광택, HairAlpha 결 하이라이트, Sparkle 반짝이, Iridescence 무지개 막, Prism 코팅, CustomEnv 강한 광택,
+Toon 평평한 색. 렌더하는 동안만 쓰는 사본이라 **아이템 재질은 바뀌지 않습니다**. 실제 모습은 Unity·제페토 미리보기가 기준입니다.
+
+**Exit Studio** 를 누르면 스튜디오가 더한 것이 모두 지워지고 렌더 엔진·해상도·카메라·월드가 원래대로 돌아갑니다.
+Send·Export 에는 스튜디오 물체가 들어가지 않습니다.
+
+![EEVEE 렌더 예시 (Sky 배경, Neutral 조명, Portrait 4:5)](assets/guide/bl-studio-render.png)
+
+!!! note "얼굴·머리카락"
+    제페토 베이스 캐릭터는 텍스처 없는 회색 몸이라, 눈·입술·머리카락은 직접 만든 얼굴 텍스처와 헤어 아이템이
+    있어야 보입니다.

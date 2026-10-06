@@ -30,6 +30,16 @@ To update, do the same with the new file — the old version is replaced.
 
 Unity does not need to be the active window — it keeps importing in the background.
 
+![An imported item](assets/guide/un-import.png)
+
+A skirt sent from Blender: **①** the ZEPETO shader (`ZEPETO/BuiltIn/Lit`) is set and **②** its texture sits in
+the Albedo slot. **③** The Console shows the import result and the review check (`0 error(s), 0 warning(s)`).
+
+**Swing bones** — chains made with Blender's Auto Skirt Swing arrive under the thigh bones with their names
+intact (`skirtswing_1_01_physics_14_20_26`) **①②**. ZEPETO swings every bone whose name contains `_physics`.
+
+![Swing bones](assets/guide/un-swing-bones.png)
+
 ## 3. The BZepeto menu
 
 | Menu | What it does |
@@ -43,3 +53,9 @@ Unity does not need to be the active window — it keeps importing in the backgr
 | **BZepeto > Effects > Set Selected Textures as Particle Sprites** | Sprite (2D and UI) + Full Rect, as the Effect guide asks |
 | **BZepeto > Capture Playground For Blender** | in Play mode of the playground scene: records ZEPETO's preview menu for Blender's Playground and clip tests |
 | **BZepeto > Convert Diagnostics** | why a "Convert to ZEPETO style" failed |
+
+![BZepeto Dashboard](assets/guide/un-dashboard.png)
+
+The **Import** tab of **BZepeto > Open Dashboard**: the hot folder watch and its folder **①**, and the
+buttons to start or stop it **②**.
+

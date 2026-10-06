@@ -24,7 +24,7 @@ Blender  ──①──>  ArmorPaint  ──②──>  Blender
 | 페이지 | 내용 |
 |---|---|
 | [Blender 애드온](KO_blender.md) | 설치, 베이스 캐릭터 불러오기, 검사와 Send, Review Tools, 얼굴 표정 |
-| [Unity 패키지](KO_unity.md) | 설치, 자동 가져오기와 제페토 셰이더, 검사 메뉴, 실시간 미리보기 |
+| [Unity 패키지](KO_unity.md) | 설치, 자동 가져오기와 제페토 셰이더, 검사 메뉴 |
 | [ArmorPaint](KO_armorpaint.md) | 설치, 라이브 링크, **처음 쓰는 분을 위한 노드 샘플**, 재질 라이브러리, ZEPETO Mode, 스티치 |
 | [도움말·FAQ](KO_help.md) | 문제 해결, 자주 묻는 질문, 반려 사례, 라이선스 |
 
@@ -65,7 +65,7 @@ Blender  ──①──>  ArmorPaint  ──②──>  Blender
 ## BZepeto가 파일을 두는 곳
 
 모두 `%USERPROFILE%\BZepeto` 아래에 있습니다. 베이스 캐릭터는
-`%USERPROFILE%\BZepeto\Samples\creatorBaseSet_zepeto.fbx` 에 두세요(또는 애드온 설정에서 위치 지정).
+`%USERPROFILE%\BZepeto\Samples\creatorBaseSet_zepeto.fbx` 에 두세요(또는 애드온 설정의 **ZEPETO Files Folder** 를 그 파일이 있는 폴더로).
 Blender와 Unity는 둘 다 `%USERPROFILE%\BZepeto\HotExport` 를 주고받는 폴더로 쓰므로 따로 설정할 것이
 없습니다. 다른 곳으로 옮기려면 환경 변수 `BZEPETO_HOME` (예: `D:\BZepeto`)을 지정하고 Blender와
 Unity를 다시 시작하세요.
@@ -73,6 +73,34 @@ Unity를 다시 시작하세요.
 ---
 
 ## 새 소식
+
+### v1.3.1 — 스튜디오 렌더, 마블러스 디자이너 연동, 롱치마 흔들림 & 검사 정확도
+
+!!! note "Blender 애드온과 Unity 패키지를 업데이트하세요"
+    ArmorPaint 는 1.3.0 그대로 써도 됩니다(버전 표시만 바뀜).
+
+**스튜디오 렌더** — 새 **Studio Render** 패널. 이음매 없는 배경·부드러운 조명·인물 카메라로 아이템을 입은 캐릭터를
+찍습니다. 배경색·조명색(무지개 포함) 프리셋, 전신·상반신·얼굴 구도, 빌더식 슬라이더, EEVEE·Cycles, 투명 PNG,
+제페토 셰이더 느낌까지 ([Blender 가이드](KO_blender.md#10-스튜디오-렌더-studio-render)).
+
+**마블러스 디자이너 연동** — **MD Live** 패널. 제페토 캐릭터를 마블러스 디자이너로
+보내고, 만든 옷을 받아 카테고리에 맞게 리깅·착용까지 합니다. **Live** 를 켜면 포즈·체형을 바꿀 때마다
+마블러스 디자이너의 아바타가 바뀌고 옷이 다시 맞춰져 돌아옵니다 — 누를 것 없이
+([Blender 가이드](KO_blender.md#마블러스-디자이너-marvelous-designer)).
+
+**롱치마 자동 흔들림** — Rigging > Swing Bones > **Auto Skirt Swing**. 치마·원피스·롱코트에 흔들림 본을
+한 번에 넣습니다(앞부터 4개, 고관절 → 밑단). 밑단 흔들림 기본 0.4 는 걸을 때 다리가 치마 밖으로 나오지
+않는 값입니다
+
+**검사가 더 정확해졌습니다** — 오류가 아닌데 오류·경고로 뜨던 것을 고쳤습니다:
+- 헤드웨어 재질의 `(NoColor)` 가 이름 오류로 뜨고 **Fix Material Names 가 지우던 것**
+- 리핏한 옷의 내부 쉐이프키가 **FBX 에 블렌드쉐이프로 실려 가던 것**(실제 버그)
+- `_shd` 재질 이름·DR/TOP 메쉬 이름은 권장이라 경고 대신 제안으로
+- 하이힐·플랫폼 신발의 "너무 큼", 액세서리의 "마스크 비어 있음", 헤어밴드·헤어핀의 "헤어 색"
+- Export 검사: 재질 2개 원피스의 "하나로 합쳐라", 사용 안 하는 뼈, 텍스처 절대 경로
+- Unity: 변환된 모든 프리팹의 Sprites-Default 경고, 스킨 없는 아이템의 "hips 없음" 오류,
+  표정 없는 모자의 블렌드쉐이프 오류, 같은 아이템을 다시 보낼 때의 "texture matched no slot" 경고,
+  모든 아이템의 "Can't import tangents" 경고(이제 FBX 에 탄젠트가 함께 나갑니다)
 
 ### v1.3.0 — 아머페인트 재질 라이브러리 & 하이힐
 
@@ -82,11 +110,12 @@ Unity를 다시 시작하세요.
 
 **아머페인트 재질 라이브러리 (BZepeto Library 패널)** — 이번 업데이트의 주인공:
 
-- **스마트 재질 22종** — Wool·Canvas·Linen·Suede·Corduroy·Tweed·Velvet·Satin·Sequin·Camo,
+- **스마트 재질 32종** — Wool·Canvas·Linen·Suede·Corduroy·Tweed·Velvet·Satin·Sequin·Camo,
   Gold·Chrome·Copper·Rusty Iron·Painted Metal·Brushed Aluminium·Carbon Fiber·Gem,
   Glitter·Wood·Marble·Plastic·Rubber. 색·거칠기·금속·올록볼록까지 한 번에 들어가고, 절차적이라
-  512px에서도 또렷합니다
-- **제너레이터 6종** — Dirt(더러움)·Bleach Fade(바랜 티)·Mud(진흙)·Rust(녹)·Chipping(도장 벗겨짐)·
+  512px에서도 또렷합니다. 이후 10종 추가(Denim Wash·Rose Gold·Patina Copper·Neoprene·Cork·
+  Terrazzo·Chalk Paint·Crushed Velvet·Tulle Net·Gold Sequin)
+- **제너레이터 6종 + 메시 기반 2종** — Dirt(더러움)·Bleach Fade(바랜 티)·Mud(진흙)·Rust(녹)·Chipping(도장 벗겨짐)·
   Sparkle Dust(반짝이 먼지). 패턴이 곧 불투명도인 레이어를 한 클릭에 만들고, 검은 마스크를 칠해
   위치를 정합니다 (섭스텐스의 스마트 마스크 역할)
 - **퀵 셋업 9종** — 상의·후디·청바지·치마·코트·신발·보석·헤어·툰. ZEPETO 모드 선택과 어울리는 재질
@@ -107,6 +136,9 @@ Head**. 탈 눈이 얼굴 눈의 1.3배면 1.3배로 깜빡입니다
 **치마·원피스** — 걸음 포즈에서 앞가운데가 바지처럼 갈라지던 것을 고쳤습니다
 
 **라이브 프리뷰 제거** — Unity 에디트 씬에는 캐릭터가 없어(SDK가 Play 때 생성) 동작할 수 없는 기능이었습니다. 체형·포즈 확인은 Blender의 **Playground**(제페토 미리보기 메뉴 + 뚫림 검사)가 담당합니다
+
+**아머페인트 필터·노드 6종 추가** — 조정 레이어 6종(Blur·Sharpen·Invert·HSL·Levels·Warm Tint)과
+  패션 무늬 GPU 노드(Tartan Plaid·Gingham·Polka Dots·Grunge·Water Drops·Glow Bands)
 
 **기타** — 모든 패널이 섹션별로 접힙니다(▸/▾, 접힌 머리줄에 상태 표시). 검사 결과는 문제 항목 먼저.
 GLB 를 불러온 뒤 패널이 느려지던 것, Bind 뒤 벨트·버클이 납작해지던 것, T포즈 코트의 잘못된 경고,

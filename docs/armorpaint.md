@@ -150,9 +150,9 @@ with **Fill Layer With It**, or paint with it:
 
 | Group | Materials |
 |---|---|
-| **Fabric** | Wool · Canvas · Linen · Suede · Corduroy · Tweed · Velvet · Satin · Sequin · Camo |
-| **Metal / Hard** | Gold · Chrome · Copper · Rusty Iron · Painted Metal · Brushed Aluminium · Carbon Fiber · Gem |
-| **Other** | Glitter · Wood · Marble · Plastic · Rubber |
+| **Fabric** | Wool · Canvas · Linen · Suede · Corduroy · Tweed · Velvet · Satin · Sequin · Camo · Denim Wash · Crushed Velvet · Tulle Net (transparent) |
+| **Metal / Hard** | Gold · Chrome · Copper · Rusty Iron · Painted Metal · Brushed Aluminium · Carbon Fiber · Gem · Rose Gold · Patina Copper · Gold Sequin |
+| **Other** | Glitter · Wood · Marble · Plastic · Rubber · Neoprene · Cork · Terrazzo · Chalk Paint |
 
 - **Velvet** wants the ZEPETO Mode set to **Cloth**, and **Gem** to **CustomEnv** (the status line
   says so too)
@@ -163,6 +163,14 @@ with **Fill Layer With It**, or paint with it:
 Dirt · Bleach Fade · Mud · Rust · Chipping · Sparkle Dust. The layer shows only where the pattern is.
 Add a **black mask** (right-click the layer → Add Black Mask) and paint white where it should show, or
 paint on the layer to add more. Colour and roughness live in the material's nodes.
+
+**Mesh-driven generators** — **Edge Wear** and **Cavity Dirt** read the mesh's curved areas in the
+shader: they appear on edges and in crevices only, like Substance's generators. Adjust them in the
+material's nodes, or paint the layer's mask to place them.
+
+**Filters** — adjustment layers that edit **everything painted below**: Blur · Sharpen · Invert ·
+HSL Shift · Levels · Warm Tint. Change the values in the filter layer's nodes and the whole stack
+below follows (the Substance filter-layer way).
 
 **Quick Setup** — one button per kind of ZEPETO garment applies the **ZEPETO Mode and a matching
 material** together: Top / T-Shirt · Hoodie / Knit · Jeans / Pants · Skirt / Dress · Coat / Outer ·
@@ -201,8 +209,11 @@ In the material node menu under **BZepeto ZEPETO**:
 | Hair Strands / Hair Root to Tip | strands with alpha, shade and highlight shift; root-to-tip light |
 | Floral Lace / Lace Mesh | Chantilly-style lace (opacity, height, motif mask); simple mesh net |
 | Weave / Knit / Quilt | fabric structures |
+| Tartan Plaid / Gingham / Polka Dots | fashion check and stripe patterns |
 | Sequins / Gem Facets / Hammered Metal | accessories and jewellery |
 | Edge Wear / Toon Hatching / Fur Strands | wear, toon brush strokes, fur pattern |
+| Grunge | stain and scuff mask (the dirt/wear building block) |
+| Water Drops / Glow Bands | droplets, glowing stripes |
 
 ## 7. Stitches
 

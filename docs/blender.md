@@ -14,9 +14,12 @@ The red boxes in the pictures are what you click, in the order of their numbers.
 
 ![Blender preferences](assets/guide/bl-prefs.png)
 
-**Base Character FBX** points at ZEPETO's `creatorBaseSet_zepeto.fbx` (default
-`%USERPROFILE%\BZepeto\Samples\`). BZepeto does not include it — download it from ZEPETO's creator
-resources.
+**ZEPETO Files Folder** **③** is the **one folder** for the ZEPETO files the add-on reads (default
+`%USERPROFILE%\BZepeto\Samples\`): put ZEPETO's `creatorBaseSet_zepeto.fbx` (the base character) and
+`Female_Torso.fbx` (the female reference for Body Shape > Female) in it — they are found by name, so a
+download called `Female_Torso.fbx.fbx` works too. Right below, the preferences show whether each one was
+found. BZepeto does not include them — download them from ZEPETO's creator resources. Files set separately
+in an earlier version keep working.
 
 ## 2. The BZepeto tab and the base character
 
@@ -81,8 +84,40 @@ middle like trousers
    and the weight radius
 4. **Make Swing Chains**
 
-Bones are named the way ZEPETO reads them: `<joint> physics <drag> <angle drag> <restore drag>`.
-ZEPETO recommends 2–5 chains per item. **Remove Physics Naming** strips the physics part again.
+**Auto Skirt Swing** puts swing chains on a skirt, dress or long coat in one go. Pick Skirt, Dress or
+Outerwear in Wearables > ZEPETO Category and the section shows the steps in order: **1. Make Rig → 2. Bind
+To Character → 3. Auto Skirt Swing**. Shorts or a lining inside the skirt, in the same mesh, keep following
+the legs; the chains go on the outer cloth. No edges to pick: chains (4 by default, 2-5) from the hip joints
+down to the hem, just inside the cloth.
+
+![Auto Skirt Swing](assets/guide/bl-swing.png)
+
+**①** the ZEPETO category (Skirt) **②** the three buttons, in order **③** when done the section shows the chain count
+(`MySkirt: 4 swing chains`). The four vertical bars in the viewport are the swing chains hanging from the thighs.
+
+**Find Crossing Faces** — when the waist or overlapping parts of a garment look jagged in a big pose, the mesh often
+**cuts through itself from the start** (layers, flaps and belt loops exported from Marvelous Designer). This button
+selects, in Edit Mode, the faces that cut through other faces in the current pose. Weights cannot fix it: move the
+layers apart in MD or delete the hidden inner faces.
+
+**Follow the Legs** (on by default) — ZEPETO's default swing has no leg colliders, so a chain hanging from the
+hips stays put when a leg steps forward and **the thigh comes out through the skirt**. The chains therefore sit
+on the diagonals (front-left, front-right, back-left, back-right), **each hanging from the thigh on its side**:
+the skirt moves with the leg and swings on top of that. Ankle-length skirt, measured: big stride (45 deg) 694 ->
+41 leg points out, normal stride (30 deg) 220 -> 0. Use an even number of chains (2 or 4; with an odd number one
+hangs from the hips at the back).
+
+The top keeps its weights and the swing grows towards the hem (**Swing at the Hem**, 0.7 by default — the least
+poke-through with the chains on the thighs; 0.4 with Follow the Legs off). Run it again to redo the chains.
+
+Bones are named the way ZEPETO's SDK reads them: `<joint>_physics_<drag>_<angle drag>_<restore drag>`
+(e.g. `hair_01_physics_10_15_20`). ZEPETO recommends 2–5 chains per item. **Remove Physics Naming** strips the
+physics part again.
+
+!!! warning "Swing bones made before 1.3.1"
+    Earlier versions named them with **spaces** (`hair_01 physics 10 15 20`), but ZEPETO only swings bones whose
+    name contains `_physics` — so they did not move in Unity or ZEPETO. Press **Fix Swing Names** once and send
+    the item again (same values, weights kept). The Send check points such bones out.
 
 ## 4. Body shape
 
@@ -96,6 +131,13 @@ ZEPETO SDK does, so the feet stay on the ground.
 → `Make Garment Rig` → `Bind Garment To Character` → `Refit Clothing To Body`. **Auto Mask from Items**
 paints the body black where the items cover it (ZEPETO hides those parts).
 
+**Headwear / hair pivot** — ZEPETO's head template (`HEADWEAR_Guide`) puts the **head joint at the
+origin** (the app parents hair, hats and glasses to the character's head). BZepeto's character has its
+head ~0.89 m up, so an item made on the guide would land at the feet. The `Head Accessory` import and
+`Make Head Acc` / `Make Hair Rig` recognise that layout and lift the item onto the head (unweighted
+pieces go on the head bone). The sent item sits in ZEPETO exactly where a guide-made one does
+(checked on the Unity conversion).
+
 **Touching up the mask by face** — ZEPETO hides every **vertex** that is not white and removes every
 triangle touching one, so painting finer (a subdivided copy) changes nothing. Work on the result
 instead, face by face:
@@ -107,6 +149,64 @@ instead, face by face:
   face at its edge may stay); to remove all of it, turn on **Cover Whole Selection** in the redo panel
   (the ring just outside goes too).
 - **Select Removed Faces** selects what is removed now — handy for touching up an Auto Mask.
+
+### Marvelous Designer
+
+Send the ZEPETO character to Marvelous Designer, make the garment there, and bring it back **already
+worn**. It is the **MD Live (Marvelous Designer)** panel in the BZepeto tab.
+
+![MD Live panel](assets/guide/bl-md-live.png)
+
+**①** Start Live **②** Get Garment Now **③** Send Body to MD **④** Import Garment from MD **⑤** Open MD Plug-in Folder
+
+**Once**
+
+1. Press **Open MD Plug-in Folder**.
+2. In Marvelous Designer, **Plug-in ▸ Plug-in Manager ▸ Add** `bz_live.py`. Add `bz_load_avatar`
+   (load the avatar) and `bz_send_garment` (send the garment) too if you want the one-shot steps.
+
+**Live (automatic)**
+
+1. In Blender, **Start Live**.
+2. In Marvelous Designer, click `bz_live` in the Plug-in menu once (again to stop). The panel shows
+   `MD: bz_live running` when the two are connected.
+
+From then on there is nothing to press:
+
+- Change the **pose, body shape or high heel** in Blender and the body is sent again; Marvelous
+  Designer swaps the avatar, simulates **MD Simulate Frames** (30 by default) and sends the garment
+  back.
+- The garment that comes back is rigged as the **Wear As** category and worn, replacing the one Live
+  brought in before.
+- After editing the garment in Marvelous Designer, **Get Garment Now** brings it over at once.
+- Garments are received in Object Mode; in another mode the panel says "Garment waiting" and it is
+  worn when you return.
+
+**One-shot — sending the character**
+
+1. In Blender, **Send Body to MD** writes the ZEPETO body, in its current pose and shape, to the shared
+   folder as OBJ.
+2. In Marvelous Designer, `bz_load_avatar` from the Plug-in menu loads it as the avatar — no import
+   dialog. Sending again replaces the avatar instead of adding a second one.
+
+**One-shot — bringing the garment back**
+
+1. In Marvelous Designer, `bz_send_garment` writes the garment (no avatar) to the shared folder.
+2. In Blender, **Import Garment from MD** opens with the newest garment picked. Choose its **ZEPETO
+   Category** and it is rigged that way and worn (the same as Make Garment Rig + Bind).
+
+**Good to know**
+
+- Left empty, the shared folder is `%USERPROFILE%\BZepeto\MDLive`. The folder and the scales are
+  remembered.
+- Units: garments sent by the BZepeto plug-ins carry a note of their unit and always fit. A garment
+  exported by hand from MD's menu uses **Import Scale**, and if it still does not sit on the body the
+  right unit (mm, cm, inch or m) is found by itself.
+- Topstitches are switched to texture only while exporting (and back afterwards), so the file stays
+  light. Hand exports lose their stitch, button and zipper meshes before they are read (**Skip Stitches
+  & Trims**) — a 300 MB shirt comes in within a couple of seconds.
+- ZEPETO's triangle limits are easy to exceed: raise **Particle Distance** in Marvelous Designer for a
+  coarser mesh.
 
 ## 6. Send to ZEPETO
 
@@ -256,3 +356,46 @@ deformations and the space — so you can check the item before it reaches Unity
 
 > The playground needs a capture from your own ZEPETO Studio project once: in Unity, enter Play mode
 > in the playground scene and choose **BZepeto > Capture Playground For Blender**.
+
+## 10. Studio Render
+
+Shoot the character in its items in a studio, like the ZEPETO character builder's promotional
+pictures. It is the **Studio Render** panel in the BZepeto tab.
+
+![Studio Render panel](assets/guide/bl-studio.png)
+
+The numbers follow the steps below: **①** Start/Exit Studio **②** Background **③** Light **④** Camera
+**⑤** Character **⑥** Render
+
+1. **Start Studio** — a seamless backdrop (the floor curving up into the wall), soft three-point
+   light (key, fill, rim) and an 85 mm portrait camera are set up around the character, and the
+   viewport looks through the camera, **rendered** with the engine picked under Render (EEVEE or
+   Cycles; switching it switches Blender's render engine). The character is shot in the pose it has (A/T pose, high
+   heel, a playground animation frame).
+2. **Background** — White, Gray, Pink, Peach, Butter, Mint, Sky, Lavender, Dark, or a **Custom**
+   colour.
+3. **Light** — Neutral, Warm, Cool, Pink, **Rainbow** (three hues on the three lights), and
+   **Brightness**.
+4. **Camera** — **Full Body / Upper Body / Head** framing, **Format** (1:1, 4:5, 9:16, 16:9),
+   **Depth of Field** (soft background). After changing the pose, body or items, **Frame Again**.
+5. **Character** — the builder's **Head Size**, **Lean ↔ Sturdy** (chest, waist, pelvis and
+   shoulders together) and **Height**. **Back to Original** puts every body slider back to 0.
+6. **Render** — **EEVEE** (fast), **Cycles** (denoised, on the **GPU** — the device in Preferences >
+   System, picked automatically when none is set) or **Both** (one picture each).
+   **Transparent** gives a PNG with alpha (Cycles keeps the floor shadow). Pictures go to
+   `%USERPROFILE%\BZepeto\Renders` (**Open Renders Folder**).
+
+**ZEPETO Shader Look** — items whose ZEPETO shader is set in Send render with its feel: sheen in
+the cloth's colour for Cloth and Fur, streaky highlights for HairAlpha, glints for Sparkle, a thin
+film for Iridescence, a clear coat for Prism, high gloss for CustomEnv, flat colour for Toon. A
+copy is used for the render only, so **the item's materials are never changed**. Unity's and
+ZEPETO's preview remain the reference for the real look.
+
+**Exit Studio** removes everything the studio added and puts the render engine, resolution,
+camera and world back. Send and Export never take studio objects along.
+
+![EEVEE render (Sky backdrop, Neutral light, Portrait 4:5)](assets/guide/bl-studio-render.png)
+
+!!! note "Face and hair"
+    The ZEPETO base character is an untextured grey body: eyes, lips and hair show only with your
+    own face texture and hair item.
