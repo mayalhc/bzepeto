@@ -105,6 +105,34 @@ inside the skirt in a stride
   shape error on hats without expressions, "texture matched no slot" when an item is sent again, and
   "Can't import tangents" on every item (the FBX now carries tangents)
 
+### v1.3.2 — ArmorPaint filters, mesh-driven generators + diagnostics
+
+**The ArmorPaint effect stack, reworked against Substance Painter:**
+
+- **Filters (6 adjustment layers)**: Blur · Sharpen · Invert · HSL Shift · Levels · Warm Tint —
+  they edit everything painted below (the Substance filter-layer way)
+- **Mesh-driven generators**: **Edge Wear** and **Cavity Dirt** read the mesh's curved areas
+  directly in the shader — they appear on edges and in crevices only
+- **6 new GPU nodes (19 total)**: Tartan Plaid · Gingham · Polka Dots · Grunge · Water Drops ·
+  Glow Bands
+- **10 new smart materials (32 total)**: Denim Wash · Rose Gold · Patina Copper · Neoprene · Cork ·
+  Terrazzo · Chalk Paint · Crushed Velvet · Tulle Net · Gold Sequin
+
+**Convert Diagnostics improved** — fixed diagnosing the old target instead of the FBX picked in the
+Project window, the diagnosed path is shown in full, a **Check the original FBX** button appears for
+converted prefabs, and item meshes count skinned meshes too (correct FBXs no longer report "no item
+mesh")
+
+**Live preview removed** — the Unity edit-mode scene has no character of its own (the SDK builds it
+on Play), so the feature had nothing to move. Blender's **Playground** covers body shape and pose
+checks
+
+### v1.3.1
+
+- **11 URP Shader Graph samples** in the Unity package's `Samples~` (Eye, Toon, Hologram, Water,
+  Wind, Sparkle, Hair, Lava, ForceField, Iridescence, Neon) — import them from Package Manager >
+  Samples
+
 ### v1.3.0 — The ArmorPaint material library & high heels
 
 !!! warning "Update all three tools together"
@@ -113,13 +141,11 @@ inside the skirt in a stride
 
 **The ArmorPaint material library (the BZepeto Library panel)** — the star of this release:
 
-- **32 smart materials** — Wool·Canvas·Linen·Suede·Corduroy·Tweed·Velvet·Satin·Sequin·Camo,
+- **22 smart materials** — Wool·Canvas·Linen·Suede·Corduroy·Tweed·Velvet·Satin·Sequin·Camo,
   Gold·Chrome·Copper·Rusty Iron·Painted Metal·Brushed Aluminium·Carbon Fiber·Gem,
   Glitter·Wood·Marble·Plastic·Rubber. Colour, roughness, metal and relief land in one click, and
-  being procedural they stay crisp at 512 px, with 10 more added later (Denim Wash,
-  Rose Gold, Patina Copper, Neoprene, Cork, Terrazzo, Chalk Paint, Crushed Velvet,
-  Tulle Net, Gold Sequin)
-- **6 generators + 2 mesh-driven** — Dirt·Bleach Fade·Mud·Rust·Chipping·Sparkle Dust. One click makes a layer whose
+  being procedural they stay crisp at 512 px
+- **6 generators** — Dirt·Bleach Fade·Mud·Rust·Chipping·Sparkle Dust. One click makes a layer whose
   opacity *is* the pattern; paint its black mask to place it (the Substance smart-mask job)
 - **9 quick setups** — top·hoodie·jeans·skirt·coat·shoes·gem·hair·toon. The ZEPETO mode and a
   matching material, one button each
@@ -140,10 +166,6 @@ Mouth → **Transfer to Mascot Head**. A mascot eye 1.3x the face's blinks 1.3x 
 **Skirts and dresses** — no longer split open in the middle on a stride
 
 **Live preview removed** — the Unity edit-mode scene has no character of its own (the SDK builds it on Play), so the feature had nothing to move. Checking body shape and poses stays with Blender's **Playground** (ZEPETO's preview menu and the clip tests)
-
-**ArmorPaint filters + 6 new nodes** — six adjustment layers (Blur, Sharpen, Invert, HSL,
-  Levels, Warm Tint) and fashion-pattern GPU nodes (Tartan Plaid, Gingham, Polka Dots,
-  Grunge, Water Drops, Glow Bands)
 
 **Also** — every panel folds into sections (▸/▾, the status stays on the folded row); check results
 list the problems first; panels stay fast after importing a GLB; Bind keeps a belt's and its buckle's

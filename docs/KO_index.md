@@ -102,6 +102,30 @@ Unity를 다시 시작하세요.
   표정 없는 모자의 블렌드쉐이프 오류, 같은 아이템을 다시 보낼 때의 "texture matched no slot" 경고,
   모든 아이템의 "Can't import tangents" 경고(이제 FBX 에 탄젠트가 함께 나갑니다)
 
+### v1.3.2 — 아머페인트 필터·메시 제너레이터 + 진단 개선
+
+**아머페인트 이펙트 체계 확장** (섭스텐스 페인터 기준으로 재정비):
+
+- **Filters (조정 레이어 6종)**: Blur · Sharpen · Invert · HSL Shift · Levels · Warm Tint — 아래에
+  칠한 모든 것을 편집합니다 (섭스텐스의 필터 레이어와 같은 방식)
+- **메시 기반 제너레이터 2종**: **Edge Wear**(모서리 마모) · **Cavity Dirt**(오목한 곳 먼지) —
+  메쉬의 굽은 영역을 셰이더에서 직접 읽습니다
+- **GPU 노드 6종 (총 19종)**: Tartan Plaid · Gingham · Polka Dots · Grunge · Water Drops · Glow Bands
+- **스마트 재질 +10 (총 32종)**: Denim Wash · Rose Gold · Patina Copper · Neoprene · Cork · Terrazzo ·
+  Chalk Paint · Crushed Velvet · Tulle Net · Gold Sequin
+
+**Convert Diagnostics 개선** — Project 창에서 FBX 를 골라도 이전 대상(프리팹)을 검사하던 버그 수정,
+검사 중인 전체 경로 표시, 변환 완료 프리팹 진단 시 **Check the original FBX** 버튼 제공. 아이템 메쉬를
+스킨 메쉬로도 세도록 수정 (올바른 FBX 가 "아이템 없음"으로 나오던 것)
+
+**라이브 프리뷰 제거** — Unity 에디트 씬에는 캐릭터가 없어(SDK가 Play 때 생성) 동작할 수 없는 기능이었습니다.
+체형·포즈 확인은 Blender의 **Playground**가 담당합니다
+
+### v1.3.1
+
+- Unity 패키지 `Samples~` 에 **URP Shader Graph 샘플 11종** (Eye, Toon, Hologram, Water, Wind, Sparkle,
+  Hair, Lava, ForceField, Iridescence, Neon) — Package Manager 의 Samples 에서 가져옵니다
+
 ### v1.3.0 — 아머페인트 재질 라이브러리 & 하이힐
 
 !!! warning "세 도구를 함께 업데이트하세요"
@@ -110,12 +134,11 @@ Unity를 다시 시작하세요.
 
 **아머페인트 재질 라이브러리 (BZepeto Library 패널)** — 이번 업데이트의 주인공:
 
-- **스마트 재질 32종** — Wool·Canvas·Linen·Suede·Corduroy·Tweed·Velvet·Satin·Sequin·Camo,
+- **스마트 재질 22종** — Wool·Canvas·Linen·Suede·Corduroy·Tweed·Velvet·Satin·Sequin·Camo,
   Gold·Chrome·Copper·Rusty Iron·Painted Metal·Brushed Aluminium·Carbon Fiber·Gem,
   Glitter·Wood·Marble·Plastic·Rubber. 색·거칠기·금속·올록볼록까지 한 번에 들어가고, 절차적이라
-  512px에서도 또렷합니다. 이후 10종 추가(Denim Wash·Rose Gold·Patina Copper·Neoprene·Cork·
-  Terrazzo·Chalk Paint·Crushed Velvet·Tulle Net·Gold Sequin)
-- **제너레이터 6종 + 메시 기반 2종** — Dirt(더러움)·Bleach Fade(바랜 티)·Mud(진흙)·Rust(녹)·Chipping(도장 벗겨짐)·
+  512px에서도 또렷합니다
+- **제너레이터 6종** — Dirt(더러움)·Bleach Fade(바랜 티)·Mud(진흙)·Rust(녹)·Chipping(도장 벗겨짐)·
   Sparkle Dust(반짝이 먼지). 패턴이 곧 불투명도인 레이어를 한 클릭에 만들고, 검은 마스크를 칠해
   위치를 정합니다 (섭스텐스의 스마트 마스크 역할)
 - **퀵 셋업 9종** — 상의·후디·청바지·치마·코트·신발·보석·헤어·툰. ZEPETO 모드 선택과 어울리는 재질
@@ -136,9 +159,6 @@ Head**. 탈 눈이 얼굴 눈의 1.3배면 1.3배로 깜빡입니다
 **치마·원피스** — 걸음 포즈에서 앞가운데가 바지처럼 갈라지던 것을 고쳤습니다
 
 **라이브 프리뷰 제거** — Unity 에디트 씬에는 캐릭터가 없어(SDK가 Play 때 생성) 동작할 수 없는 기능이었습니다. 체형·포즈 확인은 Blender의 **Playground**(제페토 미리보기 메뉴 + 뚫림 검사)가 담당합니다
-
-**아머페인트 필터·노드 6종 추가** — 조정 레이어 6종(Blur·Sharpen·Invert·HSL·Levels·Warm Tint)과
-  패션 무늬 GPU 노드(Tartan Plaid·Gingham·Polka Dots·Grunge·Water Drops·Glow Bands)
 
 **기타** — 모든 패널이 섹션별로 접힙니다(▸/▾, 접힌 머리줄에 상태 표시). 검사 결과는 문제 항목 먼저.
 GLB 를 불러온 뒤 패널이 느려지던 것, Bind 뒤 벨트·버클이 납작해지던 것, T포즈 코트의 잘못된 경고,
