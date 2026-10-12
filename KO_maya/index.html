@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="chamiseul" /><link rel="canonical" href="https://mayalhc.github.io/bzepeto/KO_maya/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Maya 플러그인 - BZepeto — User Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Maya \ud50c\ub7ec\uadf8\uc778";
+        var mkdocs_page_input_path = "KO_maya.md";
+        var mkdocs_page_url = "/bzepeto/KO_maya/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> BZepeto — User Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">BZepeto</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >English</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="..">Home</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="..#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#your-download">Your download</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#where-bzepeto-keeps-its-files">Where BZepeto keeps its files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="..#whats-new">What's New</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="..#mzepeto-010-the-maya-edition">MZepeto 0.1.0 — the Maya edition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="..#v132-armorpaint-filters-mesh-driven-generators-diagnostics">v1.3.2 — ArmorPaint filters, mesh-driven generators + diagnostics</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="..#v131-studio-render-marvelous-designer-link-long-skirt-swing-accurate-checks">v1.3.1 — Studio render, Marvelous Designer link, long-skirt swing &amp; accurate checks</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="..#v130-the-armorpaint-material-library-high-heels">v1.3.0 — The ArmorPaint material library &amp; high heels</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="..#v120-major-update">v1.2.0 — Major update</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="..#v100-first-release">v1.0.0 — First release</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../blender/">Blender Add-on</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#1-install">1. Install</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#2-the-bzepeto-tab-and-the-base-character">2. The BZepeto tab and the base character</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#3-rigging">3. Rigging</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="../blender/#high-heels">High heels</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="../blender/#gloves-nails-and-rings-glove-test">Gloves, nails and rings (Glove Test)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="../blender/#skirts-dresses-and-coats">Skirts, dresses and coats</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="../blender/#swing-bones-hair-skirts-ribbons">Swing bones (hair, skirts, ribbons)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#4-body-shape">4. Body shape</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#5-wearables">5. Wearables</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="../blender/#marvelous-designer">Marvelous Designer</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#6-send-to-zepeto">6. Send to ZEPETO</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#7-review-tools-under-send">7. Review Tools (under Send)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#8-painting-in-armorpaint">8. Painting in ArmorPaint</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="../blender/#set-outfits-separate-maps-for-the-top-and-the-bottom-udim">Set outfits — separate maps for the top and the bottom (UDIM)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#9-zepeto-playground">9. ZEPETO Playground</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../blender/#10-studio-render">10. Studio Render</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unity/">Unity Package</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../unity/#1-install">1. Install</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../unity/#2-what-happens-by-itself">2. What happens by itself</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../unity/#3-the-bzepeto-menu">3. The BZepeto menu</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../armorpaint/">ArmorPaint</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../armorpaint/#1-install">1. Install</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../armorpaint/#2-new-to-armorpaint-start-with-the-node-samples">2. New to ArmorPaint? Start with the node samples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../armorpaint/#3-paint-while-you-model-live-link">3. Paint while you model (live link)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../armorpaint/#4-bzepeto-materials-smart-materials">4. BZepeto Materials (smart materials)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="../armorpaint/#the-bzepeto-library-the-material-library">The BZepeto Library — the material library</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../armorpaint/#5-zepeto-mode">5. ZEPETO Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../armorpaint/#6-bzepeto-nodes">6. BZepeto nodes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../armorpaint/#7-stitches">7. Stitches</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../armorpaint/#8-sending-the-textures">8. Sending the textures</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../help/">Help & FAQ</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../help/#troubleshooting">Troubleshooting</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../help/#faq">FAQ</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../help/#rejection-reasons-official-guide-and-help-centre">Rejection reasons (official guide and help centre)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../help/#licence">Licence</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >한국어</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../KO_index/">홈</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#_1">필요한 것</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#_2">받은 파일</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#bzepeto">BZepeto가 파일을 두는 곳</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_index/#_3">새 소식</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="../KO_index/#mzepeto-010-maya">MZepeto 0.1.0 — Maya 판</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="../KO_index/#v132">v1.3.2 — 아머페인트 필터·메시 제너레이터 + 진단 개선</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="../KO_index/#v131">v1.3.1 — 스튜디오 렌더, 마블러스 디자이너 연동, 롱치마 흔들림 &amp; 검사 정확도</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="../KO_index/#v130">v1.3.0 — 아머페인트 재질 라이브러리 &amp; 하이힐</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="../KO_index/#v120">v1.2.0 — 중요 업데이트</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="../KO_index/#v100">v1.0.0 — 첫 출시</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../KO_blender/">Blender 애드온</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#1">1. 설치</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#2-bzepeto">2. BZepeto 탭과 베이스 캐릭터</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#3-rigging">3. 리깅 (Rigging)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="../KO_blender/#high-heel">하이힐 (High Heel)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="../KO_blender/#glove-test">장갑·네일·반지 (Glove Test)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="../KO_blender/#_1">치마·원피스·코트</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="../KO_blender/#_2">스윙 본 (머리카락, 치마, 리본)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#4-body-shape">4. 체형 (Body Shape)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#5-wearables">5. 의상 (Wearables)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="../KO_blender/#marvelous-designer">마블러스 디자이너 (Marvelous Designer)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#6-send-to-zepeto">6. Send to ZEPETO</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#7-review-tools-send">7. Review Tools (Send 아래)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#8-armorpaint">8. ArmorPaint에서 칠하기</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="../KO_blender/#udim">세트 의상 — 상의·하의에 맵을 따로 (UDIM)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#9-zepeto-playground">9. ZEPETO Playground</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_blender/#10-studio-render">10. 스튜디오 렌더 (Studio Render)</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../KO_unity/">Unity 패키지</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_unity/#1">1. 설치</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_unity/#2">2. 자동으로 되는 것</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_unity/#3-bzepeto">3. BZepeto 메뉴</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../KO_armorpaint/">ArmorPaint</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_armorpaint/#1">1. 설치</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_armorpaint/#2-armorpaint">2. ArmorPaint가 처음이라면 — 노드 샘플부터</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_armorpaint/#3">3. 모델링하면서 칠하기 (라이브 링크)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_armorpaint/#4-bzepeto-materials">4. BZepeto Materials (스마트 머티리얼)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="../KO_armorpaint/#bzepeto-library">BZepeto Library — 재질 라이브러리</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_armorpaint/#5-zepeto-mode">5. ZEPETO Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_armorpaint/#6-bzepeto">6. BZepeto 노드</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_armorpaint/#7">7. 스티치</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_armorpaint/#8">8. 텍스처 보내기</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../KO_help/">도움말·FAQ</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_help/#_1">문제 해결</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_help/#_2">자주 묻는 질문</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_help/#_3">반려 사례 (공식 가이드·고객센터 기준)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../KO_help/#_4">라이선스</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">MZepeto</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >English</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../maya/">Maya Plug-in</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../maya/#1-what-you-downloaded">1. What you downloaded</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../maya/#2-install">2. Install</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../maya/#3-first-time-setup-setup">3. First-time setup (Setup)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../maya/#4-the-mzepeto-panel">4. The MZepeto panel</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../maya/#5-base-character-and-clothing-wearables">5. Base character and clothing (Wearables)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../maya/#6-rigging">6. Rigging</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="../maya/#swing-bones-hair-skirts-ribbons">Swing bones (hair, skirts, ribbons)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="../maya/#weights">Weights</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../maya/#7-body-shape">7. Body Shape</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../maya/#8-export">8. Export</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../maya/#9-send-to-zepeto">9. Send to ZEPETO</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../maya/#10-review-tools-and-studio-render">10. Review Tools and Studio Render</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../maya/#11-zepeto-playground">11. ZEPETO Playground</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../maya/#12-armorpaint-and-md-live">12. ArmorPaint and MD Live</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../maya/#13-about">13. About</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../maya/#14-using-it-from-python">14. Using it from Python</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../maya/#15-troubleshooting">15. Troubleshooting</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >한국어</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Maya 플러그인</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#1">1. 받은 파일</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2">2. 설치</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-setup">3. 처음 설정 (Setup)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-mzepeto">4. MZepeto 패널</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-wearables">5. 베이스 캐릭터와 의상 (Wearables)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-rigging">6. 리깅 (Rigging)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_1">스윙 본 (머리카락, 치마, 리본)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_2">웨이트</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#7-body-shape">7. 체형 (Body Shape)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#8-export">8. 내보내기 (Export)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#9-send-to-zepeto">9. Send to ZEPETO</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#10-review-tools-studio-render">10. Review Tools 와 Studio Render</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#11-zepeto-playground">11. ZEPETO Playground</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#12-armorpaint-md-live">12. ArmorPaint 와 MD Live</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#13-about">13. 버전 정보 (About)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#14-python">14. Python 으로 쓰기</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#15">15. 문제 해결</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://mayalhc.github.io/GroomForge-Wiki/">All add-ons & guides</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">BZepeto — User Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">MZepeto</li>
+          <li class="breadcrumb-item">한국어</li>
+      <li class="breadcrumb-item active">Maya 플러그인</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="maya-mzepeto">Maya 플러그인 (MZepeto)</h1>
+<p><a href="../maya/">🇺🇸 English</a> | 🇰🇷 한국어</p>
+<p><img alt="MZepeto" src="../assets/MZepeto01.jpg" /></p>
+<p>MZepeto 는 BZepeto Blender 애드온의 <strong>Maya 판</strong>입니다. 같은 패널, 같은 버튼, 같은 제페토 검사를 Maya 안에서
+씁니다. 아이템은 BZepeto 와 같은 <strong>Unity 패키지</strong>로 넘어가고, 텍스처는 같은 <strong>ArmorPaint</strong> 로 칠합니다.</p>
+<p>그림의 빨간 상자가 누를 곳이고, 번호 순서대로 누르면 됩니다.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Maya</td>
+<td><strong>Autodesk Maya 2027</strong> (Windows 64비트)</td>
+</tr>
+<tr>
+<td>Unity</td>
+<td>ZEPETO Studio 프로젝트, <strong>Unity 2020.3.9f1</strong> — <a href="../KO_unity/">Unity 패키지</a></td>
+</tr>
+<tr>
+<td>제페토 베이스 캐릭터</td>
+<td>제페토 크리에이터 자료의 <code>creatorBaseSet_zepeto.fbx</code> — 제페토의 파일이라 <strong>포함되어 있지 않습니다</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="1">1. 받은 파일</h2>
+<p>검로드에서 받는 파일은 <code>MZepeto_&lt;버전&gt;.zip</code> 하나입니다. 이 파일을 풀면 생기는 <code>MZepeto_&lt;버전&gt;</code> 폴더에
+다음 파일이 있습니다:</p>
+<table>
+<thead>
+<tr>
+<th>파일</th>
+<th>내용</th>
+<th>설치</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mzepeto_maya-&lt;버전&gt;.zip</code></td>
+<td>Maya 플러그인</td>
+<td>아래 2번</td>
+</tr>
+<tr>
+<td><code>com.bzepeto.unity2020-&lt;버전&gt;.tgz</code></td>
+<td><strong>ZEPETO Studio(Unity 2020.3.9)</strong> 용 Unity 패키지 — BZepeto 와 같은 파일</td>
+<td><a href="../KO_unity/">Unity 페이지</a> 1번</td>
+</tr>
+<tr>
+<td><code>BZepeto_ArmorPaint_&lt;버전&gt;_win64.zip</code></td>
+<td>BZepeto 플러그인이 켜진 ArmorPaint — BZepeto 와 같은 파일</td>
+<td><a href="../KO_armorpaint/">ArmorPaint 페이지</a> 1번</td>
+</tr>
+<tr>
+<td><code>SHA256SUMS.txt</code></td>
+<td>파일 확인용 체크섬</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>BZepeto 를 이미 쓰고 있다면 Unity 패키지와 ArmorPaint 는 같은 것이므로 다시 설치하지 않아도 됩니다.</p>
+<h2 id="2">2. 설치</h2>
+<ol>
+<li><code>mzepeto_maya-&lt;버전&gt;.zip</code> 을 풉니다. 안에 있는 <strong><code>MZepeto</code> 폴더</strong>를 계속 둘 곳에 옮깁니다 — 예: <code>C:\MZepeto</code></li>
+<li>Maya 2027 을 실행합니다</li>
+<li><code>MZepeto</code> 폴더 안의 <strong><code>install.mel</code> 을 Maya 뷰포트로 끌어다 놓습니다</strong></li>
+<li>끝입니다. 메뉴 막대에 <strong>MZepeto</strong> 메뉴 <strong>①</strong>, 셸프에 <strong>MZepeto</strong> 탭 <strong>②</strong> 이 생기고, 그다음부터는 Maya 를
+   켤 때마다 플러그인이 자동으로 켜집니다</li>
+</ol>
+<p><img alt="설치 후 Maya" src="../assets/guide/ma-overview.png" /></p>
+<p><strong>①</strong> MZepeto 메뉴 <strong>②</strong> MZepeto 셸프 탭 <strong>③</strong> 셸프 버튼 <strong>④</strong> MZepeto 패널(오른쪽에 붙인 모습)</p>
+<div class="admonition warning">
+<p class="admonition-title">폴더 경로는 영문으로</p>
+<p>Maya 는 경로에 한글 같은 영문 외 글자가 있으면 플러그인을 읽지 못합니다. <code>C:\MZepeto</code>, <code>D:\Tools\MZepeto</code>
+처럼 <strong>영문·숫자만 있는 경로</strong>에 두세요. 설치 프로그램이 한글 경로를 알아보고 멈추며 이유를 알려 줍니다.
+(Maya 설정 폴더가 <code>OneDrive\문서</code> 에 있는 것은 괜찮습니다.)</p>
+</div>
+<p><strong>셸프 버튼</strong> <strong>③</strong></p>
+<table>
+<thead>
+<tr>
+<th>버튼</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Load</strong></td>
+<td>플러그인을 켭니다(자동으로 켜지지 않았을 때)</td>
+</tr>
+<tr>
+<td><strong>MZ</strong></td>
+<td>MZepeto 패널을 엽니다</td>
+</tr>
+<tr>
+<td><strong>BrON</strong> / <strong>BrOFF</strong></td>
+<td>Unity 라이브 브리지를 켜고 끕니다</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Maya 보안 창</strong> — Maya 2027 이 처음 플러그인을 읽을 때 <em>"이 플러그인을 신뢰하시겠습니까?"</em> 를 물으면
+<strong>Allow</strong>(허용)를 누르세요. 거부하면 MZepeto 메뉴가 생기지 않습니다.</p>
+<p><strong>설치가 하는 일</strong> — Maya 의 <code>modules</code> 폴더에 <code>MZepeto.mod</code> 파일 하나를 만들어 MZepeto 폴더를 가리키게 합니다.
+파일을 복사하지 않습니다. 그래서:</p>
+<ul>
+<li><strong>폴더를 옮겼다면</strong> 새 위치의 <code>install.mel</code> 을 다시 끌어다 놓으세요</li>
+<li><strong>업데이트</strong>는 새 버전을 같은 폴더에 덮어 풀고(또는 새 폴더에 풀고 그 <code>install.mel</code> 을 끌어다 놓고) Maya 를
+  다시 시작하면 됩니다</li>
+<li><strong>삭제</strong>는 Script Editor 의 Python 탭에서 아래를 실행한 뒤 MZepeto 폴더를 지웁니다</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">mzepeto.install</span><span class="p">;</span> <span class="n">mzepeto</span><span class="o">.</span><span class="n">install</span><span class="o">.</span><span class="n">uninstall</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="3-setup">3. 처음 설정 (Setup)</h2>
+<p>Blender 애드온은 이 설정을 애드온 환경 설정에 두었지만, Maya 에는 그런 곳이 없어서 <strong>MZepeto &gt; Setup / Folders...</strong>
+가 같은 설정 창을 엽니다(패널의 Setup 칸 맨 위 버튼도 같음). <strong>한 번 저장해 두면 모든 버튼이 이 경로를 써서 파일 창이
+뜨지 않습니다.</strong></p>
+<p><img alt="Setup 창" src="../assets/guide/ma-setup.png" /></p>
+<ol>
+<li><strong>ZEPETO Files Folder</strong> <strong>①</strong> — 제페토 파일을 모아 두는 폴더입니다. 여기에 제페토의
+   <code>creatorBaseSet_zepeto.fbx</code>(베이스 캐릭터)와 <code>Female_Torso.fbx</code>(Body Shape &gt; Female 용 여성 레퍼런스)를 두세요.
+   이름으로 찾으므로 <code>Female_Torso.fbx.fbx</code> 처럼 받아진 이름도 됩니다</li>
+<li><strong>ArmorPaint Executable</strong> <strong>②</strong> — ArmorPaint 를 푼 폴더의 <code>ArmorPaint.exe</code> (<a href="../KO_armorpaint/">ArmorPaint 설치</a>)</li>
+<li>나머지 폴더는 비워 두면 기본값을 씁니다(아래 표). 각 칸 아래의 작은 글씨가 그 칸의 용도입니다.
+   <strong>Browse...</strong> 로 고르고, <strong>Open</strong> 은 그 폴더를 탐색기로 엽니다</li>
+</ol>
+<p><img alt="Setup 창 아래" src="../assets/guide/ma-setup2.png" /></p>
+<ol>
+<li>아래에 두 제페토 파일을 찾았는지 <strong>①</strong> <code>[ok]</code>(찾음) / <code>[--]</code>(없음) 으로 나옵니다</li>
+<li><strong>Save</strong> <strong>②</strong> — 저장합니다. <strong>Check Setup</strong> <strong>③</strong> 은 모든 경로를 검사해 Script Editor 에 적습니다</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>설정</th>
+<th>비워 두면</th>
+<th>쓰는 곳</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ZEPETO Files Folder</td>
+<td><code>%USERPROFILE%\BZepeto\Samples</code></td>
+<td>Load ZEPETO Base Character, Body Shape &gt; Female</td>
+</tr>
+<tr>
+<td>HotExport Path</td>
+<td><code>%USERPROFILE%\BZepeto\HotExport</code></td>
+<td>Send to Unity, Export FBX, ArmorPaint 라이브 링크</td>
+</tr>
+<tr>
+<td>ArmorPaint Executable</td>
+<td>—</td>
+<td>Paint in ArmorPaint, Pull Textures</td>
+</tr>
+<tr>
+<td>MD Live Folder</td>
+<td><code>%USERPROFILE%\BZepeto\MDLive</code></td>
+<td>MD Live</td>
+</tr>
+<tr>
+<td>Renders Folder</td>
+<td><code>%USERPROFILE%\BZepeto\Renders</code></td>
+<td>Studio Render</td>
+</tr>
+<tr>
+<td>Body Shape Presets</td>
+<td><code>%USERPROFILE%\BZepeto\Presets\BodyShape</code></td>
+<td>체형 프리셋 저장·불러오기</td>
+</tr>
+<tr>
+<td>Bridge Port Start / End</td>
+<td>8765 / 8795</td>
+<td>Unity 라이브 브리지</td>
+</tr>
+</tbody>
+</table>
+<p>설정 파일은 BZepeto 와 같은 <code>%USERPROFILE%\BZepeto\settings.json</code> 입니다. <strong>HotExport</strong> 는 Unity 패키지가 지켜보는
+폴더라서 기본값 그대로면 Unity 쪽은 따로 설정할 것이 없습니다.</p>
+<h2 id="4-mzepeto">4. MZepeto 패널</h2>
+<p>Blender 는 애드온을 3D 뷰의 사이드바 탭(N)에 그리지만, Maya 에는 그런 사이드바가 없어서 같은 패널들을 <strong>도킹 패널</strong>
+하나에 그립니다. <strong>MZepeto &gt; Open MZepeto Window</strong> 또는 셸프의 <strong>MZ</strong> 로 엽니다.</p>
+<ul>
+<li><strong>처음에는 떠 있는 창</strong>으로 열립니다. 창의 제목 탭을 끌어 Maya 화면 가장자리(오른쪽 등)에 놓으면 붙고, Channel Box·
+  Attribute Editor 옆에 놓으면 <strong>탭으로 합쳐집니다</strong> — Maya 의 기본 패널과 같은 방식입니다</li>
+<li>Maya 가 붙인 위치를 기억해서 <strong>다음에 열 때 그 자리</strong>에 다시 나옵니다. Setup 창도 같은 방식으로 붙일 수 있습니다</li>
+<li>패널은 Blender 패널마다 <strong>접히는 칸</strong> 하나씩입니다: Setup, Wearables, Export, Rigging, Body Shape, Send to ZEPETO,
+  Review Tools, Studio Render, ZEPETO Playground, ArmorPaint, MD Live. 칸 머리줄의 <strong>▸/▾</strong> 로 접고, 접힌 머리줄에도
+  핵심 상태(캐릭터 이름, 본 수, 체형 …)가 보입니다</li>
+<li>패널을 좁게 붙이면 버튼이 폭에 맞게 줄어듭니다. 잘린 긴 글줄은 <strong>마우스를 올리면</strong> 전체가 보입니다</li>
+</ul>
+<p>모든 버튼은 <strong>MZepeto 메뉴</strong>에도 같은 이름으로 있습니다(Character, Export, Rigging, Weights, Body Shape, Send to
+ZEPETO, Review, Studio Render, Playground, ArmorPaint, MD Live, Setup). 메뉴의 점선을 누르면 떼어 내어 띄워 둘 수
+있습니다.</p>
+<h2 id="5-wearables">5. 베이스 캐릭터와 의상 (Wearables)</h2>
+<p><img alt="Setup 과 Wearables" src="../assets/guide/ma-wearables.png" /></p>
+<p><strong>①</strong> Setup 칸 — 지금 쓰는 경로와 각 폴더 열기. 머리줄에 <code>ready</code> 가 보이면 제페토 파일을 찾은 것입니다.</p>
+<ol>
+<li><strong>Load ZEPETO Base Character</strong> <strong>②</strong> — 제페토 베이스 캐릭터(104개 뼈, 키 108.65cm, 몸 메쉬 <code>mask</code>)를
+   불러옵니다</li>
+<li>헤드웨어·마스크를 만든다면 대신 <strong>Load with Face Expressions</strong> <strong>③</strong> — 베이스에 제페토 얼굴 표정 249개가
+   함께 들어갑니다(아래 9번)</li>
+<li><strong>ZEPETO category</strong> <strong>④</strong> 에서 아이템 종류를 고릅니다(예: Top, Skirt, Hair). 아래 줄에 그 카테고리의 리그와
+   한도가 나옵니다 — 예: <code>Top rig | &lt;= 6,000 tris, textures &lt;= 512 px and 1,024 KB in total, &lt;= 3 materials</code></li>
+<li><strong>Import Clothing (FBX/OBJ)...</strong> <strong>⑤</strong> — 옷 파일을 불러와 고른 카테고리로 캐릭터에 붙입니다</li>
+<li><strong>Make Garment Rig</strong> <strong>⑥</strong> → <strong>Bind Garment To Character</strong> <strong>⑦</strong> — 옷에 웨이트를 주고 캐릭터에 바인드합니다.
+   바인드한 뒤에도 옷이 <strong>선택된 채로</strong> 남아 다음 버튼을 바로 누를 수 있습니다</li>
+<li><strong>Auto Mask from Items</strong> <strong>⑧</strong> — 아이템이 덮는 몸을 검게 칠합니다(제페토가 그 부분을 숨김)</li>
+</ol>
+<p>카테고리는 패널에 <strong>하나</strong>만 있습니다: Wearables 와 Send to ZEPETO 의 두 드롭다운은 서로 따라갑니다. Make Garment Rig
+는 고른 카테고리를 메쉬에 기록하고, 이미 리깅된 아이템은 자기 카테고리를 유지합니다(바꾸려면 Make Garment Rig 를
+다시).</p>
+<p>그 밖의 버튼:</p>
+<table>
+<thead>
+<tr>
+<th>버튼</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Import Custom Character...</td>
+<td>내 제페토 캐릭터 FBX 를 베이스 대신 불러옵니다</td>
+</tr>
+<tr>
+<td>Refit Clothing To Body</td>
+<td>체형을 바꾼 뒤 입은 옷을 몸에 다시 맞춥니다</td>
+</tr>
+<tr>
+<td>Align Mesh to Base Body</td>
+<td>선택한 메쉬의 점을 캐릭터 몸에 맞춥니다</td>
+</tr>
+<tr>
+<td>Wrap to Body (proximity)</td>
+<td>Maya 의 프록시미티 랩으로 메쉬를 몸에 붙입니다(토폴로지는 그대로, 몸을 따라감)</td>
+</tr>
+<tr>
+<td>Transfer UVs and Normals</td>
+<td>UV·노멀·버텍스 컬러를 다른 메쉬에서 복사합니다</td>
+</tr>
+<tr>
+<td>Clear Mask / Mask Selected Faces / Unmask Selected Faces</td>
+<td>마스크 지우기, 선택한 면을 숨기기·되살리기</td>
+</tr>
+<tr>
+<td>Select Removed Faces</td>
+<td>제페토에서 실제로 지워질 면을 선택합니다</td>
+</tr>
+</tbody>
+</table>
+<p><strong>캐릭터가 엄청 크게 보이면</strong> — 베이스는 센티미터로 만들어져 있습니다. Maya 씬 단위가 미터면 108.65cm 가
+108.65m 가 됩니다. <strong>Windows &gt; Settings/Preferences &gt; Preferences &gt; Settings &gt; Working Units &gt; Linear</strong> 를
+<strong>centimeter</strong> 로 두세요. 불러올 때 단위가 센티미터가 아니면 경고가 나옵니다.</p>
+<h2 id="6-rigging">6. 리깅 (Rigging)</h2>
+<p><img alt="Rigging" src="../assets/guide/ma-rigging.png" /></p>
+<ul>
+<li><strong>본 개수</strong> — 칸 머리줄에 내 리그와 제페토 기본 뼈대(104개) 비교가 보입니다(<strong>Refresh Bone Count</strong> 로 다시 셈)</li>
+<li><strong>Convert to A-pose</strong> <strong>①</strong> / <strong>Restore to T-pose</strong> — T 포즈와 A 포즈 전환</li>
+<li><strong>High Heel</strong> <strong>②</strong> — <strong>Angle (deg)</strong> 은 뒤꿈치를 드는 각도, <strong>Sole (cm)</strong> 은 앞창 두께. 발가락은 바닥에
+  그대로 있고 몸이 올라갑니다. 신발(Shoes) 아이템을 보낼 때만 제페토 힐 정보가 실립니다. <strong>Flat Feet</strong> 는 힐을 끄고,
+  <strong>Read Heel From Rig</strong> 은 불러온 하이힐 아이템의 값을 슬라이더로 가져옵니다</li>
+<li><strong>Glove Test &gt; Fist</strong> <strong>③</strong> — 양손이 주먹을 쥡니다. 장갑·반지·네일이 손가락을 따라가는지 보는 용도이고,
+  내보내기에는 영향이 없습니다</li>
+</ul>
+<h3 id="_1">스윙 본 (머리카락, 치마, 리본)</h3>
+<ul>
+<li><strong>Auto Skirt Swing</strong> <strong>④</strong> — 치마·원피스·롱코트에 흔들림 본을 한 번에 넣습니다. 카테고리를 Skirt·Dress·
+  Outerwear 로 두고 Make Garment Rig → Bind → Auto Skirt Swing 순서로 누르세요</li>
+<li><strong>Make Swing Chains</strong> — 고른 엣지 줄을 따라 체인을 만듭니다</li>
+<li>뼈 이름은 제페토 SDK 형식 <code>&lt;관절&gt;_physics_&lt;drag&gt;_&lt;angle drag&gt;_&lt;restore drag&gt;</code> 로 붙습니다.
+  <strong>Name Selected Bones</strong> 는 선택한 뼈에 이 이름을 붙이고, <strong>Remove Physics Naming</strong> 은 지웁니다</li>
+<li><strong>Fix Swing Names</strong> — 예전 형식(띄어쓰기)의 흔들림 뼈 이름을 고칩니다</li>
+<li><strong>Find Crossing Faces</strong> — 옷이 스스로를 뚫는 면을 선택해 줍니다</li>
+<li><strong>Swing Test</strong> — 모든 체인을 흔들어 실제로 얼마나 움직이는지 알려 줍니다(Maya 전용)</li>
+</ul>
+<h3 id="_2">웨이트</h3>
+<table>
+<thead>
+<tr>
+<th>버튼</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Transfer Weights (Nearest Surface)</strong> <strong>⑤</strong></td>
+<td>몸의 웨이트를 선택한 옷에 옮깁니다</td>
+</tr>
+<tr>
+<td>Check and Fix Symmetry</td>
+<td>좌우 웨이트가 다른 곳을 찾아 고칩니다</td>
+</tr>
+<tr>
+<td>Mirror Weights (YZ)</td>
+<td>Maya 의 웨이트 미러(YZ 평면) — Maya 전용</td>
+</tr>
+<tr>
+<td>Fix Scale Bones</td>
+<td>체형용 <code>_scale</code> 뼈가 받아야 할 웨이트를 옮깁니다(제페토 리깅 규칙) — Maya 전용</td>
+</tr>
+<tr>
+<td>Limit Influences to 4</td>
+<td>정점마다 영향 뼈를 4개로 제한</td>
+</tr>
+<tr>
+<td>Scan / Delete Unused Bones</td>
+<td>쓰지 않는 뼈를 찾고 지웁니다(제페토 필수 뼈는 보호)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-body-shape">7. 체형 (Body Shape)</h2>
+<ul>
+<li><strong>Body Type</strong> — Base / Female / Male / Imported 중에서 고릅니다. <strong>Rebuild Bust from Reference FBX</strong> 는
+  <code>Female_Torso.fbx</code> 로 여성 가슴 모양을 다시 만들고, <strong>Import Body from Character</strong> 는 다른 캐릭터의 뼈 배치와 몸을
+  가져옵니다</li>
+<li><strong>슬라이더 8개</strong> — 키, 어깨 너비, 가슴, 허리, 골반, 다리 길이, 목 길이, 머리 크기</li>
+<li><strong>Store Base Snapshot</strong> 은 지금 상태를 기준으로 저장하고, <strong>Build Body Shape Delta</strong> 는 슬라이더를 리그에 적용해
+  체형 차이를 만듭니다</li>
+<li><strong>Save / Load Body Shape Preset</strong> — 슬라이더 값을 JSON 으로 저장·불러오기(Setup 의 Body Shape Presets 폴더)</li>
+</ul>
+<h2 id="8-export">8. 내보내기 (Export)</h2>
+<ul>
+<li><strong>Run Export Checks</strong> — 내보내기 전 점검 목록을 실행합니다. 결과는 칸 아래(처음에는 <em>Not checked yet</em>)와
+  Script Editor 에 나옵니다</li>
+<li><strong>Check and Export FBX</strong> — 검사한 뒤 제페토 설정으로 FBX 를 HotExport 폴더에 내보냅니다</li>
+<li><strong>Fit to Triangle Budget</strong> — 선택한 메쉬를 카테고리 삼각형 한도까지 줄입니다(Maya 의 polyReduce, Maya 전용)</li>
+</ul>
+<h2 id="9-send-to-zepeto">9. Send to ZEPETO</h2>
+<p><img alt="Send to ZEPETO" src="../assets/guide/ma-send.png" /></p>
+<p><strong>①</strong> Run Export Checks(Export 칸) <strong>②</strong> Start Bridge <strong>③</strong> Check <strong>④</strong> Send to Unity <strong>⑤</strong> ZEPETO Shader <strong>⑥</strong> Category</p>
+<ol>
+<li>아이템을 선택하고 <strong>Category</strong> <strong>⑥</strong> 를 고릅니다(Wearables 의 카테고리와 같은 것)</li>
+<li><strong>Check</strong> <strong>③</strong> — 카테고리 한도와 제페토 변환기 규칙으로 검사합니다. 결과는 Script Editor 와 뷰포트 아래에 나옵니다</li>
+<li>고칠 것이 있으면 아래 버튼으로 고칩니다:<ul>
+<li><strong>Shrink Textures to 1 MB</strong> — 텍스처 합계가 1MB 를 넘으면 줄인 사본을 만들어 연결합니다(원본은 그대로)</li>
+<li><strong>Fix Material Names</strong> — 머티리얼 이름을 제페토 규칙(<code>&lt;아이템&gt;_shd</code>)으로 바꿉니다</li>
+<li><strong>Fix Transforms (0.01 / X 90)</strong> — 제페토 아이템 규칙의 스케일·회전을 맞춥니다</li>
+<li><strong>Create ZEPETO Material</strong> — 제페토 BuiltIn 머티리얼을 줍니다</li>
+<li><strong>Sort Hair Layers (inner first)</strong> — 헤어 카드를 안쪽부터 그리도록 정렬합니다</li>
+</ul>
+</li>
+<li><strong>Send to Unity</strong> <strong>④</strong> — 검사하고, FBX + 마스크 + PNG 텍스처 + 설명 파일을 만들어 Unity 로 보냅니다</li>
+</ol>
+<p><strong>Unity 라이브 브리지</strong> <strong>②</strong> — <strong>Start Bridge</strong> 를 누르면 Unity 와 바로 연결되고, 위 줄에 상태와 포트가 나옵니다.
+브리지를 켜지 않아도 Send 는 HotExport 폴더를 거쳐 Unity 로 갑니다(<a href="../KO_unity/">Unity 패키지</a>가 지켜봄).</p>
+<p><strong>ZEPETO Shader</strong> <strong>⑤</strong> — 아이템의 제페토 셰이더를 고릅니다(Lit, Cloth, Fur, HairAlpha, Sparkle, Iridescence,
+Prism, CustomEnv, Toon, Detail Normal). 셰이더는 아이템과 함께 Unity 로 가고, 아래 줄에 그 셰이더가 읽는 맵이 나옵니다.</p>
+<ul>
+<li><strong>Preview ZEPETO Shader</strong> — 아이템 자신의 맵으로 Maya 뷰포트용 미리보기 재질을 만듭니다(Fur·Sparkle·Toon 같은
+  효과는 근사치이고, 실제 모습은 Unity·제페토 미리보기가 기준)</li>
+<li><strong>Clear Shader Preview</strong> — 원래 재질로 정확히 되돌립니다</li>
+<li><strong>Status Badge On / Off</strong> — 뷰포트에 선택한 아이템의 삼각형/한도, 재질 수, 텍스처 KB, 뼈 수를 한 줄로 계속
+  보여 줍니다(Maya 전용)</li>
+</ul>
+<p><strong>Set ZEPETO Category</strong> 는 선택한 아이템에 카테고리를 기록하고, <strong>Select Category Items</strong> 는 그 카테고리 아이템을
+모두 선택합니다.</p>
+<h2 id="10-review-tools-studio-render">10. Review Tools 와 Studio Render</h2>
+<p><img alt="Review Tools" src="../assets/guide/ma-review.png" /></p>
+<ul>
+<li><strong>Pose / Body Clip Test</strong> <strong>①</strong> — 아이템을 입힌 캐릭터에 제페토 미리보기 포즈를 체형·데포메이션마다 적용해 살이
+  아이템을 뚫는 곳을 찾습니다</li>
+<li><strong>Head Size Test</strong>(앱이 쓰는 가장 작은·큰 머리), <strong>Mark Selected as Front Hair</strong>(잔머리를 맨 앞에), <strong>Add FX
+  Joint</strong>(이펙트용 조인트), <strong>Fit Custom Body Part</strong>(여성·커스텀 몸통 맞추기)</li>
+</ul>
+<p><strong>얼굴 표정</strong></p>
+<ul>
+<li><strong>Add Face Expressions to Base</strong> <strong>②</strong> — 불러온 베이스에 표정 249개를 만듭니다</li>
+<li><strong>Transfer Face Expressions</strong> <strong>③</strong> — 얼굴 아이템(헤어, 마스크)을 선택하고 누르면, 아이템이 바로 아래 얼굴을
+  따라 움직이는 표정을 받습니다</li>
+<li><strong>Add / Remove In-Between Shape</strong>, <strong>In-Between Shapes</strong> — 제페토 가이드의 인비트윈 표정(eyeBlink 와 관련
+  표정)을 넣고 빼고 목록을 봅니다</li>
+<li><strong>Step Expression</strong> 은 표정을 하나씩 보여 주고, <strong>Expression Clip Test</strong> 는 표정마다 얼굴이 아이템을 뚫는지·아이템이
+  따라가는지 검사하며, <strong>Play Expressions</strong> 는 모든 표정을 타임라인 애니메이션으로 만듭니다</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Maya 의 표정 이름</p>
+<p>Maya 블렌드셰이프 이름에는 점(.)을 쓸 수 없어서, Blender 의 <code>zepeto.jawOpen</code> 이 Maya 에서는 <code>zepeto_jawOpen</code>
+입니다. 검사와 버튼은 두 이름을 모두 알아봅니다. 다만 Maya 에서 내보낸 FBX 의 표정 이름은 <code>zepeto_jawOpen</code> 이 되므로,
+이름이 반드시 <code>zepeto.jawOpen</code> 이어야 하는 얼굴 아이템은 Blender(BZepeto)에서 내보내세요.</p>
+</div>
+<p><strong>인형탈 표정</strong> — 탈을 선택하고 컴포넌트 모드에서 탈의 눈 정점을 선택한 뒤 <strong>Mark Eyes</strong> <strong>④</strong>, 같은 방법으로
+<strong>Mark Brows</strong>, <strong>Mark Mouth</strong>. 그다음 <strong>Transfer to Mascot Head</strong> — 탈 부위를 얼굴의 같은 부위에 크기 비율대로 맞춰
+표정을 굽습니다. <strong>Clear Mascot Marks</strong> 는 표시를 지웁니다.</p>
+<p><strong>Playblast Review (movie)</strong> — 타임라인을 동영상으로 남깁니다(흔들림·표정은 정지 화면으로 판단하기 어려워서).</p>
+<p><strong>Studio Render</strong> <strong>⑤</strong> — <strong>Studio (toggle)</strong> 로 배경·부드러운 조명·인물 카메라를 캐릭터에 맞춰 세우고, <strong>Render</strong> 로
+PNG 를 Renders 폴더에 저장합니다. 포즈·체형·아이템을 바꾼 뒤에는 <strong>Frame Again</strong>, 체형 슬라이더를 모두 0 으로 돌리려면
+<strong>Back to Original (body shape)</strong>. 다시 <strong>Studio (toggle)</strong> 를 누르면 스튜디오가 더한 것이 모두 지워집니다.</p>
+<h2 id="11-zepeto-playground">11. ZEPETO Playground</h2>
+<p>ZEPETO Studio 의 플레이 모드 메뉴(애니메이션 10종, 카메라, 체형 타입, 데포메이션 13종, 스페이스)를 Maya 에서
+재현해, Unity 로 넘기기 전에 아이템을 확인합니다.</p>
+<p><img alt="Playground" src="../assets/guide/ma-playground.png" /></p>
+<p><img alt="Playground 패널" src="../assets/guide/ma-playground-panel.png" /></p>
+<ol>
+<li><strong>Animations</strong> <strong>①</strong> 에서 애니메이션 번호를 누릅니다</li>
+<li><strong>Camera, Type, Deformation, Space</strong> <strong>②</strong> 에서 카메라(DEFAULT / GUIDE VIEW), 체형 타입(DEFAULT / ANIME),
+   데포메이션, 스페이스를 고릅니다. 고른 항목은 초록색입니다</li>
+<li><strong>Enter Playground</strong> <strong>④</strong> — 카메라, 가이드 프레임, 둥근 벽이 생기고 애니메이션이 캐릭터에 들어갑니다</li>
+<li><strong>Play / Pause</strong> <strong>③</strong> — 재생과 멈춤</li>
+<li>
+<p><strong>Exit Playground (Rest Pose)</strong> <strong>⑤</strong> — 키를 지우고 캐릭터를 원래 자세로 되돌립니다. <strong>내보내기는 원래 자세를
+   쓰므로</strong>, 캐릭터를 고치기 전에 나오세요</p>
+</li>
+<li>
+<p>플레이그라운드는 함께 들어 있는 캡처로 바로 쓸 수 있습니다. 내 ZEPETO Studio 프로젝트의 캡처를 쓰려면 Unity 에서
+  플레이그라운드 씬을 Play 모드로 실행하고 <strong>BZepeto &gt; Capture Playground For Blender</strong> 를 누른 뒤, <strong>Capture file</strong>
+  칸에 그 파일을 넣고 <strong>Reload</strong></p>
+</li>
+<li><strong>재생 속도</strong> — 들어갈 때 씬을 클립의 프레임 속도(24·30 fps)로 맞추고, Maya 의 재생 속도가 제한 없음(Play every
+  frame, Max Free — Maya 2027 기본값)이면 <strong>실시간으로 제한</strong>합니다. 그래서 애니메이션이 원래 속도로 재생됩니다.
+  나오면(Exit) 씬의 원래 프레임 속도와 재생 설정으로 돌아갑니다</li>
+</ol>
+<h2 id="12-armorpaint-md-live">12. ArmorPaint 와 MD Live</h2>
+<p><img alt="ArmorPaint 와 MD Live" src="../assets/guide/ma-ap-md.png" /></p>
+<p><strong>ArmorPaint</strong></p>
+<ol>
+<li>아이템을 선택하고 <strong>Paint in ArmorPaint</strong> <strong>①</strong> — 아이템이 열린 채로 ArmorPaint 가 뜹니다(Setup 의 ArmorPaint
+   Executable 필요)</li>
+<li>칠한 뒤 <strong>Pull Textures from ArmorPaint</strong> <strong>②</strong> — 텍스처를 가져와 아이템에 연결합니다</li>
+<li><strong>Stitch Selected Edges</strong> — 선택한 엣지를 따라 스티치를 ArmorPaint 레이어로 그립니다</li>
+</ol>
+<p>ArmorPaint 쪽 사용법: <a href="../KO_armorpaint/">ArmorPaint</a>.</p>
+<p><strong>MD Live (마블러스 디자이너)</strong> — 제페토 캐릭터를 마블러스 디자이너로 보내 옷을 만들고, 완성된 옷을 입힌 상태로
+가져옵니다.</p>
+<p>처음 한 번만: <strong>Open MD Plug-in Folder</strong> <strong>⑦</strong> 로 플러그인 폴더를 열고, 마블러스 디자이너의 <strong>Plug-in ▸ Plug-in
+Manager ▸ Add</strong> 로 <code>bz_live.py</code> 를 등록합니다(<code>bz_load_avatar</code>, <code>bz_send_garment</code> 도 원하면 함께).</p>
+<ul>
+<li><strong>Live (toggle)</strong> <strong>③</strong> — 켜면 캐릭터가 바뀔 때마다 몸이 다시 보내지고, 마블러스 디자이너가 돌려보낸 옷이 위
+  카테고리로 리깅되어 입혀집니다(이전 라이브 옷을 대신함). 마블러스 디자이너에서 Plug-in 메뉴의 <code>bz_live</code> 를 한 번 눌러
+  두세요</li>
+<li><strong>Send Body to MD</strong> <strong>④</strong> — 지금 포즈·체형의 몸을 공유 폴더에 보냅니다(마블러스 디자이너에서 <code>bz_load_avatar</code>)</li>
+<li><strong>Get Garment Now</strong> <strong>⑤</strong> — 마블러스 디자이너에서 지금 옷을 바로 받습니다. 마블러스 디자이너에서 <code>bz_live</code> 가
+  돌고 있지 않으면 그렇다고 알려 줍니다</li>
+<li><strong>Import Garment from MD...</strong> <strong>⑥</strong> — 마블러스 디자이너에서 <code>bz_send_garment</code> 로 저장한 옷을 가져와 입힙니다</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">BZepeto 와 함께 쓴다면</p>
+<p>마블러스 디자이너는 <strong>Plug-in Manager 에 등록한 폴더</strong>의 설정을 읽습니다. Blender 애드온과 MZepeto 가 각자 플러그인
+폴더를 가지고 있으므로, 둘 다 쓴다면 MD Live Folder 를 같은 폴더로 두세요. 다르면 MZepeto 가 마블러스 디자이너가 실제로
+쓰는 폴더를 따라가고, 그렇다고 한 줄로 알려 줍니다.</p>
+</div>
+<p>단위: 마블러스 디자이너는 밀리미터, Maya 씬은 센티미터라서 MZepeto 가 씬 단위를 읽어 알아서 맞춥니다.</p>
+<h2 id="13-about">13. 버전 정보 (About)</h2>
+<p><strong>MZepeto &gt; About / Version</strong> 은 버전, 만든 이, 라이선스, Maya·Python 버전, 플러그인 상태, 설치 폴더와 설정 파일 위치를
+보여 줍니다. <strong>Open Install Folder</strong>·<strong>Open Settings Folder</strong> 로 바로 열 수 있습니다. 문의할 때 이 창의 내용을 함께
+알려 주세요.</p>
+<p><img alt="About" src="../assets/guide/ma-about.png" /></p>
+<h2 id="14-python">14. Python 으로 쓰기</h2>
+<p>모든 버튼은 Maya 명령이기도 합니다(105개) — 예: <code>mzepeto_loadBaseCharacter</code>, <code>mzepeto_sendItem</code>,
+<code>mzepeto_autoMask</code>. 스크립트에서는:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">mzepeto.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">api</span>
+<span class="n">api</span><span class="o">.</span><span class="n">load_base_character</span><span class="p">()</span>                         <span class="c1"># 베이스 캐릭터</span>
+<span class="n">api</span><span class="o">.</span><span class="n">load_base_character</span><span class="p">(</span><span class="n">face_expressions</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>    <span class="c1"># 표정 249개와 함께</span>
+<span class="n">api</span><span class="o">.</span><span class="n">import_clothing</span><span class="p">()</span>                             <span class="c1"># 옷 불러오기</span>
+<span class="n">api</span><span class="o">.</span><span class="n">run_checks</span><span class="p">()</span>                                  <span class="c1"># 제페토 검사 (결과 출력)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">send_item</span><span class="p">(</span><span class="s2">"TOP"</span><span class="p">)</span>                              <span class="c1"># 검사 + 내보내기 + Unity 로 보내기</span>
+<span class="n">api</span><span class="o">.</span><span class="n">bridge_start</span><span class="p">()</span>                                <span class="c1"># Unity 라이브 브리지</span>
+</code></pre></div>
+<p>패널을 코드로 열려면 <code>from mzepeto.ui import window; window.show()</code>.</p>
+<h2 id="15">15. 문제 해결</h2>
+<table>
+<thead>
+<tr>
+<th>증상</th>
+<th>해결</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>install.mel</code> 을 놓아도 아무 일이 없거나 오류</td>
+<td>MZepeto 폴더 경로에 한글이 있는지 확인하세요(2번). Maya 보안 창에서 거부했다면 Maya 를 다시 켜고 Allow</td>
+</tr>
+<tr>
+<td>MZepeto 메뉴가 사라짐</td>
+<td><strong>Windows &gt; Settings/Preferences &gt; Plug-in Manager</strong> 에서 <code>mzepeto_plugin.py</code> 의 <strong>Loaded</strong>·<strong>Auto load</strong> 를 켜거나, 셸프의 <strong>Load</strong></td>
+</tr>
+<tr>
+<td>Load ZEPETO Base Character 가 파일 창을 띄움</td>
+<td>Setup 의 ZEPETO Files Folder 에 <code>creatorBaseSet_zepeto.fbx</code> 가 없습니다. Setup 아래 <code>[ok]</code> / <code>[--]</code> 를 확인하세요</td>
+</tr>
+<tr>
+<td>캐릭터가 엄청 크게 보임</td>
+<td>씬 단위가 미터입니다. Working Units &gt; Linear 를 centimeter 로(5번)</td>
+</tr>
+<tr>
+<td>플레이그라운드 애니메이션이 너무 빠름</td>
+<td>이 버전은 Enter Playground 가 재생 속도를 실시간으로 제한합니다. 직접 바꾸려면 Preferences &gt; Time Slider &gt; <strong>Playback speed</strong> 를 Real-time 또는 Max Playback Speed 를 Real-time 으로</td>
+</tr>
+<tr>
+<td>패널이 화면 밖에 있거나 찾을 수 없음</td>
+<td><strong>MZepeto &gt; Open MZepeto Window</strong> 를 다시 누르면 앞으로 나옵니다</td>
+</tr>
+<tr>
+<td>Get Garment Now 가 반응 없음</td>
+<td>마블러스 디자이너에서 <code>bz_live</code> 가 돌고 있는지, MD Live Folder 가 마블러스 디자이너 플러그인과 같은 폴더인지(12번)</td>
+</tr>
+</tbody>
+</table>
+<p>더 많은 질문은 <a href="../KO_help/">도움말·FAQ</a>에 있습니다(Unity·ArmorPaint·제페토 심사 내용은 BZepeto 와 같습니다).</p>
+<p>© 2026 Chamiseul</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../maya/" class="btn btn-neutral float-left" title="Maya Plug-in"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../maya/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../nav-fold.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
