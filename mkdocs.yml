@@ -20,12 +20,14 @@ nav:
   - English:
     - "Home": index.md
     - "Blender Add-on": blender.md
+    - "Maya Plug-in (MZepeto)": maya.md
     - "Unity Package": unity.md
     - "ArmorPaint": armorpaint.md
     - "Help & FAQ": help.md
   - 한국어:
     - "홈": KO_index.md
     - "Blender 애드온": KO_blender.md
+    - "Maya 플러그인 (MZepeto)": KO_maya.md
     - "Unity 패키지": KO_unity.md
     - "ArmorPaint": KO_armorpaint.md
     - "도움말·FAQ": KO_help.md

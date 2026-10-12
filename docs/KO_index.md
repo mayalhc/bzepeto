@@ -24,6 +24,7 @@ Blender  ──①──>  ArmorPaint  ──②──>  Blender
 | 페이지 | 내용 |
 |---|---|
 | [Blender 애드온](KO_blender.md) | 설치, 베이스 캐릭터 불러오기, 검사와 Send, Review Tools, 얼굴 표정 |
+| [Maya 플러그인 (MZepeto)](KO_maya.md) | Maya 판: 끌어다 놓기 설치, Setup, 도킹 패널과 모든 칸을 단계별로 |
 | [Unity 패키지](KO_unity.md) | 설치, 자동 가져오기와 제페토 셰이더, 검사 메뉴 |
 | [ArmorPaint](KO_armorpaint.md) | 설치, 라이브 링크, **처음 쓰는 분을 위한 노드 샘플**, 재질 라이브러리, ZEPETO Mode, 스티치 |
 | [도움말·FAQ](KO_help.md) | 문제 해결, 자주 묻는 질문, 반려 사례, 라이선스 |
@@ -36,6 +37,7 @@ Blender  ──①──>  ArmorPaint  ──②──>  Blender
 |---|---|
 | OS | Windows 10 / 11, 64비트 |
 | Blender | 4.5 이상 (4.5 – 5.3 확인) |
+| Maya (MZepeto) | Autodesk Maya 2027 |
 | Unity | ZEPETO Studio 프로젝트, **Unity 2020.3.9f1** |
 | GPU | DirectX 12 지원 (ArmorPaint) |
 | 제페토 베이스 캐릭터 | 제페토 크리에이터 자료의 `creatorBaseSet_zepeto.fbx` — 제페토의 파일이라 **포함되어 있지 않습니다** |
@@ -58,6 +60,10 @@ Blender  ──①──>  ArmorPaint  ──②──>  Blender
 
 사용 설명은 이 가이드 하나뿐입니다 — 받은 파일에는 README가 없습니다.
 
+!!! note "Maya 를 쓴다면"
+    Maya 판 **MZepeto** 는 따로 받는 `MZepeto_<버전>.zip` 입니다: Maya 플러그인과 같은 Unity 패키지·ArmorPaint 가
+    들어 있습니다. 설치는 [Maya 페이지](KO_maya.md)를 보세요.
+
 **업데이트라면** 새 버전이 나오면 검로드가 메일로 알려 줍니다. **검로드 라이브러리(Library)** 에서 새
 `BZepeto_<버전>.zip` 을 받아 세 파일을 모두 설치하세요. Blender 애드온과 Unity 패키지는 이전 버전을
 교체하고, ArmorPaint는 새 폴더에 풉니다.
@@ -73,6 +79,13 @@ Unity를 다시 시작하세요.
 ---
 
 ## 새 소식
+
+### MZepeto 0.1.0 — Maya 판
+
+**MZepeto** 는 BZepeto 를 **Maya 2027** 로 옮긴 것입니다. 같은 패널·버튼·제페토 검사를 쓰고, 같은 Unity 패키지로 보내고
+같은 ArmorPaint 로 칠합니다. `install.mel` 을 뷰포트에 끌어다 놓으면 설치되고, 모든 기능이 도킹 패널 하나에 있습니다.
+Maya 전용 기능: Mirror Weights, Fix Scale Bones, Fit to Triangle Budget, Wrap to Body, Swing Test, 뷰포트 Status Badge,
+Playblast Review ([Maya 페이지](KO_maya.md)).
 
 ### v1.3.1 — 스튜디오 렌더, 마블러스 디자이너 연동, 롱치마 흔들림 & 검사 정확도
 

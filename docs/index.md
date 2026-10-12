@@ -26,6 +26,7 @@ Unity ④ the finished item goes to Unity, checked and packaged
 | Page | What is in it |
 |---|---|
 | [Blender Add-on](blender.md) | install, loading the base character, checks and Send, Review Tools, face expressions |
+| [Maya Plug-in (MZepeto)](maya.md) | the Maya edition: drag-and-drop install, Setup, the dockable panel and every section, step by step |
 | [Unity Package](unity.md) | install, automatic import and ZEPETO shaders, review menu |
 | [ArmorPaint](armorpaint.md) | install, live link, **node samples for beginners**, the material library, ZEPETO Mode, stitches |
 | [Help & FAQ](help.md) | troubleshooting, frequent questions, rejection reasons, licence |
@@ -38,6 +39,7 @@ Unity ④ the finished item goes to Unity, checked and packaged
 |---|---|
 | OS | Windows 10 / 11, 64-bit |
 | Blender | 4.5 or later (tested on 4.5 – 5.3) |
+| Maya (MZepeto) | Autodesk Maya 2027 |
 | Unity | ZEPETO Studio project, **Unity 2020.3.9f1** |
 | GPU | DirectX 12 capable (for ArmorPaint) |
 | ZEPETO base character | `creatorBaseSet_zepeto.fbx` from ZEPETO's creator resources — it is ZEPETO's file, so it is **not included** |
@@ -60,6 +62,10 @@ Gumroad gives you one file, `BZepeto_<version>.zip`. Unzip **only this file** (r
 
 This guide is the only manual — there are no README files in the download.
 
+!!! note "Working in Maya?"
+    The Maya edition, **MZepeto**, is its own download, `MZepeto_<version>.zip`: the Maya plug-in plus the same Unity
+    package and ArmorPaint. Install it from the [Maya page](maya.md).
+
 **Updating?** Gumroad emails you when a new version is posted; download the new
 `BZepeto_<version>.zip` from your **Gumroad Library** and install all three files. The Blender
 add-on and the Unity package replace the old ones; ArmorPaint goes into a new folder.
@@ -75,6 +81,13 @@ nothing to set up between them. To move everything, set the environment variable
 ---
 
 ## What's New
+
+### MZepeto 0.1.0 — the Maya edition
+
+**MZepeto** brings BZepeto to **Maya 2027**: the same panels, buttons and ZEPETO checks, sending to the same Unity
+package and painting in the same ArmorPaint. Install by dragging `install.mel` into the viewport; everything sits in one
+dockable panel. Maya-only extras: Mirror Weights, Fix Scale Bones, Fit to Triangle Budget, Wrap to Body, Swing Test,
+the viewport Status Badge and Playblast Review ([Maya page](maya.md)).
 
 ### v1.3.1 — Studio render, Marvelous Designer link, long-skirt swing & accurate checks
 
