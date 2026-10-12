@@ -93,3 +93,22 @@
 .wy-side-nav-search input[type=text] {
     border-color: rgba(255,255,255,0.2) !important;
 }
+
+/* 제품 머리줄(BZepeto / MZepeto)을 눌러 접고 펼치기 (nav-fold.js) */
+.wy-menu-vertical p.caption {
+    cursor: pointer !important;
+    user-select: none;
+}
+.wy-menu-vertical p.caption::before {
+    content: "\25B8";
+    display: inline-block;
+    width: 1.1em;
+}
+.wy-menu-vertical p.caption.nav-open::before {
+    content: "\25BE";
+}
+
+/* 페이지 안 소제목은 지금 보는 페이지 것만 펼침 */
+.wy-menu-vertical li.toctree-l2:not(.current) > ul {
+    display: none !important;
+}

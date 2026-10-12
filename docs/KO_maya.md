@@ -2,6 +2,8 @@
 
 [🇺🇸 English](./maya.md) | 🇰🇷 한국어
 
+![MZepeto](assets/MZepeto01.jpg)
+
 MZepeto 는 BZepeto Blender 애드온의 **Maya 판**입니다. 같은 패널, 같은 버튼, 같은 제페토 검사를 Maya 안에서
 씁니다. 아이템은 BZepeto 와 같은 **Unity 패키지**로 넘어가고, 텍스처는 같은 **ArmorPaint** 로 칠합니다.
 

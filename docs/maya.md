@@ -2,6 +2,8 @@
 
 🇺🇸 English | [🇰🇷 한국어](./KO_maya.md)
 
+![MZepeto](assets/MZepeto01.jpg)
+
 MZepeto is the **Maya edition** of the BZepeto Blender add-on: the same panels, the same buttons and the same
 ZEPETO checks, inside Maya. Items go to Unity through the same **Unity package** as BZepeto, and textures are
 painted in the same **ArmorPaint**.

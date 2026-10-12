@@ -15,22 +15,29 @@ theme:
 extra_css:
   - custom.css
 
+extra_javascript:
+  - nav-fold.js
+
 # 네비게이션 (메뉴 구조)
 nav:
-  - English:
-    - "Home": index.md
-    - "Blender Add-on": blender.md
-    - "Maya Plug-in (MZepeto)": maya.md
-    - "Unity Package": unity.md
-    - "ArmorPaint": armorpaint.md
-    - "Help & FAQ": help.md
-  - 한국어:
-    - "홈": KO_index.md
-    - "Blender 애드온": KO_blender.md
-    - "Maya 플러그인 (MZepeto)": KO_maya.md
-    - "Unity 패키지": KO_unity.md
-    - "ArmorPaint": KO_armorpaint.md
-    - "도움말·FAQ": KO_help.md
+  - BZepeto:
+    - English:
+      - "Home": index.md
+      - "Blender Add-on": blender.md
+      - "Unity Package": unity.md
+      - "ArmorPaint": armorpaint.md
+      - "Help & FAQ": help.md
+    - 한국어:
+      - "홈": KO_index.md
+      - "Blender 애드온": KO_blender.md
+      - "Unity 패키지": KO_unity.md
+      - "ArmorPaint": KO_armorpaint.md
+      - "도움말·FAQ": KO_help.md
+  - MZepeto:
+    - English:
+      - "Maya Plug-in": maya.md
+    - 한국어:
+      - "Maya 플러그인": KO_maya.md
   - "All add-ons & guides": https://mayalhc.github.io/GroomForge-Wiki/
 
 # 마크다운 확장 기능 (기능 강화)

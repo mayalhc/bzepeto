@@ -89,6 +89,28 @@ package and painting in the same ArmorPaint. Install by dragging `install.mel` i
 dockable panel. Maya-only extras: Mirror Weights, Fix Scale Bones, Fit to Triangle Budget, Wrap to Body, Swing Test,
 the viewport Status Badge and Playblast Review ([Maya page](maya.md)).
 
+### v1.3.2 — ArmorPaint filters, mesh-driven generators + diagnostics
+
+**The ArmorPaint effect stack, reworked against Substance Painter:**
+
+- **Filters (6 adjustment layers)**: Blur · Sharpen · Invert · HSL Shift · Levels · Warm Tint —
+  they edit everything painted below (the Substance filter-layer way)
+- **Mesh-driven generators**: **Edge Wear** and **Cavity Dirt** read the mesh's curved areas
+  directly in the shader — they appear on edges and in crevices only
+- **6 new GPU nodes (19 total)**: Tartan Plaid · Gingham · Polka Dots · Grunge · Water Drops ·
+  Glow Bands
+- **10 new smart materials (32 total)**: Denim Wash · Rose Gold · Patina Copper · Neoprene · Cork ·
+  Terrazzo · Chalk Paint · Crushed Velvet · Tulle Net · Gold Sequin
+
+**Convert Diagnostics improved** — fixed diagnosing the old target instead of the FBX picked in the
+Project window, the diagnosed path is shown in full, a **Check the original FBX** button appears for
+converted prefabs, and item meshes count skinned meshes too (correct FBXs no longer report "no item
+mesh")
+
+**Live preview removed** — the Unity edit-mode scene has no character of its own (the SDK builds it
+on Play), so the feature had nothing to move. Blender's **Playground** covers body shape and pose
+checks
+
 ### v1.3.1 — Studio render, Marvelous Designer link, long-skirt swing & accurate checks
 
 !!! note "Update the Blender add-on and the Unity package"
@@ -117,34 +139,6 @@ inside the skirt in a stride
 - Unity: the Sprites-Default warning on every converted prefab, "no hips" on unskinned items, the blend
   shape error on hats without expressions, "texture matched no slot" when an item is sent again, and
   "Can't import tangents" on every item (the FBX now carries tangents)
-
-### v1.3.2 — ArmorPaint filters, mesh-driven generators + diagnostics
-
-**The ArmorPaint effect stack, reworked against Substance Painter:**
-
-- **Filters (6 adjustment layers)**: Blur · Sharpen · Invert · HSL Shift · Levels · Warm Tint —
-  they edit everything painted below (the Substance filter-layer way)
-- **Mesh-driven generators**: **Edge Wear** and **Cavity Dirt** read the mesh's curved areas
-  directly in the shader — they appear on edges and in crevices only
-- **6 new GPU nodes (19 total)**: Tartan Plaid · Gingham · Polka Dots · Grunge · Water Drops ·
-  Glow Bands
-- **10 new smart materials (32 total)**: Denim Wash · Rose Gold · Patina Copper · Neoprene · Cork ·
-  Terrazzo · Chalk Paint · Crushed Velvet · Tulle Net · Gold Sequin
-
-**Convert Diagnostics improved** — fixed diagnosing the old target instead of the FBX picked in the
-Project window, the diagnosed path is shown in full, a **Check the original FBX** button appears for
-converted prefabs, and item meshes count skinned meshes too (correct FBXs no longer report "no item
-mesh")
-
-**Live preview removed** — the Unity edit-mode scene has no character of its own (the SDK builds it
-on Play), so the feature had nothing to move. Blender's **Playground** covers body shape and pose
-checks
-
-### v1.3.1
-
-- **11 URP Shader Graph samples** in the Unity package's `Samples~` (Eye, Toon, Hologram, Water,
-  Wind, Sparkle, Hair, Lava, ForceField, Iridescence, Neon) — import them from Package Manager >
-  Samples
 
 ### v1.3.0 — The ArmorPaint material library & high heels
 

@@ -87,6 +87,25 @@ Unity를 다시 시작하세요.
 Maya 전용 기능: Mirror Weights, Fix Scale Bones, Fit to Triangle Budget, Wrap to Body, Swing Test, 뷰포트 Status Badge,
 Playblast Review ([Maya 페이지](KO_maya.md)).
 
+### v1.3.2 — 아머페인트 필터·메시 제너레이터 + 진단 개선
+
+**아머페인트 이펙트 체계 확장** (섭스텐스 페인터 기준으로 재정비):
+
+- **Filters (조정 레이어 6종)**: Blur · Sharpen · Invert · HSL Shift · Levels · Warm Tint — 아래에
+  칠한 모든 것을 편집합니다 (섭스텐스의 필터 레이어와 같은 방식)
+- **메시 기반 제너레이터 2종**: **Edge Wear**(모서리 마모) · **Cavity Dirt**(오목한 곳 먼지) —
+  메쉬의 굽은 영역을 셰이더에서 직접 읽습니다
+- **GPU 노드 6종 (총 19종)**: Tartan Plaid · Gingham · Polka Dots · Grunge · Water Drops · Glow Bands
+- **스마트 재질 +10 (총 32종)**: Denim Wash · Rose Gold · Patina Copper · Neoprene · Cork · Terrazzo ·
+  Chalk Paint · Crushed Velvet · Tulle Net · Gold Sequin
+
+**Convert Diagnostics 개선** — Project 창에서 FBX 를 골라도 이전 대상(프리팹)을 검사하던 버그 수정,
+검사 중인 전체 경로 표시, 변환 완료 프리팹 진단 시 **Check the original FBX** 버튼 제공. 아이템 메쉬를
+스킨 메쉬로도 세도록 수정 (올바른 FBX 가 "아이템 없음"으로 나오던 것)
+
+**라이브 프리뷰 제거** — Unity 에디트 씬에는 캐릭터가 없어(SDK가 Play 때 생성) 동작할 수 없는 기능이었습니다.
+체형·포즈 확인은 Blender의 **Playground**가 담당합니다
+
 ### v1.3.1 — 스튜디오 렌더, 마블러스 디자이너 연동, 롱치마 흔들림 & 검사 정확도
 
 !!! note "Blender 애드온과 Unity 패키지를 업데이트하세요"
@@ -114,30 +133,6 @@ Playblast Review ([Maya 페이지](KO_maya.md)).
 - Unity: 변환된 모든 프리팹의 Sprites-Default 경고, 스킨 없는 아이템의 "hips 없음" 오류,
   표정 없는 모자의 블렌드쉐이프 오류, 같은 아이템을 다시 보낼 때의 "texture matched no slot" 경고,
   모든 아이템의 "Can't import tangents" 경고(이제 FBX 에 탄젠트가 함께 나갑니다)
-
-### v1.3.2 — 아머페인트 필터·메시 제너레이터 + 진단 개선
-
-**아머페인트 이펙트 체계 확장** (섭스텐스 페인터 기준으로 재정비):
-
-- **Filters (조정 레이어 6종)**: Blur · Sharpen · Invert · HSL Shift · Levels · Warm Tint — 아래에
-  칠한 모든 것을 편집합니다 (섭스텐스의 필터 레이어와 같은 방식)
-- **메시 기반 제너레이터 2종**: **Edge Wear**(모서리 마모) · **Cavity Dirt**(오목한 곳 먼지) —
-  메쉬의 굽은 영역을 셰이더에서 직접 읽습니다
-- **GPU 노드 6종 (총 19종)**: Tartan Plaid · Gingham · Polka Dots · Grunge · Water Drops · Glow Bands
-- **스마트 재질 +10 (총 32종)**: Denim Wash · Rose Gold · Patina Copper · Neoprene · Cork · Terrazzo ·
-  Chalk Paint · Crushed Velvet · Tulle Net · Gold Sequin
-
-**Convert Diagnostics 개선** — Project 창에서 FBX 를 골라도 이전 대상(프리팹)을 검사하던 버그 수정,
-검사 중인 전체 경로 표시, 변환 완료 프리팹 진단 시 **Check the original FBX** 버튼 제공. 아이템 메쉬를
-스킨 메쉬로도 세도록 수정 (올바른 FBX 가 "아이템 없음"으로 나오던 것)
-
-**라이브 프리뷰 제거** — Unity 에디트 씬에는 캐릭터가 없어(SDK가 Play 때 생성) 동작할 수 없는 기능이었습니다.
-체형·포즈 확인은 Blender의 **Playground**가 담당합니다
-
-### v1.3.1
-
-- Unity 패키지 `Samples~` 에 **URP Shader Graph 샘플 11종** (Eye, Toon, Hologram, Water, Wind, Sparkle,
-  Hair, Lava, ForceField, Iridescence, Neon) — Package Manager 의 Samples 에서 가져옵니다
 
 ### v1.3.0 — 아머페인트 재질 라이브러리 & 하이힐
 
